@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HTML-form" />
+    <title>Form Introduction</title>
+  </head>
+
+  <body>
+    <h2>Form-Introduction</h2>
+    <form action="#" method="get">
+      <fieldset>
+        <legend>Basic Form Details:</legend>
+        <p>
+          <label for="first-name">First Name:</label>
+          <input type="text" name="first-name" id="first-name" placeholder="Enter First Name" />
+        </p>
+        <p>
+          <label for="last-name">Last Name:</label>
+          <input type="text" name="last-name" id="last-name" placeholder="Enter Last Name" />
+        </p>
+        <p>
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email" placeholder="Enter Email" />
+        </p>
+        <p>
+          <label for="telephone">Telephone:</label>
+          <input type="text" name="telephone" id="telephone" placeholder="Enter Telephone" />
+        </p>
+        <p>
+          <label for="mobile-number">Mobile Number:</label>
+          <input type="number" name="mobile-number" id="mobile-number" placeholder="Mobile Number" />
+        </p>
+        <p>
+          <label for="password">Password:</label>
+          <input type="password" name="password" id="password" placeholder="Enter Password" />
+        </p>
+        <p>
+          <label for="confirm-password">Confirm Password:</label>
+          <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" />
+        </p>
+
+        <p>
+          <label for="dob">DOB:</label>
+          <input type="date" name="dob" id="dob" />
+        </p>
+        <p><label for="gender">Gender:</label> <input type="radio" name="gender" id="male" /><span>Male</span> <input type="radio" name="gender" id="female" /><span>Female</span> <input type="radio" name="gender" id="others" /><span>Other</span></p>
+
+        <p>
+          <label for="hobbies">Hobbies:</label>
+          <input type="checkbox" name="cricket" id="cricker" /><span>Cricket</span> <input type="checkbox" name="sing" id="sing" /><span>Singing</span> <input type="checkbox" name="swimming" id="swimming" /><span>Swimming</span>
+        </p>
+        <p>
+          <label for="address">Address:</label>
+          <textarea name="address" id="address" cols="30" rows="5"></textarea>
+        </p>
+        <p><label for="upload-file">Upload File:</label> <input type="file" name="upload-file" id="upload-file" /></p>
+        <p>
+          <label for="subject">Select Subjects</label>
+          <select name="select" id="select" multiple>
+            <option value="english">English</option>
+            <option value="hindi">Hindi</option>
+            <option value="science">Science</option>
+            <option value="maths">Maths</option>
+          </select>
+        </p>
+      </fieldset>
+    </form>
+  </body>
+</html>

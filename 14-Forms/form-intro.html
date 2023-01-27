@@ -15,7 +15,7 @@
         <legend>Basic Form Details:</legend>
         <p>
           <label for="first-name">First Name:</label>
-          <input type="text" name="first-name" id="first-name" placeholder="Enter First Name" />
+          <input type="text" name="first-name" id="first-name" placeholder="Enter First Name" required />
         </p>
         <p>
           <label for="last-name">Last Name:</label>
@@ -59,14 +59,24 @@
         <p><label for="upload-file">Upload File:</label> <input type="file" name="upload-file" id="upload-file" /></p>
         <p>
           <label for="subject">Select Subjects</label>
-          <select name="select" id="select" multiple>
-            <option value="english">English</option>
-            <option value="hindi">Hindi</option>
-            <option value="science">Science</option>
-            <option value="maths">Maths</option>
+          <select name="select" id="select">
+            <optgroup label="UG">
+              <option value="english">English</option>
+              <option value="hindi">Hindi</option>
+              <option value="science">Science</option>
+              <option value="maths">Maths</option>
+            </optgroup>
+            <optgroup label="PU">
+              <option value="english">English</option>
+              <option value="computer">Computer</option>
+              <option value="science">Science</option>
+              <option value="maths">Maths</option>
+            </optgroup>
           </select>
         </p>
       </fieldset>
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
     </form>
   </body>
 </html>

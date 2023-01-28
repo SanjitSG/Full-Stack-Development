@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="form" />
+    <title>Student information form</title>
+  </head>
+  <body>
+    <h2>Student information form</h2>
+    <section>
+      <form action="#" method="post">
+        <fieldset>
+          <p>
+            <label for="full-name">Full Name:</label>
+            <input type="text" name="full-name" id="full-name" placeholder="Full Name" />
+          </p>
+          <p>
+            <label for="age">Age:</label>
+            <input type="text" name="age" id="age" placeholder="Age" />
+          </p>
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" />
+          </p>
+          <p>
+            <label for="mobile">Mobile Number:</label>
+            <input type="text" name="mobile" id="mobile" placeholder="Mobile Number" />
+          </p>
+          <label for="applying">Applying for:</label>
+          <select name="applying" id="applying">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <p>
+            <label for="gender"><strong>Gender</strong></label>
+            <br />
+            <input type="radio" name="gender" id="male" /><span>Male</span> <input type="radio" name="gender" id="female" /><span>Female</span>
+          </p>
+          <p>
+            <label for="services"><strong>Do you need any special services</strong></label>
+            <br />
+            <span>School bus:</span><input type="checkbox" name="bus" id="bus" /> <span>School lunch:</span><input type="checkbox" name="lunch" id="lunch" /> <span>Hostel facility:</span><input type="checkbox" name="hostel" id="hostel" />
+          </p>
+          <p>
+            <label for="commnet">Have any comments?</label>
+            <br />
+            <textarea name="comments" id="comments" cols="40" rows="5"></textarea>
+          </p>
+          <button type="submit">Submit</button>
+          <button type="reset">Clear</button>
+        </fieldset>
+      </form>
+    </section>
+  </body>
+</html>

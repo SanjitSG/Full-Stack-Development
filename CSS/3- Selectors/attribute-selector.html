@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="attribute-selector" />
+    <title>attribute-selector</title>
+    <style>
+      p[class] {
+        color: blue;
+      }
+
+      p[class="color-red"] {
+        color: red;
+      }
+
+      /* p[class^="s"] {
+        color: green;
+      } */
+      p[class*="col"] {
+        color: teal;
+      }
+
+      p[class$="e"] {
+        color: brown;
+      }
+      p[id] {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Attribute Selector</h2>
+    <p class="sample" id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id unde cupiditate mollitia iure animi beatae culpa sed vero, hic debitis.</p>
+    <hr />
+    <p class="color-blue">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores doloremque non omnis numquam sit aut harum exercitationem sunt tempore dolores?</p>
+    <hr />
+    <p class="color-red">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, dicta quia iste minus totam odio nam facilis odit porro rem!</p>
+    <hr />
+    <p class="color-green">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Numquam consequatur similique ipsum voluptatem eum aliquam maiores doloribus voluptatibus ex pariatur.</p>
+    <hr />
+    <p class="simple">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, quaerat natus nesciunt dolore sit rerum aperiam optio molestias maiores necessitatibus.</p>
+  </body>
+</html>

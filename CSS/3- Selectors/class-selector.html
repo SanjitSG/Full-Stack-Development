@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Class-Selector" />
+    <title>Class-Selector</title>
+    <style>
+      .subject {
+        color: blue;
+      }
+      .fruits {
+        color: red;
+      }
+
+      /* specificity */
+
+      li.subject {
+        color: darkviolet;
+      }
+      .border {
+        border-style: dashed;
+        border-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Class-Selector</h2>
+    <p>List of Programming Subjects:</p>
+    <ol>
+      <li class="subject border">C</li>
+      <!-- we can have more than one class name for a element -->
+      <li class="subject">HTML</li>
+      <li class="subject border">CSS</li>
+      <li class="subject">JavaScript</li>
+    </ol>
+
+    <p>List of Fruits</p>
+    <ol>
+      <li class="fruits">Apple</li>
+      <li class="fruits">Orange</li>
+      <li class="fruits">Banana</li>
+      <li class="fruits">Mango</li>
+    </ol>
+  </body>
+</html>

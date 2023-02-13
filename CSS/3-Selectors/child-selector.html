@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Child-Selector" />
+    <title>Child-Selector</title>
+    <style>
+      div > p {
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Child Selector</h2>
+    <div id="div-container">
+      <p>Lorem ipsum dolor sit amet. <a href="#">Lorem ipsum</a> Lorem ipsum dolor sit amet.</p>
+      <a href="#">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, culpa.</p>
+      </a>
+      <div id="inner-div">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero modi asperiores consequatur!</p>
+        <a href="#"><p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, consectetur.</p></a>
+      </div>
+    </div>
+    <hr />
+  </body>
+</html>

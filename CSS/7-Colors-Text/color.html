@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS Colors" />
+    <title>CSS Colors</title>
+    <style>
+      div {
+        height: 80px;
+        width: 150px;
+        margin: 0 auto;
+        display: block;
+      }
+      .color-name {
+        background-color: rebeccapurple;
+      }
+
+      .color-hexa {
+        background-color: #008b8b;
+      }
+
+      .color-rgb {
+        background-color: rgb(2, 0, 36);
+      }
+
+      .color-rgba {
+        background-color: rgba(53, 148, 7, 0.33874709976798145);
+      }
+
+      .color-linear {
+        background: rgb(0, 36, 32);
+        background: linear-gradient(90deg, rgba(0, 36, 32, 1) 0%, rgba(37, 24, 186, 1) 46%, rgba(0, 212, 255, 1) 100%);
+      }
+
+      .color-radial {
+        background: rgb(0, 36, 32);
+        background: radial-gradient(circle, rgba(0, 36, 32, 1) 0%, rgba(37, 24, 186, 1) 46%, rgba(0, 212, 255, 1) 100%);
+      }
+      span {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        display: block;
+        font-weight: 500;
+        color: azure;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS Colors</h2>
+    <div class="color-name"><span>Color Name</span></div>
+    <hr />
+    <div class="color-hexa"><span>Hex Value</span></div>
+    <hr />
+    <div class="color-rgb"><span>RBG</span></div>
+    <hr />
+    <div class="color-rgba"><span>RGBA</span></div>
+    <hr />
+    <div class="color-linear"><span>Linear Gradient</span></div>
+    <hr />
+    <div class="color-radial"><span>Radial Gradient</span></div>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h2::before {
+        content: '';
+        height: 10px;
+        width: 200px;
+        background-color: rebeccapurple;
+        display: block;
+      }
+      h2::after {
+        content: '';
+        height: 10px;
+        width: 200px;
+        background-color: rebeccapurple;
+        display: block;
+      }
+
+      p {
+        background-color: yellow;
+      }
+      p::first-letter {
+        font-size: 50px;
+        background-color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Pseudo Element</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est quam dicta excepturi nihil perferendis molestias aliquid nulla numquam iusto recusandae.</p>
+  </body>
+</html>

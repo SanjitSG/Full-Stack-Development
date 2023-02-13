@@ -13,9 +13,21 @@
       section article {
         color: blue;
       } */
+
       /* Descendent Selector as id and class */
-      #div-container p[class*='ele'] {
+
+      /*id and attribute selector*/
+      /* #div-container p[class*='ele'] {
+        
         color: blue;
+      } */
+
+      #div-container .ele-3 {
+        color: red;
+      }
+
+      #section-container header {
+        color: green;
       }
     </style>
   </head>
@@ -33,7 +45,7 @@
       <p class="ele-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, velit? Lorem ipsum dolor sit amet.</p>
     </div>
     <hr />
-    <section>
+    <section id="section-container">
       <article>
         <header>This is Article -1</header>
         <p>This is article Paragraph</p>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Descendant-Selector" />
+    <title>Descendant-Selector</title>
+    <style>
+      /* div p {
+        color: red;
+      }
+      section article {
+        color: blue;
+      } */
+      /* Descendent Selector as id and class */
+      #div-container p[class*='ele'] {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Descendant-Selector</h2>
+    <div id="div-container">
+      <h2 class="ele-1">This is a heading</h2>
+      <p class="ele-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A laudantium ad nihil sed cum dolorem praesentium quaerat, repellat nesciunt illo.</p>
+      <ul class="ele-3">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+      </ul>
+      <hr />
+      <p class="ele-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, velit? Lorem ipsum dolor sit amet.</p>
+    </div>
+    <hr />
+    <section>
+      <article>
+        <header>This is Article -1</header>
+        <p>This is article Paragraph</p>
+        <footer><i>#End of Article -1 </i></footer>
+      </article>
+    </section>
+  </body>
+</html>

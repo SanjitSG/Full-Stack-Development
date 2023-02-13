@@ -1,0 +1,44 @@
+{
+  "editor.fontSize": 24,
+  "files.autoSave": "off",
+  "editor.tabSize": 1,
+  "editor.wordWrap": "on",
+  "terminal.integrated.fontSize": 22,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "editor.minimap.enabled": false,
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": true,
+  "prettier.singleQuote": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.cursorBlinking": "expand",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "highlight-matching-tag.styles": {
+    "opening": {
+      "left": {
+        "custom": {
+          "borderWidth": "0 0 0 3px",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px"
+        }
+      },
+      "right": {
+        "custom": {
+          "borderWidth": "0 3px 0 0",
+          "borderStyle": "solid",
+          "borderColor": "yellow",
+          "borderRadius": "5px"
+        }
+      }
+    }
+  }
+}

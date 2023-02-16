@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS unit em" />
+    <title>CSS unit em</title>
+    <style>
+      div {
+        font-size: 10px;
+      }
+      .absolute {
+        font-size: 16px;
+      }
+      .relative {
+        font-size: 2em;
+        /* (base value)*emUnit-value */
+        /*
+        base value=> Parent element/ Default Element value.
+
+        therefore,
+        font-size:
+        10px * 2em = 20px
+        */
+      }
+    </style>
+  </head>
+  <body>
+    <h2><u>CSS unit em</u></h2>
+    <div><h3 class="relative">Relative Text</h3></div>
+    <div><h3 class="absolute">Absolute Text</h3></div>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="min and max" />
+    <title>CSS - min and max</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .navbar {
+        background-color: blue;
+        color: #ffffff;
+        font-size: 3rem; /* 16px x 3 = 48px*/
+        height: 6rem;
+      }
+
+      .banner {
+        background-color: red;
+        min-height: calc(100vh-6rem);
+        max-height: 50vh;
+        /* overflow: hidden; */
+        overflow: scroll;
+      }
+
+      .example {
+        background-color: green;
+        width: 10rem;
+        height: 25rem;
+        overflow: scroll;
+        /* overflow: hidden; */
+      }
+    </style>
+  </head>
+
+  <body>
+    <ul class="navbar">
+      <li>simple link</li>
+    </ul>
+    <div class="banner">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis voluptates natus ipsum qui non illo magni corrupti id hic unde. Similique veritatis corporis laudantium quidem aliquid eveniet deleniti blanditiis ducimus quam dignissimos. Nemo aspernatur maxime laborum vero esse quasi. Atque culpa voluptate obcaecati consequatur accusamus numquam ducimus sunt suscipit possimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam consectetur explicabo laudantium voluptas? Placeat fuga ea veritatis, tempora modi eveniet ipsa corporis rerum atque consectetur est nulla accusamus
+      deleniti debitis laboriosam eos molestiae quam. Odit doloribus sunt tenetur aut vel sint excepturi modi labore odio? Illo doloremque voluptatibus quas explicabo.
+    </div>
+    <div class="example">
+      <p>Hello world</p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis ullam saepe facilis, aperiam repellat eaque est provident ipsum ducimus, optio eius atque. Assumenda ipsam quidem quae magnam debitis dolorum eligendi, aperiam et tempora est, fuga architecto. Blanditiis, natus reprehenderit vero ex voluptates rem fugit odit numquam ipsum, aliquam nisi magnam. Sapiente laborum deleniti adipisci ipsam neque consequuntur, aut dolorem sunt recusandae aliquid numquam facilis! Eius corrupti hic ipsa ducimus impedit maiores ipsum sunt, deserunt consequuntur iste explicabo omnis incidunt
+      veritatis necessitatibus. Natus accusamus error provident doloremque consequuntur incidunt, corporis commodi tempora animi soluta illo laboriosam molestias eaque rem repellendus ea.
+      <p>Hello World</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS - Bg-image shorthand property" />
+    <title>CSS - Bg-image shorthand property</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      div {
+        min-height: 100vh;
+        border: 2px solid red;
+        color: red;
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .img-1 {
+        /* background: url(../images/img-1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; */
+
+        /* background: urlFunction bg-position/bg-size bg-repeat bg-attachment */
+
+        background: url(../images/img-1.jpg) center/cover no-repeat fixed;
+      }
+
+      .img-2 {
+        background: linear-gradient(180deg, rgba(121, 0, 255, 1) 0%, rgba(0, 212, 255, 0.7455357142857143) 100%) center/cover no-repeat fixed;
+      }
+
+      .img-3 {
+        background: rgb(255, 255, 255);
+        background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(38, 0, 255, 0.9613095238095238) 40%, rgba(0, 246, 194, 0.6643907563025211) 100%) center/cover no-repeat fixed;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="img-1">
+      <h1>Image - 1</h1>
+    </div>
+    <div class="img-2">
+      <h1>Image - 2</h1>
+    </div>
+    <div class="img-3">
+      <h1>Image - 3</h1>
+    </div>
+  </body>
+</html>

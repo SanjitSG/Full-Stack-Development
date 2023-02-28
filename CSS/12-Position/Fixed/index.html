@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS - Position : Fixed" />
+    <title>CSS - Position : Fixed</title>
+
+    <style>
+      .nav {
+        background: red;
+        color: white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin-top: 0;
+        /* applied to Viewport area */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      div {
+        border: 3px solid red;
+        margin-top: 40px;
+        background: yellow;
+      }
+
+      .container {
+        min-height: 100vh;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">navbar</div>
+    <div>
+      <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae voluptatem maiores repellat ullam ea commodi, aut consequatur soluta iusto! Officia sunt odio provident facere quisquam!</p>
+      <p class="two">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed vero mollitia natus, perspiciatis esse laudantium, nulla rerum, doloremque veniam cum quas aliquam dignissimos quidem ipsa?</p>
+      <div class="container"></div>
+    </div>
+  </body>
+</html>

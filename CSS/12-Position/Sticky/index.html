@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS - Position : Sticky" />
+    <title>CSS - Position : Sticky</title>
+    <style>
+      .nav {
+        background: red;
+        color: white;
+        text-transform: uppercase;
+        font-size: 1rem;
+        margin-top: 0;
+        margin-left: 0;
+        width: 100%;
+        position: sticky;
+        top: 0;
+      }
+
+      div {
+        background: yellow;
+        border: 2px solid red;
+        margin-top: 40px;
+      }
+
+      .container {
+        background: blue;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">navbar</div>
+    <div>
+      <p class="one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error sed nihil explicabo modi facere voluptate quisquam neque aliquam fugiat. Cum quasi quibusdam neque porro provident!</p>
+      <p class="two">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae nesciunt eveniet ex perspiciatis, iure magni fugit officiis repellendus exercitationem illum? Quaerat veniam fuga nihil quidem.</p>
+      <div class="container"></div>
+    </div>
+  </body>
+</html>

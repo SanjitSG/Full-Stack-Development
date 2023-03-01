@@ -4,13 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Translate" />
-    <title>Translate</title>
+    <meta name="description" content="Skew" />
+    <title>Skew</title>
     <style>
       /* transform: translate(), scale(), rotate(), skew() */
+
+      /* transform:skew(deg) x and y - axis */
+
       body {
         background: darkcyan;
       }
+
       div {
         width: 150px;
         height: 150px;
@@ -19,16 +23,17 @@
 
       .one {
         background: green;
-        transform: translateX(25%);
+        transform: skewX(40deg);
       }
 
       .two {
         background: red;
-        transform: translateY(25%);
+        transform: skewY(40deg);
       }
 
       .three {
         background: blue;
+        transform: skew(40deg, 40deg);
       }
     </style>
   </head>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS - Transition Delay" />
+    <title>CSS - Transition Delay</title>
+    <style>
+      body {
+        background: darkcyan;
+      }
+
+      div {
+        width: 150px;
+        height: 150px;
+        display: inline-block;
+      }
+
+      .one {
+        background: green;
+      }
+
+      .two {
+        background: red;
+      }
+
+      .three {
+        background: blue;
+        /* transition-property: background, border-radius, transform;
+        transition-duration: 3s, 1s, 2s; */
+        transition: all 0.5s;
+      }
+
+      .three:hover {
+        background: yellow;
+        border-radius: 50%;
+        transform: scale(0.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Timing Function" />
+    <title>Timing Function</title>
+    <style>
+      div {
+        width: 150px;
+        height: 150px;
+        background: green;
+        margin: 5px;
+        transition: all 2s;
+        /* position: relative; */
+      }
+
+      div p {
+        font-size: 1.5rem;
+        color: white;
+        /* position: absolute;
+        top: 25%;
+        left: 25%; */
+        transform: translate(25%, 70%);
+      }
+
+      div:hover {
+        transform: translateX(100px);
+      }
+
+      .ease {
+        transition-timing-function: ease;
+      }
+
+      .linear {
+        transition-timing-function: linear;
+      }
+      .ease-in {
+        transition-timing-function: ease-in;
+      }
+      .ease-out {
+        transition-timing-function: ease-out;
+      }
+      .ease-in-out {
+        transition-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="default"><p>Default</p></div>
+    <div class="ease"><p>Ease</p></div>
+    <div class="linear"><p>linear</p></div>
+    <div class="ease-in"><p>Ease-in</p></div>
+    <div class="ease-out"><p>Ease-out</p></div>
+    <div class="ease-in-out"><p>Ease-in-out</p></div>
+  </body>
+</html>

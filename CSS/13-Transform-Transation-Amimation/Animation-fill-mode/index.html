@@ -7,15 +7,43 @@
     <meta name="description" content="Animation Fill Mode" />
     <title>Animation Fill Mode</title>
     <style>
+      body {
+        background: darkcyan;
+      }
       div {
         width: 200px;
         height: 100px;
         color: white;
         margin: 10px;
+        opacity: 0;
       }
 
       .animation {
         background: blue;
+        animation: move 5s 2;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes move {
+        0% {
+          opacity: 0.1;
+        }
+        25% {
+          opacity: 0.25;
+          transform: translateX(200px);
+        }
+        50% {
+          opacity: 0.5;
+          transform: translateY(50px);
+        }
+        75% {
+          opacity: 0.75;
+          transform: rotate(60deg);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1.5);
+        }
       }
     </style>
   </head>

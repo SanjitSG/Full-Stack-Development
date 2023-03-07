@@ -15,6 +15,9 @@ body {
   height: 5rem;
   background-color: #222;
   padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 .nav-title {
@@ -37,6 +40,7 @@ body {
   background-color: #d9afd9;
   background: linear-gradient(356deg, rgba(121, 0, 255, 1) 0%, rgba(255, 153, 0, 0.8240546218487395) 100%);
   min-height: calc(100vh - 5rem);
+  position: relative;
 }
 
 .hero-center {
@@ -45,6 +49,11 @@ body {
   margin: 0 auto;
   color: #fff;
   padding: 5rem 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 .hero-center h1 {
@@ -56,6 +65,12 @@ body {
 .hero-center p {
   margin-bottom: 1.5rem;
   max-width: 35rem;
+  margin: 0 auto;
+}
+
+.hero-text {
+  animation: slideFromTop 2s ease-in-out 1;
+  /* animation: animation-name duration transition-timing-function iteration-count */
 }
 
 .button {
@@ -65,8 +80,37 @@ body {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 2px;
+  margin-top: 20px;
+  animation: slideFromBottom 2s ease-in-out 1;
 }
 
 .button:hover {
   cursor: pointer;
+}
+
+.dummy {
+  min-height: 100vh;
+  background: grey;
+}
+/* animation */
+@keyframes slideFromTop {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

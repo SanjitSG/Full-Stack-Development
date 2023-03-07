@@ -8,7 +8,7 @@
     "javascript": "javascriptreact"
   },
   "emmet.triggerExpansionOnTab": true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "prettier.jsxSingleQuote": true,
   "prettier.semi": true,
   "prettier.singleQuote": true,

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Flexbox demo 1" />
+    <title>CSS Flexbox Demo 1</title>
+    <style>
+      * {
+        margin: 0;
+      }
+
+      .hero {
+        height: 100vh;
+        background: url(./img-1.jpg) center/cover fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      h1 {
+        font-size: 60px;
+        color: red;
+        text-transform: uppercase;
+      }
+
+      .banner {
+        height: 100vh;
+        background: gainsboro;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .test {
+        height: 150px;
+        width: 150px;
+        background: green;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <h1>Page Title</h1>
+    </div>
+    <div class="banner">
+      <div class="test"></div>
+    </div>
+  </body>
+</html>

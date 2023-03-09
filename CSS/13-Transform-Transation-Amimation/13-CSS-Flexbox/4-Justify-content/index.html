@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS-Flexbox Justify Content" />
+    <title>CSS-Flexbox - Justify Content</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .parent {
+        border: 5px solid red;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+      }
+
+      .box {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #f3f3f3;
+      }
+
+      .child-1 {
+        background: #581f18;
+      }
+
+      .child-2 {
+        background: rebeccapurple;
+      }
+
+      .child-3 {
+        background: darkcyan;
+      }
+
+      .child-4 {
+        background: darkmagenta;
+      }
+
+      .child-5 {
+        background: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parent -->
+    <div class="parent">
+      <!-- Child -->
+      <div class="box child-1">One</div>
+      <div class="box child-2">Two</div>
+      <div class="box child-3">Three</div>
+      <div class="box child-4">Four</div>
+      <div class="box child-5">Five</div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS-Flexbox Main-cross axis" />
+    <title>CSS-Flexbox - Main-cross axis</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .parent {
+        border: 5px solid red;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .parent-1 {
+        height: 800px;
+        border: 5px solid blue;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* now controls the main (x) axis*/
+        justify-content: center; /* now controls the cross (y) axis*/
+      }
+      .box {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #f3f3f3;
+      }
+
+      .box-1 {
+        background: #581f18;
+      }
+
+      .box-2 {
+        background: rebeccapurple;
+      }
+
+      .box-3 {
+        background: darkcyan;
+      }
+
+      .box-4 {
+        background: darkmagenta;
+      }
+
+      .box-5 {
+        background: darkblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parent -->
+    <div class="parent">
+      <!-- Child -->
+      <div class="box box-1">One</div>
+      <div class="box box-2">Two</div>
+      <div class="box box-3">Three</div>
+      <div class="box box-4">Four</div>
+      <div class="box box-5">Five</div>
+    </div>
+    <div class="parent-1">
+      <!-- Child -->
+      <div class="box box-1">One</div>
+      <div class="box box-2">Two</div>
+      <div class="box box-3">Three</div>
+      <div class="box box-4">Four</div>
+      <div class="box box-5">Five</div>
+    </div>
+  </body>
+</html>

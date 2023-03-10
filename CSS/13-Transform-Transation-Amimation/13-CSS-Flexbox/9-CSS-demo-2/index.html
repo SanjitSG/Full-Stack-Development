@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS Flex Demo 2" />
+    <title>CSS Flex Demo 2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      img {
+        height: 250px;
+        width: 250px;
+        border-radius: 18px;
+      }
+      .container {
+        border: 5px solid green;
+        padding: 10px;
+        height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        overflow: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div><img src="./images/img-1.jpg" alt="img-1" /></div>
+      <div><img src="./images/img-2.jpg" alt="img-2" /></div>
+      <div><img src="./images/img-3.jpg" alt="img-3" /></div>
+      <div><img src="./images/img-4.jpg" alt="img-4" /></div>
+      <div><img src="./images/img-1 copy.jpg" alt="img-1 copy" /></div>
+      <div><img src="./images/img-2 - Copy.jpg" alt="img-2 copy" /></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS-Flexbox Grow" />
+    <title>CSS-Flexbox - Grow</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .parent {
+        border: 5px solid red;
+        /* height: 50vh; */
+        display: flex;
+      }
+
+      .box {
+        padding: 30px;
+        text-align: center;
+        font-size: 35px;
+        color: #f3f3f3;
+        /* flex-grow: 0; (default-value) */
+        /* flex-grow: 1; */
+      }
+
+      .child-1 {
+        background: #581f18;
+        flex-grow: 1;
+      }
+
+      .child-2 {
+        background: rebeccapurple;
+        flex-grow: 2;
+      }
+
+      .child-3 {
+        background: darkcyan;
+        flex-grow: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Parent -->
+    <div class="parent">
+      <!-- Child -->
+      <div class="box child-1">One</div>
+      <div class="box child-2">Two</div>
+      <div class="box child-3">Three</div>
+      <!-- <div class="box child-4">Four</div>
+      <div class="box child-5">Five</div> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS Flexbox Align self" />
+    <title>CSS Flexbox Align self</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background: #f3f3f3;
+      }
+
+      .parent {
+        border: 5px solid red;
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        text-align: center;
+        padding: 30px;
+        font-size: 35px;
+        color: black;
+      }
+      .child-1 {
+        background: cyan;
+        align-self: flex-start;
+      }
+
+      .child-2 {
+        background: magenta;
+        align-self: stretch;
+      }
+
+      .child-3 {
+        background: yellow;
+        align-self: center;
+      }
+
+      .child-4 {
+        background: green;
+        align-self: self-end;
+      }
+
+      .child-5 {
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="box child-1">One</div>
+      <div class="box child-2">Two</div>
+      <div class="box child-3">Three</div>
+      <div class="box child-4">Four</div>
+      <div class="box child-5">Five</div>
+    </div>
+  </body>
+</html>

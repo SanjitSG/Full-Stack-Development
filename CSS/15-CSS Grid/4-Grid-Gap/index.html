@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="CSS Grid Gap" />
+    <title>CSS Grid Gap</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+
+      .container {
+        border: 5px solid red;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 2fr 1fr 2fr;
+
+        /* gap */
+
+        /* grid-column-gap: 20px;
+        grid-row-gap: 20px; */
+
+        /* shorthand property-> grid-gap: 20px 50px; <row column>  */
+
+        row-gap: 50px;
+        column-gap: 20px;
+      }
+
+      .cell {
+        border: 2px solid green;
+        font-weight: bold;
+        text-transform: uppercase;
+        background: #dedede;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cell">One</div>
+      <div class="cell">Two</div>
+      <div class="cell">Three</div>
+      <div class="cell">Four</div>
+      <div class="cell">Five</div>
+      <div class="cell">Six</div>
+    </div>
+  </body>
+</html>

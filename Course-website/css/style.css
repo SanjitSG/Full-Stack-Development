@@ -4,3 +4,76 @@
 /* 
  font-family: 'Poppins', sans-serif;
 */
+
+:root {
+  /* color variables */
+  --base-shade-1: #00a8fa;
+  --white-shade-1: #fff;
+  --white-shade-2: #d7e1f3;
+  --black-shade-1: #232323;
+  --black-shade-2: #676a8b;
+  --grade-color-1: 0, 180, 250;
+  --grade-color-2: 21, 120, 225;
+
+  /* font-size variable */
+  --base-font-size: 1.6rem;
+
+  /* heading variables */
+  --heading-font-size-1: 4rem;
+  --heading-font-size-2: 3.2rem;
+  --heading-font-size-3: 2rem;
+  --heading-font-size-4: 1.8rem;
+
+  /* border radius variable */
+  --border-radius-1: 1rem;
+  --border-radius-2: 0.5rem;
+}
+
+/* Base Style */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  /* while scrolling the screen we will get smoother behaviour  => when clicked on scroll to top arrow, it will scroll smoothly to top of the page */
+}
+
+/* Utility classes */
+section,
+footer {
+  padding: 9rem 5rem;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5rem;
+}
+
+.column {
+  width: 100%;
+}
+
+.section-desc {
+  text-align: center;
+  margin: 2rem 0 6rem 0;
+}
+
+h1 {
+  font-size: var(--heading-font-size-1);
+  color: var(--black-shade-1);
+  margin-bottom: 2rem;
+  word-spacing: 1rem;
+  line-height: 1.6;
+}

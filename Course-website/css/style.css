@@ -45,7 +45,7 @@ body {
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
-  /* while scrolling the screen we will get smoother behaviour  => when clicked on scroll to top arrow, it will scroll smoothly to top of the page */
+  /* while scrolling the screen we will get smoother behavior  => when clicked on scroll to top arrow, it will scroll smoothly to top of the page */
 }
 
 /* Utility classes */
@@ -77,3 +77,85 @@ h1 {
   word-spacing: 1rem;
   line-height: 1.6;
 }
+
+h2 {
+  font-size: var(--heading-font-size-2);
+  color: var(--black-shade-1);
+  font-weight: 700;
+  text-align: center;
+}
+
+h3 {
+  font-size: var(--heading-font-size-3);
+  color: var(--black-shade-1);
+  font-weight: 700;
+  margin: 1.5rem 0;
+  text-align: center;
+}
+
+h4 {
+  font-size: var(--heading-font-size-4);
+  color: var(--black-shade-2);
+  margin: 1.5rem 0;
+}
+
+p,
+button {
+  font-size: var(--base-font-size);
+  color: var(--black-shade-2);
+  line-height: 1.8;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: transparent;
+  padding: 1rem 3rem;
+  border-radius: var(--border-radius-1);
+  border: none;
+  margin: 2rem 0;
+}
+
+.primary-btn {
+  background-color: var(--base-shade-1);
+  color: var(--white-shade-1);
+}
+
+.secondary-btn {
+  border: 0.3rem solid var(--base-shade-1);
+  color: var(--base-shade-1);
+}
+
+/* Header */
+header {
+  position: fixed;
+  width: 100%;
+  padding: 3rem 5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  font-size: var(--heading-font-size-4);
+  text-decoration: none;
+}
+
+nav a#logo {
+  color: var(--base-shade-1);
+  font-weight: 700;
+}
+
+nav ul a {
+  color: var(--white-shade-2);
+}
+
+/* Side-Menu */

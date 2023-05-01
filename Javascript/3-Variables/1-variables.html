@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Variables" />
+    <title>JavaScript - Variables</title>
+  </head>
+  <body>
+    <h2>JavaScript - Variables</h2>
+
+    <script>
+      //Variable: is a "named storage" for data
+
+      //Syntax
+      //let_keyword <space> variableName = value;
+
+      //Ex1:
+      let numberOne = 1; // Variable named "numberOne" holds the data "1"
+      let numberTwo = 2; // Variable named "numberTwo" holds teh data "2"
+      let result = numberOne + numberTwo; //result of summation of variable"numberOne" and "numberTwo" will be stored in variable "result"
+      console.log(result);
+
+      //Ex2:
+      let name,
+        age = 30,
+        designation;
+      name = 'Sanjit';
+      designation = 'Software Developer';
+      console.log(name, age, designation);
+
+      //How to change  the value already assigned to a variable
+      let username = 'SkillSafari';
+      console.log(username); //SkillSafari
+
+      //Syntax
+      // existingVarName = newValue;
+
+      username = 'EduKeys';
+      console.log(username);
+
+      //copy the value of one variable to another
+
+      let firstName = 'Sanjit';
+      let lastName = 'Gawade';
+      console.log(firstName, lastName); //Sanjit Gawade
+
+      let fullName = firstName + ' ' + lastName;
+      console.log(fullName);
+
+      //values assigned using let variable can be modified
+      //const => values assigned to variable using const keyword cannot be modified
+
+      const city = 'Chennai';
+      console.log(city);
+
+      // city = 'Banglore'; // TypeError.
+      // console.log(city);
+
+      //const variable cre declared in UPPERCASE to differentiate it from other variables.
+      const DOB = '01-02-2023';
+      console.log(DOB);
+      //const multi-word variable, we use "_"
+      const COLOR_RED = '#FF0000';
+      console.log(COLOR_RED);
+    </script>
+  </body>
+</html>

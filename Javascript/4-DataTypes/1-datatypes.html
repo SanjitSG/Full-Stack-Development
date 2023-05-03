@@ -77,6 +77,43 @@
       //Math.trunc(): Removes anything next to the decimal point
       console.log(Math.trunc(5.4)); //5
       console.log(Math.trunc(5.9)); //5
+
+      //Other Math functions
+      // 1.Math.min()
+      // 1.Math.max()
+      // 1.Math.random()
+      // 1.Math.pow()
+
+      //Math.min(): Used to find the smallest or the minimum number in the given set of numbers
+
+      //min()
+      let minNumber = Math.min(40, 50, 0, -2, 30, -58);
+      console.log(minNumber);
+
+      //max()
+      let maxNumber = Math.max(40, 50, 0, -2, 30, -58);
+      console.log(maxNumber);
+
+      //pow()
+      console.log(Math.pow(2, 2)); //2^2 = 2x2 =4
+      console.log(Math.pow(2, 10)); //2^10 = 1024
+
+      //random(): used to generate the numbers in the range between 0.1 to 1
+
+      console.log(Math.random());
+      console.log(Math.random() * 1000); //0-1000
+      console.log(Math.floor(Math.random() * 1e2)); //0-100
+
+      // 8.2345 => 8.23
+      console.log(Math.round(8.2345 * 100) / 100); //8.23 (number)
+
+      //toFixed(digit) : how many digits after decimal point
+
+      let toFixedNum = 8.234;
+      console.log(toFixedNum.toFixed(2)); //8.23.(string). this method returns a string.
+
+      //Number(numericString) => number. converts numeric string into number.
+      console.log(Number(toFixedNum.toFixed(2)));
     </script>
   </body>
 </html>

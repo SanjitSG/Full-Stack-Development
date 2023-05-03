@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - DataTypes" />
+    <title>JavaScript - DataTypes</title>
+  </head>
+  <body>
+    <h1>JavaScript - DataTypes</h1>
+
+    <script>
+      // DataTypes:
+      // 1. Primitive DataTypes: One Variable can hold only one value.
+      // 2. Non-primitive DataTypes: One Variable can hold multiple values.
+
+      //1.Primitive DataTypes
+      // 1.Number
+      //Whole Numbers(0-9)
+      //Decimal Numbers(Ex:12.5)
+
+      let numberOne = 23;
+      console.log(numberOne); //23
+      numberOne = 23.5;
+      console.log(numberOne); //23.5
+      //depending on the value type JavaScript changes the type of the variable, thats why JavScript is called "dynamically typed" programming language.
+
+      numberOne = 'One';
+      console.log(numberOne); //numberOne variable automatically type converted to string. (Dynamically typed)
+
+      //Infinity
+      let number = 1 / 0;
+      console.log(number); // Infinity
+
+      //NaN => Not a number
+      let expression = 'hello' / 34;
+      console.log(expression); //NaN
+
+      //Defining a number
+      // let billion = 1,000,000,000; //error
+      // use "_" instead of "," to make it human readable
+      let billion = 1_000_000_000;
+      console.log(billion);
+
+      //use of "e"
+      let thousand = 1e3; // after "1" there should be "3" zeros.
+      console.log(thousand);
+
+      let newNumber = 1.6e7; //1.6 * 10000000
+      console.log(newNumber);
+
+      let negativeNum = 1e-6; // 1/100000
+      console.log(negativeNum); // 0.000001
+
+      //toString(base)
+      //binary , octal, decimal, hexadecimal
+      let newNum = 2;
+      console.log(newNum.toString(2)); // .toString(2). 2 is binary base .binary  equivalent of 2 => 1 0.
+
+      //Rounding off
+      //1.math.floor() 2. math.ceil() 3. math.round() 4. math.trunc()
+
+      //Math.floor() : Round down the given decimal number
+      console.log(Math.floor(5.2));
+      console.log(Math.floor(-5.6));
+
+      //Math.ceil(): Round up the given decimal number
+      console.log(Math.ceil(5.2));
+      console.log(Math.ceil(-1.1));
+
+      //Math.round(): Round the decimal number to nearby integer
+      console.log(Math.round(5.4)); //5
+      console.log(Math.round(5.5)); //6 (Breaking point is +> .5 i.e >= .5 rounds up to nearby integer)
+      console.log(Math.round(5.9)); //6
+
+      //Math.trunc(): Removes anything next to the decimal point
+      console.log(Math.trunc(5.4)); //5
+      console.log(Math.trunc(5.9)); //5
+    </script>
+  </body>
+</html>

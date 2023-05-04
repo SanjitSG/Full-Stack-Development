@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Interaction Methods" />
+    <title>JavaScript - Interaction Methods</title>
+  </head>
+  <body>
+    <h2>JavaScript - Interaction Methods</h2>
+
+    <script>
+      //JavaScript - Interaction Methods
+      // 1. alert()
+      // Syntax => alert("message")
+
+      //Ex:
+      // alert('This is a alert method');
+
+      //2.prompt()
+      //1.input field 2. ok btn 3. cancel btn
+
+      //Ex:
+      // prompt('Enter the number', 20);
+
+      //how to access input filed of prompt() function
+      let numberOne = prompt(' Enter the First number', 20);
+      let numberTwo = prompt(' Enter the Second number', 20);
+
+      console.log(`The user entered values are: ${numberOne}, ${numberTwo}`);
+      console.log(`The summation of numbers are: ${numberOne + numberTwo}`); //5050 | since prompt function returns the string, it will perform concatenation.
+
+      //by using Number() method
+      console.log(`The summation of numbers are: ${Number(numberOne) + Number(numberTwo)}`);
+
+      //by using unary "+"
+      console.log(`The summation of numbers are using unary: ${+numberOne + +numberTwo}`);
+    </script>
+  </body>
+</html>

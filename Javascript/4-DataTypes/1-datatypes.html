@@ -20,109 +20,157 @@
       //Whole Numbers(0-9)
       //Decimal Numbers(Ex:12.5)
 
-      let numberOne = 23;
-      console.log(numberOne); //23
-      numberOne = 23.5;
-      console.log(numberOne); //23.5
-      //depending on the value type JavaScript changes the type of the variable, thats why JavScript is called "dynamically typed" programming language.
+      // let numberOne = 23;
+      // console.log(numberOne); //23
+      // numberOne = 23.5;
+      // console.log(numberOne); //23.5
+      // //depending on the value type JavaScript changes the type of the variable, thats why JavScript is called "dynamically typed" programming language.
 
-      numberOne = 'One';
-      console.log(numberOne); //numberOne variable automatically type converted to string. (Dynamically typed)
+      // numberOne = 'One';
+      // console.log(numberOne); //numberOne variable automatically type converted to string. (Dynamically typed)
 
-      //Infinity
-      let number = 1 / 0;
-      console.log(number); // Infinity
+      // //Infinity
+      // let number = 1 / 0;
+      // console.log(number); // Infinity
 
-      //NaN => Not a number
-      let expression = 'hello' / 34;
-      console.log(expression); //NaN
+      // //NaN => Not a number
+      // let expression = 'hello' / 34;
+      // console.log(expression); //NaN
 
-      //Defining a number
-      // let billion = 1,000,000,000; //error
-      // use "_" instead of "," to make it human readable
-      let billion = 1_000_000_000;
-      console.log(billion);
+      // //Defining a number
+      // // let billion = 1,000,000,000; //error
+      // // use "_" instead of "," to make it human readable
+      // let billion = 1_000_000_000;
+      // console.log(billion);
 
-      //use of "e"
-      let thousand = 1e3; // after "1" there should be "3" zeros.
-      console.log(thousand);
+      // //use of "e"
+      // let thousand = 1e3; // after "1" there should be "3" zeros.
+      // console.log(thousand);
 
-      let newNumber = 1.6e7; //1.6 * 10000000
-      console.log(newNumber);
+      // let newNumber = 1.6e7; //1.6 * 10000000
+      // console.log(newNumber);
 
-      let negativeNum = 1e-6; // 1/100000
-      console.log(negativeNum); // 0.000001
+      // let negativeNum = 1e-6; // 1/100000
+      // console.log(negativeNum); // 0.000001
 
-      //toString(base)
-      //binary , octal, decimal, hexadecimal
-      let newNum = 2;
-      console.log(newNum.toString(2)); // .toString(2). 2 is binary base .binary  equivalent of 2 => 1 0.
+      // //toString(base)
+      // //binary , octal, decimal, hexadecimal
+      // let newNum = 2;
+      // console.log(newNum.toString(2)); // .toString(2). 2 is binary base .binary  equivalent of 2 => 1 0.
 
-      //Rounding off
-      //1.math.floor() 2. math.ceil() 3. math.round() 4. math.trunc()
+      // //Rounding off
+      // //1.math.floor() 2. math.ceil() 3. math.round() 4. math.trunc()
 
-      //Math.floor() : Round down the given decimal number
-      console.log(Math.floor(5.2));
-      console.log(Math.floor(-5.6));
+      // //Math.floor() : Round down the given decimal number
+      // console.log(Math.floor(5.2));
+      // console.log(Math.floor(-5.6));
 
-      //Math.ceil(): Round up the given decimal number
-      console.log(Math.ceil(5.2));
-      console.log(Math.ceil(-1.1));
+      // //Math.ceil(): Round up the given decimal number
+      // console.log(Math.ceil(5.2));
+      // console.log(Math.ceil(-1.1));
 
-      //Math.round(): Round the decimal number to nearby integer
-      console.log(Math.round(5.4)); //5
-      console.log(Math.round(5.5)); //6 (Breaking point is +> .5 i.e >= .5 rounds up to nearby integer)
-      console.log(Math.round(5.9)); //6
+      // //Math.round(): Round the decimal number to nearby integer
+      // console.log(Math.round(5.4)); //5
+      // console.log(Math.round(5.5)); //6 (Breaking point is +> .5 i.e >= .5 rounds up to nearby integer)
+      // console.log(Math.round(5.9)); //6
 
-      //Math.trunc(): Removes anything next to the decimal point
-      console.log(Math.trunc(5.4)); //5
-      console.log(Math.trunc(5.9)); //5
+      // //Math.trunc(): Removes anything next to the decimal point
+      // console.log(Math.trunc(5.4)); //5
+      // console.log(Math.trunc(5.9)); //5
 
-      //Other Math functions
-      // 1.Math.min()
-      // 1.Math.max()
-      // 1.Math.random()
-      // 1.Math.pow()
+      // //Other Math functions
+      // // 1.Math.min()
+      // // 1.Math.max()
+      // // 1.Math.random()
+      // // 1.Math.pow()
 
-      //Math.min(): Used to find the smallest or the minimum number in the given set of numbers
+      // //Math.min(): Used to find the smallest or the minimum number in the given set of numbers
 
-      //min()
-      let minNumber = Math.min(40, 50, 0, -2, 30, -58);
-      console.log(minNumber);
+      // //min()
+      // let minNumber = Math.min(40, 50, 0, -2, 30, -58);
+      // console.log(minNumber);
 
-      //max()
-      let maxNumber = Math.max(40, 50, 0, -2, 30, -58);
-      console.log(maxNumber);
+      // //max()
+      // let maxNumber = Math.max(40, 50, 0, -2, 30, -58);
+      // console.log(maxNumber);
 
-      //pow()
-      console.log(Math.pow(2, 2)); //2^2 = 2x2 =4
-      console.log(Math.pow(2, 10)); //2^10 = 1024
+      // //pow()
+      // console.log(Math.pow(2, 2)); //2^2 = 2x2 =4
+      // console.log(Math.pow(2, 10)); //2^10 = 1024
 
-      //random(): used to generate the numbers in the range between 0.1 to 1
+      // //random(): used to generate the numbers in the range between 0.1 to 1
 
-      console.log(Math.random());
-      console.log(Math.random() * 1000); //0-1000
-      console.log(Math.floor(Math.random() * 1e2)); //0-100
+      // console.log(Math.random());
+      // console.log(Math.random() * 1000); //0-1000
+      // console.log(Math.floor(Math.random() * 1e2)); //0-100
 
-      // 8.2345 => 8.23
-      console.log(Math.round(8.2345 * 100) / 100); //8.23 (number)
+      // // 8.2345 => 8.23
+      // console.log(Math.round(8.2345 * 100) / 100); //8.23 (number)
 
-      //toFixed(digit) : how many digits after decimal point
+      // //toFixed(digit) : how many digits after decimal point
 
-      let toFixedNum = 8.234;
-      console.log(toFixedNum.toFixed(2)); //8.23.(string). this method returns a string.
+      // let toFixedNum = 8.234;
+      // console.log(toFixedNum.toFixed(2)); //8.23.(string). this method returns a string.
 
-      //Number(numericString) => number. converts numeric string into number.
-      console.log(Number(toFixedNum.toFixed(2)));
+      // //Number(numericString) => number. converts numeric string into number.
+      // console.log(Number(toFixedNum.toFixed(2)));
 
-      /*--------------------------------------------*/
+      // /*--------------------------------------------*/
 
-      //BigInt
-      // used to express the larger numbers which have more than 20 digits
-      // Used in Scientific and Research department
-      // BigInt numbers ends with "n"
-      let bigIntNum = 2343543859723981720349173298472938n;
-      console.log(bigIntNum);
+      // //BigInt
+      // // used to express the larger numbers which have more than 20 digits
+      // // Used in Scientific and Research department
+      // // BigInt numbers ends with "n"
+      // let bigIntNum = 2343543859723981720349173298472938n;
+      // console.log(bigIntNum);
+
+      /*------------------------------------------*/
+
+      //String
+      // it is a datatype to represent alphabetical words or letters or  individual characters.
+      // we can express the string using following
+      //1. Double Quotes. Ex: "Hello"
+      //2. Single Quote. Ex: 'Hello'
+      //3. Backticks. Ex: `Hello`
+
+      // //Using double quotes
+      // let firstName = 'SkillSafari';
+      // console.log(firstName);
+
+      // //using single quotes
+      // let lastName = 'Edukeys';
+      // console.log(lastName);
+
+      // //I'm working in SkillSafari
+      // let someContent = "I'm working in skillsafari";
+      // console.log(someContent);
+
+      // //Using Backticks
+      // //We can include a number expression or statement (``)
+      // //Syntax
+      // //`content ${number, string, expression, statement}`
+
+      // //The result is 10 ;
+      // let numberOne = 5;
+      // let numberTwo = 5;
+
+      // // let result = numberOne + numberTwo;
+      // // console.log('The result is' + result); //instead we can use
+      // console.log(`The result is ${numberOne + numberTwo}`);
+
+      // console.log(`The sum is: ${25 + 25}`);
+
+      // console.log(`My fullname is: ${firstName} ${lastName}`);
+
+      /*-------------------------------------*/
+
+      // Boolean
+      // true or false
+      // Making decision while writing the code
+      //let isAdmin = true/ false; true=> yes and false=> No
+
+      let isGreater = 10 > 5;
+      console.log(isGreater); //true
     </script>
   </body>
 </html>

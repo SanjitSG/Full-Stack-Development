@@ -39,15 +39,81 @@
 
       //String Concatenation with "+" => binary
       //"Operand-1" + "Operand-2"
-      console.log('Hello' + 'World!!!');
+      // console.log('Hello' + 'World!!!');
 
-      //if any one of the operand is "string, the other operand is also converted into "string"
-      console.log(1 + '123'); // 1123
-      console.log('223' + 123); // 223123
+      // //if any one of the operand is "string, the other operand is also converted into "string"
+      // console.log(1 + '123'); // 1123
+      // console.log('223' + 123); // 223123
 
-      console.log(3 + 6 + '123'); //9123 // operation will add first two numbers => 3+6 = 9| 9 + "123" => 9123
+      // console.log(3 + 6 + '123'); //9123 // operation will add first two numbers => 3+6 = 9| 9 + "123" => 9123
 
-      console.log('123' + 5 + 6); //12356
+      // console.log('123' + 5 + 6); //12356
+
+      /*-----------------------------------------------------*/
+      //Operator Precedence
+      //BODMAS
+
+      //1.Assignment Operator
+      //let name = "SkillSafari"; //execution > right to left
+      //console.log(name) //SkillSafari
+
+      // let numberOne = 10;
+      // let numberTwo = 20;
+
+      // let numberThree = 30 - (numberOne = numberTwo + 10);
+      // //numberThree = 30 - (numberOne = 20 + 10)
+      // //numberThree = 30 - (numberOne = 30)
+      // //numberThree = 30 - (30)
+      // //numberThree = 0
+      // console.log(numberOne);
+      // console.log(numberThree);
+
+      // let numOne, numTwo, numThree;
+      // numOne = numTwo = numThree = 20 + 20;
+      // console.log(numOne, numTwo, numThree);
+
+      // let numOne = 20;
+      // numOne += 10; //numOne = numOne + 10;
+      // numOne *= 20; //numOne = numOne * 20;
+      // console.log(numOne);
+
+      // let numTwo = 20;
+      // console.log((numTwo /= 10)); // numTwo = numTwo / 10 => 20/10 => 2
+      // console.log((numTwo *= 20)); // numTwo = numTwo * 20 => 2*20 => 40
+
+      //Increment and Decrement Operators
+
+      // let numOne = 10;
+      // numOne++; //numOne = numOne + 1;
+      // console.log(numOne);
+
+      // let numTwo = 20;
+      // console.log(numTwo--); // print numTwo and perform  -1 [ post decrement]
+      // console.log(numTwo); // 19
+
+      /*IMPORTANT*/
+      //Pre Increment and Pre decrement Ex: a = 10; ++a and --a;
+      //=> Perform hte operation (++ or --) then assign the value to the VARIABLE
+
+      //Post Increment and Post decrement Ex: a = 10; a++ and a--;
+      //=> Assign the value to the variable then perform the operation.
+
+      //ex:
+      let counter = 20;
+      console.log(counter++); //20 => print the value of counter variable, after printing increment the counter variable  by +1; 20+1 = 21
+
+      console.log(++counter); //22 => increment the counter variable by +1 and print it =>21+1 =22
+
+      //Assignment (=)
+      //Comma (,)
+      let expression = (20 + 40, 40 - 30); //(30, 10) "," executes from left to right, first 30 will be assignment to 'expression' variable, which will be overwritten by second value '10'.
+      console.log(expression); //10
+
+      // ex:
+      let a = 10;
+      let b = 20;
+      let c = (a, b);
+      console.log(c);
     </script>
   </body>
 </html>

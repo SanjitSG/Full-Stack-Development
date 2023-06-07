@@ -25,17 +25,23 @@
       // prompt('Enter the number', 20);
 
       //how to access input filed of prompt() function
-      let numberOne = prompt(' Enter the First number', 20);
-      let numberTwo = prompt(' Enter the Second number', 20);
+      // let numberOne = prompt(' Enter the First number', 20);
+      // let numberTwo = prompt(' Enter the Second number', 20);
 
-      console.log(`The user entered values are: ${numberOne}, ${numberTwo}`);
-      console.log(`The summation of numbers are: ${numberOne + numberTwo}`); //5050 | since prompt function returns the string, it will perform concatenation.
+      // console.log(`The user entered values are: ${numberOne}, ${numberTwo}`);
+      // console.log(`The summation of numbers are: ${numberOne + numberTwo}`); //5050 | since prompt function returns the string, it will perform concatenation.
 
-      //by using Number() method
-      console.log(`The summation of numbers are: ${Number(numberOne) + Number(numberTwo)}`);
+      // //by using Number() method
+      // console.log(`The summation of numbers are: ${Number(numberOne) + Number(numberTwo)}`);
 
-      //by using unary "+"
-      console.log(`The summation of numbers are using unary: ${+numberOne + +numberTwo}`);
+      // //by using unary "+"
+      // console.log(`The summation of numbers are using unary: ${+numberOne + +numberTwo}`);
+
+      // 3. confirm()
+      // This is mainly used to get Yes/No response from the user.
+
+      let isAdmin = confirm('Are you an Admin?');
+      console.log(isAdmin); // ok=> true | cancel=> false
     </script>
   </body>
 </html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Type Conversion" />
+    <title>JavaScript - Type Conversion</title>
+  </head>
+  <body>
+    <h2>JavaScript - Type Conversion</h2>
+
+    <script>
+      //JavaScript - Type Conversion Methods
+      /*
+    1. Number
+    2. String
+    3. BigInt
+    4. Boolean
+    5. Null
+    6. Undefined
+   */
+
+      //1. String Conversion
+      // 1. Alphabet words ex: "hello World"
+      // 2. Number as string ex: "1", '2', `123`
+
+      // Convert to String
+      //To convert other datatype to String
+      //Syntax: String(a)
+      //a=> value which we need to convert into string
+
+      // let isAdmin = true;
+      // console.log(typeof isAdmin); //boolean
+
+      // let isAdminString = String(isAdmin); // "true" (string)
+      // console.log(typeof isAdminString); // string
+
+      // //false => "false" | null => "null"
+
+      //2. Numeric conversion
+      // Number(a)
+
+      // Ex: using expressions => "-" "/" and "*"
+      // "10" and "5" => "10"/"5" => 2
+
+      // let numOne = '10';
+      // let numTwo = '5';
+      // console.log(typeof numOne); //string
+      // console.log(typeof numTwo); //string
+
+      // let result = numOne / numTwo;
+      // console.log(result);
+      // console.log(typeof result);
+      // //Ex:
+      // let sum = Number(numOne) + Number(numTwo);
+      // console.log(sum);
+      // console.log(typeof sum);
+
+      // By passing alphabetical world as parameters in Number() returns "NaN" [Not a Number]
+      //if we pass the following to Number()
+      //"String"=> NaN
+      //true=> 1
+      //false=> 0
+      //null=>0
+
+      //3. Boolean Conversion
+      // true and false
+      // Boolean(a)
+      // a=> value of other datatype
+      // Rule:
+      //1. Values such as 0, empty string, null, undefined and NaN => false
+      //2. Other than above mentioned value => true
+
+      //Ex:
+      //false
+      console.log(Boolean(0)); //0
+      console.log(Boolean(NaN)); //NaN
+      console.log(Boolean(undefined)); //undefined
+      console.log(Boolean('')); //empty string
+      console.log(Boolean(null)); //null
+
+      //true
+      console.log(Boolean(123)); // number
+      console.log(Boolean('Hello')); //string
+      console.log(Boolean(' ')); //white space string
+    </script>   
+</html>

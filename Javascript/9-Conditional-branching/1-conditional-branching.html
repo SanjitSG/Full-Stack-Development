@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript Conditional Branching" />
+    <title>JavaScript Conditional Branching</title>
+  </head>
+  <body>
+    <h2>JavaScript Conditional Branching</h2>
+
+    <script>
+      //JavaScript Conditional Branching
+      // Interprets => top to bottom
+
+      // Conditional branching
+      // Blocks
+      // Div => { statements... }
+
+      // Ex: 1
+      // "if" statement
+      // Syntax
+      /*
+                  if(condition) {
+                      // statement -1;
+                      // statement - 2;
+
+                      // statement - N;
+                  }
+                  */
+      // console.log('Before the if statement');
+      // if (12 > 6) {
+      //   //Block statements
+      //   // console.log('Number 12 is greater than number 6');
+      //   // console.log('Hello');
+      //   let a = 10;
+      //   let b = 20;
+      //   let c = a + b;
+
+      //   console.log(c); //30
+      // }
+      // console.log('After the if statement');
+
+      // Boolean Conditions
+      // true or false / 1 or 0
+      // console.log('Before the if statement');
+      // if (1) {
+      //   //Block Statements
+      //   console.log('Condition is true');
+
+      // }
+      // console.log('After the if statement');
+
+      // "else" clause
+      // if (condition) {
+      //   //true statement
+      //   //statements
+      // } else {
+      //   // false statement
+      //   //statements
+      // }
+
+      //Check the given number is odd or even
+      // Ex: 22 => 22 % 2 = 0 //even
+      // Ex: 11 => 11 % 2 = 1 //odd
+
+      // let input = +prompt('Enter the number...'); // prompt saves values as String | +prompt converts the values into Number.
+      // console.log(`The user entered value is: ${input}`);
+
+      // if (input % 2) { // 31 % 2 => 1 == 1 => true
+      //   console.log('The number is ODD');
+      // } else { // 4 % 2 => 0 == 0 => false
+      //   console.log('The number is EVEN');
+      // }
+
+      // Multiple conditions - else if
+      /*
+                  Syntax:
+                  if (condition - 1) {
+                      // if condition true => execute the block and exit
+                      // if condition false => check the next condition
+                      // statements
+                  } else if (condition - 2) {
+                      // if condition true => execute the block and exit
+                      // if condition false => check the next condition
+                      // statements
+                  } else if (condition - N) {
+                      // if condition true => execute the block and exit
+                      // if condition false => Execute the else block
+                      // statements
+                  } else {
+                      // statements
+                  }
+              */
+
+      //write a program to find a person suitable to donate blood
+      // Age > 18
+      // Weight > 60
+      // Diseases =="no"
+      // Blood Group == "same"
+      // No drugs
+
+      // let age = +prompt('Enter the Age');
+      // let weight = +prompt('Enter the weight');
+      // let disease = prompt('do you have any disease? (true/false)');
+      // let bloodGroup = prompt('is blood group same? (true/false)');
+      // let drugsIntake = prompt('is taken dny drugs? (true/false)');
+      // console.log('User details are:');
+      // console.log('---------------------------');
+      // console.log(`Age: ${age}`);
+      // console.log(`Weight: ${weight}`);
+      // console.log(`Disease: ${disease}`);
+      // console.log(`Blood Group: ${bloodGroup}`);
+      // console.log(`Drug intake: ${drugsIntake}`);
+      // console.log('---------------------------');
+      // console.log('Result is');
+
+      // if (age < 18) {
+      //   console.log('Not eligible to donate the blood');
+      // } else if (weight < 60) {
+      //   console.log('Not eligible to donate the blood');
+      // } else if (disease == true) {
+      //   console.log('Not eligible to donate the blood');
+      // } else if (bloodGroup == false) {
+      //   console.log('Not eligible to donate the blood');
+      // } else if (drugsIntake == true) {
+      //   console.log('Not eligible to donate the blood');
+      // } else {
+      //   console.log('Eligible to donate blood');
+      // }
+
+      //shorthand of if... else clause
+      // Conditional Operator => ? and :
+      // Syntax
+      // (condition) ? "true-statement" : "false-statement"
+      //Ex:
+      // let a = 30;
+      // let b = 20;
+      // a > b ? console.log('a is greater than b') : console.log('b is greater than a');
+
+      let input = +prompt('Enter the number');
+      input % 2 ? console.log('The number is odd') : console.log('The number is even');
+    </script>
+  </body>
+</html>

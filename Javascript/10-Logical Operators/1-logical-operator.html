@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript Logical Operators" />
+    <title>JavaScript Logical Operators</title>
+  </head>
+  <body>
+    <h2>JavaScript Logical Operators</h2>
+
+    <script>
+      // /JavaScript Logical Operators
+
+      // There are three types of logical operators in JavaScript
+      // 1. Logical OR (||) => binary operator
+      // 2. Logical AND (&&) => binary operator
+      // 3. Logical NOT (!) => unary operator
+
+      //Ex: 1: write a program to scrutinize students for the interview. Eligibility criteria to attend the interview
+      // that student must have 70% or above in either hs, hssc, UG or PG.
+
+      let name = prompt('Enter Name');
+      let dept = prompt('Enter Department');
+      let hs = prompt('Enter HS percentage');
+      let hssc = prompt('Enter HSSC percentage');
+      let ug = prompt('Enter UG percentage');
+      let pg = prompt('Enter PG percentage');
+
+      console.log(`Student Name ${name} | Department ${dept}`);
+      console.log(`Marks entered: HS: ${hs} | HSSC: ${hssc} | UG: ${ug} | PG: ${pg}`);
+
+      if (hs >= 70 || hssc >= 70 || ug >= 70 || pg >= 70) {
+        console.log(`${name} is Eligible for the interview`);
+      } else {
+        console.log(`${name} is not Eligible for the interview`);
+      }
+    </script>
+  </body>
+</html>

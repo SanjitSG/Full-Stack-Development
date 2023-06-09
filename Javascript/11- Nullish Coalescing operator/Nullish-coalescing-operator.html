@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Nullish Coalescing operator" />
+    <title>Nullish Coalescing operator</title>
+  </head>
+  <body>
+    <h2>Nullish Coalescing operator</h2>
+
+    <script>
+      // Nullish Coalescing operator (??) => Binary Operator
+      // Checks for the 'Values' defined for a 'variable'
+      // Check for the "value" defined for the "operands", and return "value" of the operand whose "value" is first defined
+      // considering "null" as not a value
+      // Operands defined with "value"
+      // Checks for first defined "value" and return the same. if none of the operand not defined with any "value", returns last operand "value"
+
+      // let firstName = 'SkillSafari';
+      // let lastName = 'EduKeys';
+      // let userName = firstName ?? lastName;
+      // console.log(userName);
+
+      //Ex:2
+      // let firstName;
+      // let lastName;
+      // let userName = firstName ?? lastName ?? 'Anonymous';
+      // console.log(userName);
+
+      // Comparison with OR
+      console.log(null || undefined || false); //false
+      console.log(null ?? undefined ?? false); //false
+
+      let firstName = null;
+      let lastName = 'EduKeys';
+      let nickName = 'John';
+      let age = 20;
+      let userName = firstName || lastName || nickName || age; //null
+      // let userName = firstName ?? lastName ?? nickName ?? age; //null
+      console.log(userName);
+
+      let number = 0;
+
+      console.log(number || 20); // 20 [ 0 is treated as false]
+      console.log(number ?? 20); // 0 [0 is 'defined' as value for variable zero]
+    </script>
+  </body>
+</html>

@@ -18,24 +18,110 @@
       // 2. Logical AND (&&) => binary operator
       // 3. Logical NOT (!) => unary operator
 
+      //(value/condition/expression) || (value/condition/expression)
+
       //Ex: 1: write a program to scrutinize students for the interview. Eligibility criteria to attend the interview
       // that student must have 70% or above in either hs, hssc, UG or PG.
 
-      let name = prompt('Enter Name');
-      let dept = prompt('Enter Department');
-      let hs = prompt('Enter HS percentage');
-      let hssc = prompt('Enter HSSC percentage');
-      let ug = prompt('Enter UG percentage');
-      let pg = prompt('Enter PG percentage');
+      // let name = prompt('Enter Name');
+      // let dept = prompt('Enter Department');
+      // let hs = prompt('Enter HS percentage');
+      // let hssc = prompt('Enter HSSC percentage');
+      // let ug = prompt('Enter UG percentage');
+      // let pg = prompt('Enter PG percentage');
 
-      console.log(`Student Name ${name} | Department ${dept}`);
-      console.log(`Marks entered: HS: ${hs} | HSSC: ${hssc} | UG: ${ug} | PG: ${pg}`);
+      // console.log(`Student Name ${name} | Department ${dept}`);
+      // console.log(`Marks entered: HS: ${hs} | HSSC: ${hssc} | UG: ${ug} | PG: ${pg}`);
 
-      if (hs >= 70 || hssc >= 70 || ug >= 70 || pg >= 70) {
-        console.log(`${name} is Eligible for the interview`);
-      } else {
-        console.log(`${name} is not Eligible for the interview`);
-      }
+      // if (hs >= 70 || hssc >= 70 || ug >= 70 || pg >= 70) {
+      //   console.log(`${name} is Eligible for the interview`);
+      // } else {
+      //   console.log(`${name} is not Eligible for the interview`);
+      // }
+
+      // Logical OR => 'truty' and 'falsy' value.
+      // Finds the first "truty" value
+      // In the expression,
+      // If, anyone of the operand turns "true", the evaluation of the expression stops there and return the "value" in the operand.
+      // If, none of the operand in the expression turns "true", the "value" in the last operand must be returned
+      // 10 > 30 || 10 < 5 || 20 > 80 || "Hello"
+      // false   || false  || false   ||
+      // "Hello"
+
+      // // Operand with "truthy" value
+      // let result = 20 < 10 || 30 < 15 || 10 > 5 || 50 > 20 || 'Hello';
+      // //           false   || false   || true
+      // console.log(result); //true
+
+      //Operand with falsy value => if non of the operands are "true", the last operand will be returned.
+      //   let firstName = null;
+      //   let lastName = null;
+      //   let userName = firstName || lastName || 'Anonymous';
+      //   //              false    || false    ||
+      //   console.log(userName); //Anonymous
+      //Logical AND (&&) => binary operator
+      // if any one or both the operands turns "false", then result also be "false".
+      // only if both the operands are "true", the result is 'true'
+
+      // true && true => true
+      // true && false => false
+      // false && true => false
+      // false && false => false
+
+      //Ex: Students to enter campus interview, students must satisfy following conditions
+      // HSC, HSSC, UG, PG >= 80 marks.(at all the levels)
+
+      // let name = prompt('Enter Name');
+      // let dept = prompt('Enter Department');
+      // let hs = prompt('Enter HS percentage');
+      // let hssc = prompt('Enter HSSC percentage');
+      // let ug = prompt('Enter UG percentage');
+      // let pg = prompt('Enter PG percentage');
+
+      // console.log(`Student Name ${name} | Department ${dept}`);
+      // console.log(`Marks entered: HS: ${hs} | HSSC: ${hssc} | UG: ${ug} | PG: ${pg}`);
+
+      // if (hs >= 80 && hssc >= 80 && ug >= 80 && pg >= 80) {
+      //   console.log(`${name} is Eligible for the interview`);
+      // } else {
+      //   console.log(`${name} is not Eligible for the interview`);
+      // }
+
+      //Logical AND
+      //Finds the first 'falsy' in an expression.
+      // If anyone of the operand turns "false", the evaluation of the expression stops there and return the "value" in the operand.
+      // If, none of the operand in the expression turns "false", the "value" in the last operand must be returned.
+
+      // let firstName = 'SkillSafari';
+      // let lastName = null;
+      // let userName = firstName && lastName && 'Anonymous';
+
+      // console.log(userName); //null
+
+      //Short-circuit evaluation
+      //only with two operand
+      //Ex:
+      // let userName = 'SkillSafari' || null;
+      // console.log(userName); //SkillSafari
+
+      // AND
+      // Checks for first "falsy" value
+      // If, first operand turns "false", return the first operand "value". Else return second operand "value"
+      // let userName = null && NaN;
+      // console.log(userName); // SkillSafari
+
+      //Logical NOT (!) => unary Operator
+      // the operand can be 'true' or 'false'
+      // true => false
+      //false => true
+      // it generates opposite boolean value
+
+      // let value = true;
+      // console.log(!value); // false
+
+      // console.log(0); // 0 [because this is a number]
+      // console.log(!0); // true [0 when used with operator (!) will be considered as false]
+      // console.log(!!0); // false
     </script>
   </body>
 </html>

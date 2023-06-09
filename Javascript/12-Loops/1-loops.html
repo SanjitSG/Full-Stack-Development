@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Loops" />
+
+    <title>JavaScript - Loops</title>
+  </head>
+  <body>
+    <h2>JavaScript - Loops</h2>
+
+    <script>
+      // JavaScript - Loops
+
+      /*
+
+   1. while loop
+   2. do while loop
+   3. for loop
+   Main purpose of the loop is to 'Repeat the certain statements of the block of the code, until some condition meet'
+  
+
+  1. while loop => initialization, condition, increment/decrement 
+  Syntax:
+  initialization;
+ 
+  while(condition){
+   //loop body
+   statements;
+   .
+   .
+   .
+   increment/decrement
+  }
+  
+ 
+  */
+
+      //Ex: Print number from 1 to 10
+      //observation: sequence of number 1 to 10
+      //initialization => let initNum =1
+      //increment or decrement => initNum += 1
+      //condition => initNum >=10
+
+      // console.log('traditional way => without loop');
+      // console.log(1);
+      // console.log(2);
+      // console.log(3);
+      // console.log(4);
+      // console.log(5);
+      // console.log(6);
+      // console.log(7);
+      // console.log(8);
+      // console.log(9);
+      // console.log(10);
+      // console.log('-------------------------');
+      // console.log('Using while loop');
+
+      // initNum = 1; //initialization
+      // while (initNum <= 10) {
+      //   //1 < 10        condition
+
+      //   console.log(initNum); //1
+
+      //   initNum++; //1 + 1 = 2                // increment
+      // }
+
+      // console.log('while loop execution is complete');
+
+      // 2. do while loop
+      //syntax :
+      /* 
+         initialization;
+         do{
+
+           // loop body
+           // statements
+           // increment/decrement
+         } while(condition)
+      */
+
+      //Ex: Print the numbers 5 4 3 2 1 0
+      // initialization => initNum = 5
+      // condition => initNum > 0
+      // decrement => initNum--;
+
+      // console.log('do..while loop');
+
+      // initNum = 5;
+      // do {
+      //   console.log(initNum);
+      //   initNum--;
+      // } while (initNum >= 0);
+      // console.log('--------------------------');
+
+      // Ex: Print Even numbers from 1 to 10 using do while loop
+      // initialization => initNum = 1
+      // condition => initNum <= 10
+      // increment => initNum++
+
+      // Method -1
+      // let initNum = 2;
+      // do {
+      //   console.log(initNum);
+
+      //   initNum = initNum + 2;
+      // } while (initNum <= 10);
+
+      // Method - 2
+      // let initNum = 1;
+      // do {
+      //   if (initNum % 2 == 0) {
+      //     console.log(initNum);
+      //   }
+
+      //   initNum++;
+      // } while (initNum <= 10);
+
+      // 3. for loop
+      /*
+       Syntax:
+
+       for(initialization; condition; increment/decrement){
+
+        //loop body
+        //statements
+       }
+      
+       */
+
+      //Print ODD number from 1 to 10 =>
+      // initialization => initNum = 1;
+      // condition => initNum <= 10;
+      // increment => initNum++;
+
+      // for (let initNum = 1; initNum <= 10; initNum++) {
+      //   if (initNum % 2 != 0) {
+      //     console.log(initNum);
+      //   }
+      // }
+
+      //Skips in for loop
+      // let initNum = 1;
+      // for (; initNum <= 10; initNum++) {
+      //   if (initNum % 2 != 0) {
+      //     console.log(initNum);
+      //   }
+      // }
+
+      //increment/decrement
+
+      // for (let initNum = 1; initNum <= 10; ) {
+      //   if (initNum % 2 != 0) {
+      //     console.log(initNum);
+      //   }
+      //   initNum++;
+      // }
+
+      // break => Exit the loop after the certain condition is reached.
+
+      // Ex:
+      //Break the loop after printing first 5 iterations
+      // let number = 1;
+      // while (number <= 10) {
+      //   console.log(number);
+
+      //   if (number == 5) break;
+      //   number++;
+      // }
+
+      //continue => Skip something in the loop based on condition
+
+      //Ex: Print even numbers from 1 to 10 using continue.
+
+      for (let start = 1; start <= 10; start++) {
+        if (start % 2 != 0) continue;
+        console.log(start);
+      }
+    </script>
+  </body>
+</html>

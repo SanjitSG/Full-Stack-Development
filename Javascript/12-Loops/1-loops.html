@@ -15,27 +15,27 @@
 
       /*
 
-   1. while loop
-   2. do while loop
-   3. for loop
-   Main purpose of the loop is to 'Repeat the certain statements of the block of the code, until some condition meet'
-  
+       1. while loop
+       2. do while loop
+       3. for loop
+       Main purpose of the loop is to 'Repeat the certain statements of the block of the code, until some condition meet'
 
-  1. while loop => initialization, condition, increment/decrement 
-  Syntax:
-  initialization;
- 
-  while(condition){
-   //loop body
-   statements;
-   .
-   .
-   .
-   increment/decrement
-  }
-  
- 
-  */
+
+      1. while loop => initialization, condition, increment/decrement
+      Syntax:
+      initialization;
+
+      while(condition){
+       //loop body
+       statements;
+       .
+       .
+       .
+       increment/decrement
+      }
+
+
+      */
 
       //Ex: Print number from 1 to 10
       //observation: sequence of number 1 to 10
@@ -70,15 +70,15 @@
 
       // 2. do while loop
       //syntax :
-      /* 
-         initialization;
-         do{
+      /*
+             initialization;
+             do{
 
-           // loop body
-           // statements
-           // increment/decrement
-         } while(condition)
-      */
+               // loop body
+               // statements
+               // increment/decrement
+             } while(condition)
+          */
 
       //Ex: Print the numbers 5 4 3 2 1 0
       // initialization => initNum = 5
@@ -119,15 +119,15 @@
 
       // 3. for loop
       /*
-       Syntax:
+           Syntax:
 
-       for(initialization; condition; increment/decrement){
+           for(initialization; condition; increment/decrement){
 
-        //loop body
-        //statements
-       }
-      
-       */
+            //loop body
+            //statements
+           }
+
+           */
 
       //Print ODD number from 1 to 10 =>
       // initialization => initNum = 1;
@@ -173,9 +173,19 @@
 
       //Ex: Print even numbers from 1 to 10 using continue.
 
-      for (let start = 1; start <= 10; start++) {
-        if (start % 2 != 0) continue;
-        console.log(start);
+      // for (let start = 1; start <= 10; start++) {
+      //   if (start % 2) continue;
+      //   console.log(start);
+      // }
+
+      // Nested loops
+      // Loops inside a loop
+
+      for (let i = 1; i <= 5; i++) {
+        for (j = 1; j <= i; j++) {
+          document.write(i + ' ');
+        }
+        document.write('<br>');
       }
     </script>
   </body>

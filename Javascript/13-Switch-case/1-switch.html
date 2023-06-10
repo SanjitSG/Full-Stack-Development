@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Switch Statement" />
+    <title>Switch Statement</title>
+  </head>
+  <body>
+    <h2>Switch Statement</h2>
+
+    <script>
+      //Switch Statement
+      // alternative for 'multiple if-else'
+
+      /*
+      Syntax
+
+      switch(x) {
+
+       case "1":
+        statement;
+        break;
+        
+       case "2":
+        statement;
+        break;
+        
+       case "N":
+        statement;
+        break;
+        
+       default:
+        statement;
+        break;
+      }
+      */
+
+      // // Ex 1:
+      // let number = prompt('Enter a number from 1 to 4');
+      // switch (number) {
+      //   case '1':
+      //     console.log(' You have entered number - 1 ');
+      //     break;
+
+      //   case '2':
+      //     console.log(' You have entered number - 2 ');
+      //     break;
+
+      //   case '3':
+      //     console.log(' You have entered number - 3 ');
+      //     break;
+
+      //   case '4':
+      //     console.log(' You have entered number - 4 ');
+      //     break;
+
+      //   default:
+      //     console.log('Enter the number between 1-4 only');
+      //     break;
+      // }
+
+      //Ex - 2:
+      // let fruit = prompt('Enter any fruit name');
+      // switch (fruit) {
+      //   case 'apple':
+      //     console.log('Apple');
+      //     break;
+
+      //   case 'orange':
+      //     console.log('orange');
+      //     break;
+
+      //   case 'banana':
+      //     console.log('banana');
+      //     break;
+
+      //   case 'mango':
+      //     console.log('mango');
+      //     break;
+
+      //   default:
+      //     console.log('No fruits match, enter apple, orange, banana and mango');
+      //     break;
+      // }
+
+      // Ex - 3:
+      // Expressions in switch cases
+
+      // let number = +prompt('Enter a number');
+      // switch (number % 2) {
+      //   case 1:
+      //     console.log('This is a ODD');
+      //     break;
+
+      //   case 0:
+      //     console.log('This is a Even');
+      //     break;
+
+      //   default:
+      //     console.log('Please enter a number, not a string');
+      //     break;
+      // }
+
+      //Ex - 4:
+
+      // let number = 4;
+      // switch (number) {
+      //   case 2 + 3:
+      //     console.log('This is : 5');
+      //     break;
+
+      //   case 2 + 4:
+      //     console.log('This is : 6');
+      //     break;
+
+      //   default:
+      //     console.log('the value should be 5 or 6');
+      //     break;
+      // }
+
+      // Grouping of cases
+
+      let number = +prompt('Enter a number from 1 to 5');
+      switch (number) {
+        case 1:
+        case 3:
+        case 5:
+          console.log('Odd Numbers');
+          break;
+        case 2:
+        case 4:
+          console.log('Even numbers');
+          break;
+        default:
+          console.log('Enter the numbers between 1 to 5');
+          break;
+      }
+    </script>
+  </body>
+</html>

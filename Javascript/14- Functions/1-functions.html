@@ -43,14 +43,92 @@
       // Ex - 2:
 
       // function declaration
-      function greetings(msg) {
-        console.log('Hello, ' + msg);
+      // function greetings(msg) {
+      //   console.log('Hello, ' + msg);
+      // }
+
+      // greetings('Good morning');
+      // greetings('Good afternoon');
+      // greetings('Good Night');
+      // greetings('Sanjit');
+
+      //Local variable vs Global Variable (outer variable)
+      //Ex:
+      //function declaration
+      // function userDetails() {
+      //   let firstName = 'SkillSafari';
+      //   let lastName = 'EduKeys';
+      //   console.log(`the full name is: ${firstName}, ${lastName}`);
+      // }
+      // //function call
+      // userDetails();
+
+      //  console.log(firstName); // error: firstName is not defined (since local variable 'firstName' cannot be accessed outside the block)
+
+      //Outer Variable (Global variable)
+      // Scope of the outer variable is through out the program
+
+      //Ex:
+
+      //   let companyName = 'SkillSafari';
+      //   function userDetails() {
+      //     let firstName = 'John';
+      //     let lastName = 'Jack';
+      //     console.log('First Name ' + firstName);
+      //     console.log('Last Name ' + lastName);
+      //     console.log('Organization ' + companyName); //outer variable accessed inside the function
+      //   }
+
+      //   userDetails();
+
+      //   console.log(companyName); //outer variable accessed outside the function body
+
+      //Facts
+
+      //   let age = 25;
+      //   function userDetails() {
+      //     let firstName = 'john';
+      //     let lastName = 'Ryan';
+      //     age = 30;
+      //     console.log(firstName, lastName, age);
+      //   }
+
+      //   console.log(age); //  25
+      //   userDetails(); //john Ryan 30
+
+      // Parameters and Arguments
+
+      // function userDetails(fName, lName, age, organization) {
+      //   console.log(`The person named ${fName} ${lName} age of ${age} works in ${organization}`);
+      // }
+
+      // userDetails('John', 'Ryan', 21, 'Google');
+      // userDetails('Justin', 'Robert', 25, 'Microsoft');
+
+      //we can reuse the function by passing different arguments
+
+      //DEFAULT VALUES
+
+      // if no argument is passed to function parameters, it will assign undefined value.
+      // if there exists default value, default value is passed is not argument is passed  in function call.
+
+      //Ex:
+
+      function userDetails(firstName, lastName, organization = 'SkillSafari') {
+        //default value
+        console.log(firstName, lastName, organization);
       }
 
-      greetings('Good morning');
-      greetings('Good afternoon');
-      greetings('Good Night');
-      greetings('Sanjit');
+      // userDetails('Sanjit', 'Gawade'); /Sanjit Gawade SkillSafari
+
+      //RETURN VALUE
+      function add(a, b) {
+        let c = a + b;
+        return c;
+      }
+
+      let result = add(2, 3);
+      console.log(result);
     </script>
   </body>
 </html>

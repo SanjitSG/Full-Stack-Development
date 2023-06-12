@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Callback Function" />
+    <title>JavaScript - Callback Function</title>
+  </head>
+  <body>
+    <h2>Callback Function</h2>
+
+    <script>
+      //Callback Function => Passing a function as parameter to another function
+      //Function inside a function or a function as parameter.
+      //use to write anonymous code.
+      //---------------------------------------------------------------------
+      // Function Expression
+      // let user = function () {
+      //   console.log('SkillSafari');
+      // };
+      // user();
+
+      // function userDetails(name, age) {
+      //   //let name = "SkillSafari", let age =25
+      //   console.log(name, age); //SkillSafari 25
+      // }
+      // userDetails('SkillSafari', 25);
+      //----------------------------------------------------------------------
+
+      //Ex: Callback Function
+
+      function displayUserDetails(name, userInfo) {
+        // let userInfo = userDetails
+        console.log(`The username is: ${name}`);
+        userInfo();
+      }
+
+      let userDetails = function () {
+        let age = 25;
+        let designation = 'Full Stack Dev';
+        let city = 'Goa';
+        console.log(`The Age: ${age}, Designation: ${designation}, City: ${city}`);
+      };
+
+      displayUserDetails('Sanjit', userDetails);
+    </script>
+  </body>
+</html>

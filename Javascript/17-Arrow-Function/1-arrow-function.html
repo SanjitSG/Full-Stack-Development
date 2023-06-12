@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Arrow Function" />
+    <title>Arrow Function</title>
+  </head>
+  <body>
+    <h2>Arrow Function</h2>
+
+    <script>
+      //Arrow function: another way of writing a function in js
+      // 1. Function Declaration 2. Function Expression
+
+      // 3. Arrow Function
+
+      // let userDetails = (name, age, designation) => console.log(name, age, designation);
+
+      // userDetails('Sanjit', 25, 'Developer');
+
+      /* 
+      Syntax:
+      let varName = () => {
+       statement 
+      }
+      varName();
+
+      */
+      //Arrow function with multiple statements
+
+      let userDetails = () => {
+        let name = 'Sanjit';
+        let age = 25;
+        let designation = 'Developer';
+        console.log(name, age, designation);
+      };
+
+      userDetails();
+
+      //Arrow function with single statement
+
+      let add = (a, b) => console.log(a + b);
+      add(3, 7);
+
+      //Arrow function with one parameter
+      let number = (num) => console.log(num);
+      number(14);
+
+      //Arrow function without parameter
+
+      let result = () => console.log('function without Parameter');
+      result();
+
+      // Arrow function with return
+      let productName = (name) => {
+        let productNumber = 1234545;
+        let productInfo = `The ProductName: ${name}, ProductNumber: ${productNumber}`;
+        return productInfo;
+      };
+
+      let productResult = productName('iPhone 15');
+      console.log(productResult);
+
+      //Arrow function, omit using return keyword incase of function body with single statement
+
+      let displayNumber = (displayNum) => displayNum; //no need to use return displayNum
+      console.log(displayNumber(73));
+    </script>
+  </body>
+</html>

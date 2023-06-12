@@ -31,20 +31,36 @@
 
       //Ex-1:
 
-      let displayName = function (name) {
+      // let displayName = function (name) {
+      //   console.log(name);
+      // };
+
+      // displayName('John');
+
+      // // Ex-2:
+
+      // let userDetails = function (firstName, lastName, age) {
+      //   return firstName + lastName + age;
+      // };
+
+      // let = user = userDetails('John ', 'Ryan ', 25);
+      // console.log(user);
+
+      //Dis-advantage of Function Expression
+
+      //Function declaration vs Function Expression
+
+      // Function Declaration
+      function displayName(name) {
         console.log(name);
+      }
+      displayName('John'); //invoking the function
+
+      // Function Expression
+      let getUserDetails = function (firstName, lastName, age) {
+        console.log(firstName, lastName, age);
       };
-
-      displayName('John');
-
-      // Ex-2:
-
-      let userDetails = function (firstName, lastName, age) {
-        return firstName + lastName + age;
-      };
-
-      let = user = userDetails('John ', 'Ryan ', 25);
-      console.log(user);
+      getUserDetails('John ', 'Jack ', 25); //invoking the function
     </script>
   </body>
 </html>

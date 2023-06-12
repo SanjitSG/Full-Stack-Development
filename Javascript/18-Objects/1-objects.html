@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JavaScript - Objects" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h2>JavaScript - Objects</h2>
+
+    <script>
+      // JavaScript - Objects
+      // Datatype => non- primitive => more than one value to a variable
+
+      // Syntax
+      /*
+  
+      let objectName = {
+          key: Value,
+          key: Value,
+       }
+  
+       */
+
+      // let user={
+      //  firstName: 'Sanjit', //property => key:value => propertyName : propertyValue
+      //  lastName: 'Gawade',
+      //  age: 30
+      // }
+
+      // Declaring an Object
+      // 1. let objectName = new Object() // constructor
+      // 2. let objectName = {} // Object literals
+
+      // Ex:
+      // new object() construct
+      // let objectNam = new Object()
+      // let user = new Object();
+      // console.log(typeof user); //object
+
+      //Ex:
+      //Object literals
+      // let objectName = {};
+      // let user = {}; //empty object => object without any properties (key-value pair)
+      // console.log(typeof user);
+
+      // Creating an Object
+      let userDetails = {
+        firstName: 'SkillSafari',
+        lastName: 'EduKeys',
+        age: 25,
+        designation: 'Full-stack developer',
+      };
+
+      // Accessing the Object properties (keys)
+      // Two ways
+      // 1: by using .(dot) operator
+      // Syntax:
+      // objectName.key or objectName.propertyName
+      console.log(userDetails.firstName); // SkillSafari
+      console.log(userDetails.designation); // Full-Stack developer
+
+      // 2: by Square bracket method
+      // Syntax
+      // objectName ['key']
+      console.log(userDetails['lastName']); // EduKeys
+      console.log(userDetails['age']); //25
+      console.log(userDetails['isAdmin']); //undefined
+    </script>
+  </body>
+</html>

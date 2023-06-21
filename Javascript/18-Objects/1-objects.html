@@ -15,12 +15,12 @@
 
       // Syntax
       /*
-  
+
       let objectName = {
           key: Value,
           key: Value,
        }
-  
+
        */
 
       // let user={
@@ -46,6 +46,110 @@
       // console.log(typeof user);
 
       // Creating an Object
+      // let userDetails = {
+      //   firstName: 'SkillSafari',
+      //   lastName: 'EduKeys',
+      //   age: 25,
+      //   designation: 'Full-stack developer',
+      // };
+
+      // // Accessing the Object properties (keys)
+      // // Two ways
+      // // 1: by using .(dot) operator
+      // // Syntax:
+      // // objectName.key or objectName.propertyName
+      // console.log(userDetails.firstName); // SkillSafari
+      // console.log(userDetails.designation); // Full-Stack developer
+
+      // // 2: by Square bracket method
+      // // Syntax
+      // // objectName ['key']
+      // console.log(userDetails['lastName']); // EduKeys
+      // console.log(userDetails['age']); //25
+      // console.log(userDetails['isAdmin']); //undefined
+
+      // how to add a new property or modify existing property value
+
+      // add a new property value
+      // syntax : objectName.newPropertyName = value
+
+      // userDetails.isAdmin = true; //isAdmin property is added to userDetails object
+      // console.log(userDetails.isAdmin);
+
+      // // Modify/update the value of existing propertyName or Key
+      // // Syntax
+      // // objectName.existingPropertyName = newValue
+
+      // userDetails.isAdmin = false;
+      // console.log(userDetails.isAdmin);
+
+      // // Deleting an existing property
+      // // Syntax
+      // // delete objectName.propertyName
+      // delete userDetails.isAdmin;
+      // console.log(userDetails);
+
+      //   //Multi-word propertyName
+      //   let userDetails = {
+      //     firstName: 'SkillSafari',
+      //     // first name: 'EduKeys', //error
+      //     'first  name': 'EduKeys',
+      //   };
+      //   console.log(userDetails);
+
+      // Objects in functions
+      // function userDetails(firstName, lastName, age) {
+      //   return {
+      //     fistName: firstName,
+      //     lastName: lastName,
+      //     useAge: age,
+      //   };
+      // }
+
+      // let user = userDetails('SkillSafari', 'EduKeys', 25);
+      // console.log(user);
+
+      // Object Short-hand property
+
+      // if, propertyName and propertyValue are same => propertyName (we can directly use propertyName)
+
+      // function userDetails(firstName, lastName, age, isAdmin) {
+      //   return {
+      //     firstName,
+      //     lastName,
+      //     age,
+      //     adminOrNot: isAdmin, //combination or shorthand and normal notation => flexibility of JS
+      //   };
+      // }
+
+      // let user = userDetails('SkillSafari', 'EduKeys', 25, true);
+      // console.log(user);
+
+      // PropertyName Limitation
+      // Declaring a variable => for ,if, else
+      // No restrictions in naming a propertyName inside the object, we can even use JS reserved words
+      // let demo = {
+      //   for: 123,
+      //   if: 'Sanjit',
+      //   else: 'World',
+      // };
+      // console.log(demo);
+
+      // // Checking existing of the property in the object byt using 'in' keyword
+
+      // // Syntax
+      // // "propertyName" in objectName // true => if property exists, else false
+
+      // console.log('if' in demo); //true
+      // console.log('not' in demo); //false
+
+      // for...in loop
+      // iterate th object keys
+      /*
+      for(let key in ObjectName){
+        console.log(key) //firstName // lastName // age // designation
+      }
+      */
       let userDetails = {
         firstName: 'SkillSafari',
         lastName: 'EduKeys',
@@ -53,20 +157,11 @@
         designation: 'Full-stack developer',
       };
 
-      // Accessing the Object properties (keys)
-      // Two ways
-      // 1: by using .(dot) operator
-      // Syntax:
-      // objectName.key or objectName.propertyName
-      console.log(userDetails.firstName); // SkillSafari
-      console.log(userDetails.designation); // Full-Stack developer
-
-      // 2: by Square bracket method
-      // Syntax
-      // objectName ['key']
-      console.log(userDetails['lastName']); // EduKeys
-      console.log(userDetails['age']); //25
-      console.log(userDetails['isAdmin']); //undefined
+      for (let propName in userDetails) {
+        // let propName ="firstName" <= iteration 1
+        // let propName ="lastName" <= iteration 2
+        console.log(userDetails[propName]); //using SquareBracket method to access object
+      }
     </script>
   </body>
 </html>

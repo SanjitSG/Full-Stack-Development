@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object References</title>
+  </head>
+  <body>
+    <h1>Object References</h1>
+
+    <script>
+      //Object references
+
+      // Copy by reference
+
+      // let userOne = {
+      //   firstName: 'SkillSafari',
+      //   lastName: 'EduKeys',
+      //   age: 25,
+      // };
+
+      // let userTwo = userOne;
+
+      // userTwo.isAdmin = true; //adding new value to Object userTwo
+
+      // // Objects follows copy by reference concept
+      // console.log(userOne);
+      // console.log(userTwo);
+
+      // //comparing objects
+      // console.log(userOne == userTwo); //true
+      // console.log(userTwo === userOne); //true
+
+      // let objOne ={};
+      // let objTwo ={};
+
+      // console.log(objOne == objTwo); //false => since both the object are independent of each other and referencing to independent property memory location
+      // console.log(objOne === objTwo); //false
+
+      //property of the "const" variable also can be changed here
+
+      // const objOne = {
+      //   age: 20,
+      // };
+      // console.log(objOne.age);
+      // objOne.age = 25;
+      // console.log(objOne.age);
+
+      // let user = {
+      //   userFun: function (a, b) {
+      //     console.log(`the sum is ${a + b}`);
+      //   },
+      // };
+
+      // user.userFun(5, 7);
+
+      // Clone th object properties
+      let userOne = {
+        firstName: 'Sanjit',
+        lastName: 'Gawade',
+        age: 25,
+      };
+      console.log(userOne); //{firstName: 'Sanjit', lastName: 'Gawade', age: 25}
+      let userTwo = {};
+      console.log(userTwo); //{}
+
+      for (const key in userOne) {
+        // console.log(userOne[key])/;
+        //copying properties of userOne to userTwo
+        userTwo[key] = userOne[key]; // key => "firstName"
+        //userTwo["firstName"] = "Sanjit"
+      }
+      console.log(userTwo);
+    </script>
+  </body>
+</html>

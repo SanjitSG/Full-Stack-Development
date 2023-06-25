@@ -4,14 +4,18 @@ const http = require('http');
 //it takes two parameters in form of object
 
 const server = http.createServer((req, res) => {
+  //callback function in createServer method
   console.log(req.url);
   // console.log(res);
 
   if (req.url === '/') {
-    res.end('<h1>Welcome to Node.js</h1>');
+    res.end(`<h1>Welcome to Node.js</h1>
+    <p> This is th Home Page</p>`);
   }
   if (req.url === '/user') {
-    res.end('<h2>Welcome, John</h2>');
+    res.end(`
+    <h1>Welcome, John</h1>
+    <a href="/">Back to home page</a>`);
   }
 });
 

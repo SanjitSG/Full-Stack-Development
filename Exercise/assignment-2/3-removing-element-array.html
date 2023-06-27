@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Element Deletion - Array" />
+    <title>Element Deletion - Array</title>
+  </head>
+  <body>
+    <h1>Element Deletion - Array</h1>
+
+    <script>
+      //Element Deletion - Array
+      let array = [1, 2, 3, 4, 5];
+      console.log(array);
+      let numToRemove = 3;
+      let index;
+
+      for (let i = 0; i <= array.length; i++) {
+        if (array[i] == numToRemove) {
+          index = i;
+          break;
+        }
+      }
+      array.splice(index, 1);
+      console.log(`Element to be removed is ${numToRemove} present at index ${index}\nAfter removing the element. Array: [${array}]`);
+    </script>
+  </body>
+</html>

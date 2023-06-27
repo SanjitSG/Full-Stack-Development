@@ -13,16 +13,19 @@
       //Element Deletion - Array
       let array = [1, 2, 3, 4, 5];
       console.log(array);
+
       let numToRemove = 3;
       let index;
 
       for (let i = 0; i <= array.length; i++) {
         if (array[i] == numToRemove) {
+          // numToRemove = 3 | present at index 2
           index = i;
           break;
         }
       }
-      array.splice(index, 1);
+      array.splice(index, 1); // starting from index (2) remove one element
+
       console.log(`Element to be removed is ${numToRemove} present at index ${index}\nAfter removing the element. Array: [${array}]`);
     </script>
   </body>

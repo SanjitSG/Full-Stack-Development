@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finding Second smallest element from an array</title>
+  </head>
+  <body>
+    <h1>Finding Second smallest element from an array</h1>
+
+    <script>
+      //Finding Second smallest element from an array
+      let array = [5, 2, 9, 1, 7]; //unsorted array
+
+      //using inbuilt sort() method
+
+      console.log("Second smallest element is", array.sort()[1]); // sort() will sort the array in ascending order
+
+      console.log("Second smallest element is", array.sort().reverse()[array.length - 2]); // .reverse() will sort the array in descending order.
+    </script>
+  </body>
+</html>

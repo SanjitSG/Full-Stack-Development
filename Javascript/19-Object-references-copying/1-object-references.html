@@ -54,23 +54,103 @@
 
       // user.userFun(5, 7);
 
-      // Clone th object properties
-      let userOne = {
-        firstName: 'Sanjit',
-        lastName: 'Gawade',
-        age: 25,
-      };
-      console.log(userOne); //{firstName: 'Sanjit', lastName: 'Gawade', age: 25}
-      let userTwo = {};
-      console.log(userTwo); //{}
+      // // Clone th object properties
+      // let userOne = {
+      //   firstName: 'Sanjit',
+      //   lastName: 'Gawade',
+      //   age: 25,
+      // };
+      // console.log(userOne); //{firstName: 'Sanjit', lastName: 'Gawade', age: 25}
+      // let userTwo = {};
+      // console.log(userTwo); //{}
 
-      for (const key in userOne) {
-        // console.log(userOne[key])/;
-        //copying properties of userOne to userTwo
-        userTwo[key] = userOne[key]; // key => "firstName"
-        //userTwo["firstName"] = "Sanjit"
-      }
-      console.log(userTwo);
+      // //to add a new property to object
+      // // there are two methods
+      // //1. userTwo.isAdmin = true;
+      // //2. userTwo['isAdmin'] = true; // same method is used in below example
+      // for (const key in userOne) {
+      //   // console.log(userOne[key])/;
+      //   //copying properties of userOne to userTwo
+
+      //   // console.log(key) => 'firstName'
+      //   // console.log(userOne[key] = 'Sanjit')
+      //   // using above logic we can iterate
+      //   userTwo[key] = userOne[key]; // (key) => "firstName"
+      //   //userTwo["firstName"] = "Sanjit"
+      // }
+      // console.log(userTwo);
+
+      //nested object
+      // let userDetails = {
+      //   address: {
+      //     street: 'abc',
+      //     pinCode: 304930,
+      //     city: 'goa',
+      //   },
+      // };
+
+      // console.log(userDetails.address.city);
+      // it will be complex to clone the  nested objects using for.. in loop, to prevent these complications we have Object.assign() method
+
+      //Object.assign()
+      //Syntax :=> Object.assign(dest, source) // copying objects
+
+      //Syntax:=> Object.assign(dest, src-1, src-2,src-3,...src-n) // merge two pr more objects into single object
+
+      //Ex:
+
+      // let userDetails = {
+      //   name: {
+      //     firstName: 'Sanjit',
+      //     lastName: 'SG',
+      //   },
+      //   age: 25,
+      //   isAdmin: true,
+      // };
+      // let cloneUserDetails = {};
+
+      // console.log('----Before cloning-----');
+      // console.log(userDetails);
+      // console.log(cloneUserDetails);
+      // Object.assign(cloneUserDetails, userDetails);
+      // console.log('----After cloning-----');
+      // console.log(userDetails);
+      // console.log(cloneUserDetails);
+
+      // //updating cloned objects value
+      // cloneUserDetails.age = 18;
+      // console.log('----After updating cloned object value-----');
+
+      // console.log(cloneUserDetails);
+
+      // console.log('----Merging----');
+
+      // let src1 = { name: 'john' };
+      // let src2 = { age: 25 };
+      // let src3 = { city: 'goa' };
+
+      // let destination = { name: 'jack' };
+
+      // //merging the objects
+
+      // Object.assign(destination, src1, src2, src3);
+      // console.log(destination);
+
+      // //destination and src1 have same property name, destination value will be replaced by src1 value.
+
+      let user = {
+        address: {
+          country: {
+            state: "Goa",
+          },
+        },
+      };
+
+      //structuredClone() => deep cloning in case of nested objects, object.assign works only with one layer deep nested structure.
+
+      let clonedUser = structuredClone(user);
+      console.log(user);
+      console.log(clonedUser);
     </script>
   </body>
 </html>

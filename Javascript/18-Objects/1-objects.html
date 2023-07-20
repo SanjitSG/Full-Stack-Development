@@ -157,10 +157,17 @@
         designation: 'Full-stack developer',
       };
 
-      for (let propName in userDetails) {
-        // let propName ="firstName" <= iteration 1
-        // let propName ="lastName" <= iteration 2
-        console.log(userDetails[propName]); //using SquareBracket method to access object
+      // for (let propName in userDetails) {
+      //   // let propName ="firstName" <= iteration 1
+      //   // let propName ="lastName" <= iteration 2
+      //   console.log(userDetails[propName]); //using SquareBracket method to access object
+      // }
+
+      let userDetails2 = {};
+      for (const key in userDetails) {
+        console.log(key);
+        userDetails2[key] = userDetails[key];
+        console.log(`${userDetails2[key]} => ${userDetails[key]}`);
       }
     </script>
   </body>

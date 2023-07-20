@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function to check if Two arrays are Equal or not</title>
+  </head>
+  <body>
+    <h1>Function to check if Two arrays are Equal or not</h1>
+
+    <script>
+      // Function to check if Two arrays are Equal or not
+      let arrayOne = [1, 2, 3];
+      let arrayTwo = [1, 2, 3];
+
+      function arrayEqual(arrayOne, arrayTwo) {
+        // to check of array have same length
+        if ((arrayOne.length !== arrayTwo, length)) {
+          return console.log(`[${arrayOne}] & [${arrayTwo}] are not Equal`); //false
+        }
+
+        //iterate over the arrays and compare each elements
+        for (let i = 0; i <= arrayOne.length; i++) {
+          if (arrayOne[i] !== arrayTwo[i]) {
+            return console.log(`[${arrayOne}] & [${arrayTwo}] are not Equal`); //false
+          }
+        }
+        return console.log(`[${arrayOne}] & [${arrayTwo}] are Equal`);
+      }
+      console.log(arrayEqual(arrayOne, arrayTwo)); //true
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Constructor Function" />
+    <title>Constructor Function</title>
+  </head>
+  <body>
+    <h2>Constructor Function</h2>
+
+    <script>
+      // Constructor Function
+
+      // Create multiple objects with single function
+
+      // 1. Construction is also a function , but its name must start with "Capital" letter
+      // 2. use "new" keyword for calling the constructor
+
+      // Simple constructor function
+
+      // Declaring a constructor function
+      function User(fullName, age, password, confirmPassword, city) {
+        this.fullName = fullName;
+        this.age = age;
+        this.password = password;
+        this.confirmPassword = confirmPassword;
+        this.city = city;
+      }
+
+      // Invoking the constructor function
+      // let varName = new functionName()
+
+      let john = new User('John, Ryan', 25, '1234', '1234', 'Goa');
+      console.log(john);
+      let jack = new User('Jack, Ryan', 20, '123467', '123467', 'Mumbai');
+      console.log(jack);
+      // we are creating object john with properties  -> fullName, age, password, confirmPassword, city.
+    </script>
+  </body>
+</html>

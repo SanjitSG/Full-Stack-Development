@@ -26,6 +26,11 @@
         this.password = password;
         this.confirmPassword = confirmPassword;
         this.city = city;
+
+        // adding a function inside a constructor method
+        this.showDetails = () => {
+          console.log(this.fullName, this.age);
+        };
       }
 
       // Invoking the constructor function
@@ -33,6 +38,10 @@
 
       let john = new User('John, Ryan', 25, '1234', '1234', 'Goa');
       console.log(john);
+
+      //invoking the function inside the constructor method
+      john.showDetails(); //John Ryan, 25
+
       let jack = new User('Jack, Ryan', 20, '123467', '123467', 'Mumbai');
       console.log(jack);
       // we are creating object john with properties  -> fullName, age, password, confirmPassword, city.

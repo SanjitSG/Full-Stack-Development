@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <h2>Optional Chaining</h2>
+
+    <script>
+      //Optional Chaining
+      // over come non-existing property error.
+
+      // let user = {
+      //   name: {
+      //     firstName: 'SkillSafari',
+      //   },
+      //   age: 25,
+      //   address: {
+      //     country: {
+      //       state: 'GA',
+      //     },
+      //   },
+      // };
+
+      // console.log(user.name);
+      // console.log(user.addressCountry?.state); // it will not throw a runtime error
+      // console.log(user?.address?.country?.state);
+
+      // Short circuiting
+      // a?.b => if'a' is defined then print 'a' else 'b'
+      // let name = null;
+      // let age = 0;
+      // name?.showMessage(++age);
+      // console.log(age);
+
+      // let user = {
+      //   name: 'SkillSafari',
+      // };
+
+      // console.log(user?.name?.firstName);
+
+      let user = {
+        name: 'Sk',
+        age: 20,
+        showDetails() {
+          console.log(this.name, this.age);
+        },
+      };
+
+      console.log(user?.name);
+      console.log(user?.['name']); // square bracket method
+      user?.showDetails1?.(); // even if function doesn't exists there wont be any error
+      user?.showDetails?.();
+    </script>
+  </body>
+</html>

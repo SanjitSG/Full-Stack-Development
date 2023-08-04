@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Strings</title>
+  </head>
+  <body>
+    <h2>JavaScript - Strings</h2>
+
+    <script>
+      // // JavaScript - Strings
+      // // 1. Single Quote
+      // let name = 'SkillSafari';
+      // // 2. Double Quote
+      // let firstName = 'EduKeys';
+      // // 3. Backticks
+      // let age = 25;
+      // let userAge = `user age is ${age}`;
+      // console.log(userAge);
+
+      // //length : Returns size of the string, space is also considered as a part of string
+      // let fullName = 'Sanjit Gawade';
+      // console.log(fullName.length); //13
+
+      // Accessing the characters of the string
+      // index=> each and every character in a string have a unique value named index, starting from zero
+      // space is also indexed
+
+      // 1. String position => String[index]
+      // 2. String.chatAt(index)  // inbuilt method
+
+      let designation = 'Full-Stack Developer';
+      designation[3]; // l
+      designation[0]; // F
+      designation[5]; // S
+
+      // for (let i = 0; i <= designation.length - 1; i++) {
+      //   console.log(`Character at index ${i} is ${designation[i]}`);
+      // }
+
+      // Printing last character of the string
+      // let address = 'Chennai';
+      // // for (let i = 0; i <= address.length - 1; i++) {
+      // //   if (i == address.length - 1) {
+      // //     console.log(`The last character of the string is ${address[i]}`);
+      // //   }
+      // // }
+
+      // console.log(address[address.length - 1]);
+
+      // let string = prompt('Enter a string');
+      // console.log(`Entered string is ${string}`);
+      // console.log(`Last character of ${string} is ${string[string.length - 1]}`);
+
+      // Usage of 'at' in string
+      // let string = 'EduKeys';
+      // console.log(string[string.length - 1]);
+      // console.log(string.at(-1));
+
+      // for...of loop
+      //iterating the character in the string
+      // let string = 'EduKeys';
+      // for (let char of string) {
+      //   console.log(char);
+      // }
+
+      // Stings are immutable
+      // ==> unchangeable
+
+      // let string = 'Hello';
+      // string[2] = 'a';
+
+      // console.log(string[2]);
+
+      // sting.chatAt(index)
+      // let city = 'Delhi';
+      // console.log(city.charAt(0)); // D
+      // console.log(city.charAt(city.length - 1)); // i
+
+      // How to search a substring (part of the string) in a sting
+
+      // 1. index of method
+      // str.indexOf("substring", "starting_pos") => returns the starting 'position' of the 'substring'
+      // starting_pos => form which index the "searching" operation begins
+      // let string = 'Hello, im working from SkillSafari';
+      // console.log(string.indexOf('SkillSafari')); //23
+
+      // console.log('Sanjit'.indexOf('ji')); // 3
+
+      // // staring_pos
+
+      // let name = 'SkillSafari, EduKeys';
+
+      // console.log(name.indexOf('Safari')); // 5
+      // console.log(name.indexOf('hello')); // -1
+      // console.log(name.indexOf('Edu', 14)); // -1
+      // console.log(name.indexOf('a')); // 6 | 'a' occurs twice, it will return the first occurrence
+
+      // Find all the occurrences (pos) of the 'substring' in the given string
+
+      // Program to find all the occurrences (position) of the 'substring' in the given 'string'
+
+      let string = prompt('Enter a String');
+      let subString = prompt('Enter a subString');
+      console.log(`Entered string is ${string}`);
+      console.log(`Entered SubString is ${subString}`);
+      let pos = 0;
+      while (true) {
+        let foundPos = string.indexOf(subString, pos);
+        if (foundPos == -1) break;
+        console.log(`The substring ${subString} found at position ${foundPos}`);
+        pos = foundPos + 1;
+      }
+    </script>
+  </body>
+</html>

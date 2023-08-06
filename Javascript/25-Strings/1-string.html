@@ -9,7 +9,7 @@
     <h2>JavaScript - Strings</h2>
 
     <script>
-      // // JavaScript - Strings
+      // // JavaScript - Strings. Strings are sequence of characters enclosed within quotes " ".
       // // 1. Single Quote
       // let name = 'SkillSafari';
       // // 2. Double Quote
@@ -30,10 +30,10 @@
       // 1. String position => String[index]
       // 2. String.chatAt(index)  // inbuilt method
 
-      let designation = 'Full-Stack Developer';
-      designation[3]; // l
-      designation[0]; // F
-      designation[5]; // S
+      // let designation = 'Full-Stack Developer';
+      // designation[3]; // l
+      // designation[0]; // F
+      // designation[5]; // S
 
       // for (let i = 0; i <= designation.length - 1; i++) {
       //   console.log(`Character at index ${i} is ${designation[i]}`);
@@ -54,9 +54,10 @@
       // console.log(`Last character of ${string} is ${string[string.length - 1]}`);
 
       // Usage of 'at' in string
+      //at is use to read index of string from right to left
       // let string = 'EduKeys';
-      // console.log(string[string.length - 1]);
-      // console.log(string.at(-1));
+      // console.log(string[string.length - 1]); // s
+      // console.log(string.at(-1)); // s
 
       // for...of loop
       //iterating the character in the string
@@ -101,17 +102,85 @@
 
       // Program to find all the occurrences (position) of the 'substring' in the given 'string'
 
-      let string = prompt('Enter a String');
-      let subString = prompt('Enter a subString');
-      console.log(`Entered string is ${string}`);
-      console.log(`Entered SubString is ${subString}`);
-      let pos = 0;
-      while (true) {
-        let foundPos = string.indexOf(subString, pos);
-        if (foundPos == -1) break;
-        console.log(`The substring ${subString} found at position ${foundPos}`);
-        pos = foundPos + 1;
+      // let string = prompt('Enter a String');
+      // let subString = prompt('Enter a subString');
+      // console.log(`Entered string is ${string}`);
+      // console.log(`Entered SubString is ${subString}`);
+      // let pos = 0;
+      // while (true) {
+      //   let foundPos = string.indexOf(subString, pos);
+      //   if (foundPos == -1) break;
+      //   console.log(`The substring ${subString} found at position ${foundPos}`);
+      //   pos = foundPos + 1;
+      // }
+
+      // 2. string.lastIndexOf('substring', pos)
+      // console.log('SkillSafari'.indexOf('S')); // 0
+      // console.log('SkillSafari'.lastIndexOf('S')); // 5
+
+      // Searching for a substring => returns a boolean type
+      // 1. String.includes('substring', pos);
+      // 2. String.startsWith("substring", pos);
+      // 3. String.endsWith("substring", pos);
+      // let message = 'Welcome to SkillSafari';
+      // // substring => 'Skill'
+
+      // console.log(message.includes('Skill')); // true
+      // console.log(message.startsWith('Skill')); // false // string starts with 'Welcome'
+      // console.log(message.endsWith('Safari')); // true // safari => false
+
+      // get the substring from the string by passing start and end index
+      // string.slice(a,b)
+      // a=> start index | b => last index (not included)
+
+      // let message = 'Welcome to Goa';
+      // console.log(message.slice(0, 7)); //W-e-l-c-o-m-e-[space] => space ie present at index 7 is not included
+      // // substring starts with start index and ends with last index - 1;
+
+      // // we do not pass the last index
+      // console.log(message.slice(11)); // Goa => substring starts with start index and ends with last index
+
+      // // slice with negative index
+      // console.log(message.slice(-11, -1));
+
+      // 2. String.substring(a,b)
+      // let message = 'I am a full-stack web application developer';
+
+      // console.log(message.substring(7, 17)); // full-stack
+      // console.log(message.substring(17, 7)); // full-stack
+      // console.log(message.slice(17, 7)); // ""
+
+      // //substring identifies higher and lower index values and returns the appropriate substring
+
+      // 3. String.substr(a,b)
+      // a => start index
+      // b => length
+
+      // let message = 'Associate Software Engineer';
+      // console.log(message.substr(0, 9)); // Associate
+      // console.log(message.substr(19)); // Engineer
+
+      // // first argument can be negative
+      // console.log(message.substr(-17, 8));
+
+      // // 4. String.codePointAt(pos) => returns ASCII value of the 'char'
+
+      // console.log('Hello'.codePointAt(0)); // H=> 72
+
+      // // 5. String.fromCodePoint(char)
+      // console.log(String.fromCharCode(72)); // H
+
+      // for (let i = 65; i <= 90; i++) {
+      //   console.log(String.fromCharCode(i));
+      // }
+
+      //upperCaseString(string) => return in uppercase
+
+      function upperCaseString(string) {
+        return string.toUpperCase();
       }
+
+      console.log(upperCaseString('Hello World'));
     </script>
   </body>
 </html>

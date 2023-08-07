@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Arrays intro</title>
+  </head>
+  <body>
+    <h2>JavaScript Arrays Intro</h2>
+
+    <script>
+      // JavaScript Arrays Intro
+
+      // Arrays => it is a collection, we can able to store the sequence of data
+
+      // Syntax =>
+      // let varName = []
+
+      // 1. Declare
+      //  1. new Keyword
+      //  let arrayName = new Array()
+      //  let fruits = new Array();
+      //  console.log(typeof fruits); // object
+
+      // 2. Square bracket method
+      // let arrayName = [item-1, item-2... item-n]
+      // let fruits = ['Apple', 'Orange', 'Banana', 'Mango'];
+      // console.log(fruits);
+
+      // // 2. Accessing the array items
+      // // Syntax
+      // // arrName[index]
+      // console.log(fruits[2]);
+
+      // for (let arr of fruits) {
+      //   console.log(arr);
+      // }
+
+      // // 3. Modifying array item values
+      // // Syntax
+      // // arrName[index] = 'newValue'
+
+      // fruits[2] = 'Grapes';
+      // console.log(fruits); // ["Apple", "Orange", "Grapes", "Mango"]
+
+      // // 4. Add new item
+      // // Syntax
+      // // arrName[index] = value;
+      // fruits[fruits.length] = 'Banana'; // new item // Banana will be added at the end of the string
+      // console.log(fruits); // ['Apple', 'Orange', 'Grapes', 'Mango', 'Banana']
+
+      // arrays is c, c++, Java is used to store similar type of datatype.
+
+      // Arrays in JavaScript can be used to store mixed Datatype
+
+      // String, number, boolean, null, undefined, bigInt, object, function, array
+
+      // let mixArray = [
+      //   'Sanjit',
+      //   25,
+      //   true,
+      //   { name: 'Goa' },
+      //   [1, 2, 3],
+      //   function hello() {
+      //     console.log('Hello');
+      //   },
+      // ];
+
+      // console.log(mixArray);
+
+      // console.log(mixArray.length); // 6
+      // console.log(mixArray[mixArray.length - 1]); // last element
+
+      // console.log(mixArray.at(-1));
+
+      // Methods
+
+      // 1. pop() / push()
+      // pop() => removes last element
+      // push('item') => add new element at the last index
+
+      // let user = ['Jack', 'John'];
+      // console.log(user);
+
+      // // Array.pop()
+      // user.pop();
+      // console.log(user);
+
+      // // Array.push('item')
+      // // user.push('jack'); // adding single element
+      // user.push('jack', 'Ryan', 'David'); // adding multiple elements
+      // console.log(user);
+
+      // 2. shift() / unshift()
+      // Array.shift() => removes the first (zero-index) element in the array
+      // Array.unshift('item') => add a new element before the first (zero-index) element.
+
+      // let users = ['John', 'Jack'];
+      // console.log(users);
+
+      // users.shift();
+      // console.log(users); //['Jack']
+
+      // users.unshift('Justin', 'Memo', 'Jami');
+      // console.log(users); // ['Justin', 'Memo', 'Jami', 'Jack']
+
+      // console.log(users.shift()); // Justin. returns the removed element
+
+      // array copies value by reference, changes in one array will reflect into other
+      // let fruits = ['Apple'];
+      // let arr = fruits;
+      // console.log(arr); // ['Apple']
+      // console.log(fruits); // ['Apple']
+
+      // arr.push('Mango');
+      // console.log(arr); //['Apple', 'Mango']
+      // console.log(fruits); //['Apple', 'Mango']
+
+      // for.. of loop
+      // let subjects = ['English', 'Maths', 'Science', 'History'];
+
+      // for (let subject of subjects) {
+      //   console.log(subject);
+      // }
+
+      // length
+      // let arr = [1, 2, 3, 4, 5];
+      // console.log(arr); // [1, 2, 3, 4, 5]
+      // console.log(arr.length); // 5
+      // arr.length = 2; // truncates the array (irreversible change)
+      // console.log(arr); [1,2]
+
+      // Multi-dimensional Array
+      // Array inside an array
+
+      let arrMatrix = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      console.log(arrMatrix[0]); // [1, 2, 3]
+      console.log(arrMatrix[1]); // [4, 5, 6]
+      console.log(arrMatrix[2]); // [7, 8, 9]
+
+      // printing 5
+      console.log(arrMatrix[1][1]); //5
+    </script>
+  </body>
+</html>

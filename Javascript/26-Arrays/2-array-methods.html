@@ -60,6 +60,63 @@
 
       // // negative value as starting index
       // console.log(fruits.slice(-2)); // when end index is not passed, slice() methods displays all the values from starting index // ['Mango', 'Banana']
+
+      // Array.concat(array/s)
+      // let setOne = [1, 2, 3];
+      // let setTwo = [4, 5, 6];
+
+      // console.log(setOne.concat(setTwo, 7, 8, 9));
+
+      // iterations
+      // // Array.forEach(callback(a,b,c))\
+
+      // let subjects = ['English', 'Maths', 'Physics', 'Chemistry'];
+
+      // subjects.forEach(function (subject, index, subArray) {
+      //   console.log(`Element: ${subject}, index: ${index}, Array: ${subArray}`);
+      // });
+
+      // Access => element
+
+      // [1, 2, 3].forEach(function (a) {
+      //   console.log(a);
+      // });
+
+      // converting it to arrow function
+      // [1, 2, 3].forEach((a) => console.log(a));
+
+      // Access => index
+      //
+      // [1, 2, 3].forEach(function (a, b) {
+      //   console.log(b); // 1 2 3
+      // });
+
+      // converting it to arrow function
+      // [1, 2, 3].forEach((a, b) => console.log(b)); // 0 1 2
+      // // // Access => Array
+
+      // // [1, 2, 3].forEach(function (a, b, c) {
+      // //   console.log(c);
+      // // });
+
+      // // converting it to arrow function
+      // [1, 2, 3].forEach((a, b, c) => console.log(c));
+
+      // Searching in array
+
+      // indexOf(), lastindexOf(), includes()
+
+      // 1. indexOf()
+      let number = [1, 2, 3, 4, 5, 5, 1];
+      console.log('index of 3 is : ' + number.indexOf(3));
+      console.log(number.indexOf(2, 3)); // -1 | start position is 3 and index of 2, therefore no element found
+      console.log(number.indexOf(5)); //4
+      console.log(number.lastIndexOf(5)); //5
+
+      // 2. Array.includes(item, startPos) => return type boolean
+      console.log(number.includes(5)); // true
+      console.log(number.includes(3, 4)); // false
+      console.log(number.includes(8)); // true
     </script>
   </body>
 </html>

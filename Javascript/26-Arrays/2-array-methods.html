@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Array Methods" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h2>Array Methods</h2>
+
+    <script>
+      //Array Methods
+      // 1. pop() and push()
+      // 2. shift() and unshift()
+
+      // 3. Array.splice() => delete a specific or set of element from and array
+
+      // Syntax : Deleting the element
+      // Array.splice(a,b);
+      // a => starting index
+      // b => deleteCount
+
+      // syntax: delete and insert
+      // Array.splice(a,b,c)
+      // a => start index
+      // b => deleteCount
+      // c => new element/elements
+
+      // let subject = ['english', 'Maths', 'Physics', 'Chemistry'];
+
+      // //1. Delete and element
+      // // subject.splice(1, 2);
+      // // console.log(subject); // ['english', 'Chemistry']
+
+      // // 2. Deleting elements without deleteCount
+      // // subject.splice(2); // starting from index '2', deletes all the elements next to the element '2'
+      // // console.log(subject); // ['english', 'Maths']
+
+      // // 3. Delete and insert
+      // subject.splice(1, 2, 'Computer', 'History', 123);
+      // console.log(subject); //['english', 'Computer', 'History', 123, 'Chemistry']
+
+      // 4. let number = [1, 2, 3, 4, 5];
+      // number.splice(1, 0, 6, 7, 8); // delete count is 0, no values will be deleted. new values will be inserted from index '1';
+      // console.log(number); // [1, 6, 7, 8, 2, 3, 4, 5]
+
+      // 5. Negative values as 'starting index'
+      // let num = [1, 2, 3, 4, 5];
+      // num.splice(-2, 1, 6, 7, 8);
+      // console.log(num); //[1, 2, 3, 6, 7, 8, 5]
+
+      // 6. Array.slice(a,b)
+      // a=> start index
+      // b => end index (not included) or endIndex - 1
+
+      // let fruits = ['Apple', 'Orange', 'Mango', 'Banana'];
+      // console.log(fruits);
+      // console.log(fruits.slice(1, 3)); // starting from index one, extract 3 index values, since last index value is not included , we get output // ['Orange', 'Mango']
+
+      // // negative value as starting index
+      // console.log(fruits.slice(-2)); // when end index is not passed, slice() methods displays all the values from starting index // ['Mango', 'Banana']
+    </script>
+  </body>
+</html>

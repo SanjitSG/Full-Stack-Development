@@ -107,16 +107,136 @@
       // indexOf(), lastindexOf(), includes()
 
       // 1. indexOf()
-      let number = [1, 2, 3, 4, 5, 5, 1];
-      console.log('index of 3 is : ' + number.indexOf(3));
-      console.log(number.indexOf(2, 3)); // -1 | start position is 3 and index of 2, therefore no element found
-      console.log(number.indexOf(5)); //4
-      console.log(number.lastIndexOf(5)); //5
+      // let number = [1, 2, 3, 4, 5, 5, 1];
+      // console.log('index of 3 is : ' + number.indexOf(3));
+      // console.log(number.indexOf(2, 3)); // -1 | start position is 3 and index of 2, therefore no element found
+      // console.log(number.indexOf(5)); //4
+      // console.log(number.lastIndexOf(5)); //5
 
-      // 2. Array.includes(item, startPos) => return type boolean
-      console.log(number.includes(5)); // true
-      console.log(number.includes(3, 4)); // false
-      console.log(number.includes(8)); // true
+      // // 2. Array.includes(item, startPos) => return type boolean
+      // console.log(number.includes(5)); // true
+      // console.log(number.includes(3, 4)); // false
+      // console.log(number.includes(8)); // true
+
+      //find(), findIndex(), findLastIndex()
+
+      // 1. find() => find any specific element from given array
+      // syntax
+      /*
+        Array.find(function(item, index, array){
+          // logic
+        });
+
+
+        */
+      // ex:
+      // let users = [
+      //   { id: 1, name: 'John', age: 25 },
+      //   { id: 2, name: 'Jack', age: 35 },
+      //   { id: 3, name: 'Mary', age: 23 },
+      // ];
+
+      // // Find a element with id: 2
+
+      // let findId = +prompt('Enter id to find');
+      // let result = users.find(function (item, index, array) {
+      //   return item.id == findId;
+      // });
+      // console.log(result); // { id: 2, name: 'Jack', age: 35 }
+      // console.log(`the ID: ${findId} has the result " ${JSON.stringify(result)}`);
+      // this methods returns only one element as output
+
+      // 1. findIndex() => find index of any specific element from given array
+      // syntax
+      /*
+        Array.findIndex(function(item, index, array){
+          // logic
+        });
+
+
+        */
+      // ex:
+      // let users = [
+      //   { id: 1, name: 'John', age: 25 },
+      //   { id: 2, name: 'Jack', age: 35 },
+      //   { id: 3, name: 'Mary', age: 23 },
+      //   { id: 2, name: 'Robert', age: 33 },
+      // ];
+
+      // // let result = users.findIndex((item, index, array) => item.name == 'Mary'); // arrow function
+
+      // // console.log(result); // 2
+
+      // 3. lastIndexOf
+      // let result = users.findLastIndex((item, index, array) => item.id == 2); // arrow function
+      // console.log(result);
+
+      // 12. filter()
+      // syntax
+      // Array.filter(function(item, index, array){
+      // logic
+      //  }); => return array of element(s)
+      //        => matches not found => undefined
+      // let users = [
+      //   { id: 1, name: 'John', age: 25 },
+      //   { id: 2, name: 'Jack', age: 35 },
+      //   { id: 3, name: 'Mary', age: 23 },
+      //   { id: 2, name: 'Robert', age: 33 },
+      // ];
+
+      // let filterResult = users.filter((item) => item.age >= 25);
+      // console.log(filterResult);
+
+      // 13) map()
+      // Transform and array
+      // Syntax
+      /*
+       Array.map(function(item, index, element){
+        // logic to transform an array
+       })
+      */
+      // let users = [
+      //   { id: 1, name: 'John', age: 25 },
+      //   { id: 2, name: 'Jack', age: 35 },
+      //   { id: 3, name: 'Mary', age: 23 },
+      //   { id: 2, name: 'Robert', age: 33 },
+      // ];
+      // // let newArray = users.map((item) => item.name.length);
+
+      // // console.log(newArray); // [4,4,4,6]
+
+      // // let arrTwo = users.map((item) => item.name);
+      // // let arrTwo = users.map((item) => item.name.toUpperCase());
+
+      // let newArray = users.map((item) => {
+      //   return {
+      //     ...item, // { id: 1, name: 'John', age: 25 }
+      //     dept: 'CES', // a new dept: 'CSE' property will be added to each object
+      //   };
+      // });
+      // console.log(newArray); //{id: 1, name: 'John', age: 25, dept: 'CES'}
+
+      // 14. reverse()
+      // Array.reverse() // is use to reverse teh elements of an array
+      // let numbers = [1, 2, 3, 4, 5];
+      // console.log(numbers.reverse()); // [5, 4, 3, 2, 1]
+
+      // 15. split() and join()
+
+      // split() => split the string into an array element based on the delimiter
+
+      // Syntax
+      // String.split(delim)
+      // ex:
+      // let string = 'Apple, Orange, Banana, Mango';
+      // console.log(string);
+      // console.log(string.split(', ')); // ['Apple', 'Orange', 'Banana', 'Mango']
+
+      // joint() => joins the array element into an string based on the delimiter
+
+      // Syntax
+      //Array.join(delim)
+      // ex:
     </script>
   </body>
 </html>

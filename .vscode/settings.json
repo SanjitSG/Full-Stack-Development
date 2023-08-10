@@ -42,5 +42,6 @@
     }
   },
   "cSpell.language": "en,lorem",
-  "cSpell.words": ["Banglore", "hssc", "Panjim"]
+  "cSpell.words": ["Banglore", "hssc", "Panjim"],
+  "cSpell.ignoreWords": ["Usecase"]
 }

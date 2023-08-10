@@ -237,6 +237,29 @@
       // Syntax
       //Array.join(delim)
       // ex:
+      // Array.join(joiner)
+      // let fruitsArray = ["Apple", "Orange", "Mango", "Banana"]
+      // console.log(fruitsArray);
+      // console.log(fruitsArray.join(", "));
+
+      // reduce()
+      /*
+        Array.reduce(function (accumulator, item, index, array) {
+            // logics
+        }, initial);
+        */
+
+      let number = [1, 2, 3, 4, 5];
+
+      let result = number.reduce((acc, item, index, array) => {
+        return acc + item;
+      }, 0);
+
+      console.log(result);
+
+      // Array.isArray() => Check the presence of array
+      console.log(typeof {}); // object
+      console.log(typeof []); // object
     </script>
   </body>
 </html>

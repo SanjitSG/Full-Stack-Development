@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map Constructor Method</title>
+  </head>
+  <body>
+    <script>
+      // Map Constructor Method => Collection for storing the data
+      // Object => Used for storying keyed collection
+      // Array => Used for storing ordered collection
+
+      // the Map is a data structure that stores elements as a key-value pair
+      // behave as same as an Object
+      // Object => key => string type
+      // Map => key => any datatype => string, number, Boolean.
+
+      // Syntax
+      // let map = new Map()
+
+      // Ex:
+      // let map = new Map();
+
+      // // 1. Add new property
+      // // map.set(key,value);
+
+      // map.set('firstName', 'SkillSafari');
+      // map.set('lastName', 'EduKeys');
+      // map.set('age', 25);
+      // map.set(true, 'Hello');
+
+      // // chaining method => add multiple entires
+      // map.set('isAdmin', true).set('city', 'Panjim').set('state', 'Goa');
+
+      // // console.log(map);
+
+      // // 2. Access the property
+      // // map.get(key)
+      // console.log(map.get('city')); // Panjim
+      // console.log(map.get('designation')); // undefined => property doesn't exist
+
+      // // 3. Modify existing entry
+      // map.set('isAdmin', false);
+      // // console.log(map);
+
+      // // 4. Delete a property
+      // // map.delete(key)
+      // // map.delete('state');
+      // map.delete(true);
+      // // console.log(map);
+
+      // // 5. Clear => wipe all teh entries
+      // map.clear();
+      // console.log(map);
+
+      // Method - 2
+      // new Map()
+      // multi-dimensional array
+      let fruits = new Map([
+        ['Mango', 20],
+        ['Banana', 30],
+        ['Apple', 50],
+        ['Orange', 40],
+      ]);
+
+      console.log(fruits);
+
+      // Iterate the Keys and Values in the Map = > for.. of / forEach()
+      // map.keys() => return the keys as iterable [Array Like]
+      // map.values() => return the values as iterable [Array Like]
+      // map.entries() => return key & value as iterable [Array Like]
+
+      let fruitsKeys = fruits.keys();
+      console.log(fruitsKeys);
+      for (const keys of fruitsKeys) {
+        console.log(keys);
+      }
+
+      // Accessing Values
+      let fruitsValues = fruits.values();
+      console.log(fruitsValues);
+      for (const fruitVal of fruitsValues) {
+        console.log(fruitVal);
+      }
+
+      // forEach method
+      /* map.fortEach((value, key, map)==>{
+
+      })*/
+      fruits.forEach((values, key, array) => {
+        console.log(values);
+        console.log(key);
+        console.log(array);
+      });
+    </script>
+  </body>
+</html>

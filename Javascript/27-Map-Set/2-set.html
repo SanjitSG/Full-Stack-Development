@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Set</title>
+  </head>
+  <body>
+    <h1>JavaScript - Set - Constructor Method</h1>
+
+    <script>
+      //JavaScript - Set - Constructor Method
+      // Set is a special type of collection - " set of value" ( without keys)
+      // Set values are mostly an object
+      // Each and every value appears only once
+      // new Set()
+
+      // let set = new Set();
+      // console.log(set);
+
+      // set.add(value) => add val;ue to the Set
+      // set.delete(value) => delete the value in the Set
+      // set.has(value) => Occurrence of the value on the Set, return true/ false
+      // set.clear()
+      // set.size => number of values in the set
+
+      let userVisits = new Set();
+
+      console.log(userVisits);
+
+      // Add value to the set
+      // set.add(value)
+      let john = { name: 'John' };
+      let jack = { name: 'Jack' };
+      let mary = { name: 'Mary' };
+      let robert = { name: 'Robert' };
+
+      userVisits.add(john);
+      userVisits.add(jack);
+      userVisits.add(mary);
+      userVisits.add(robert);
+      userVisits.add(john); // do not allows duplicate entries
+
+      // console.log(userVisits.size); //4
+
+      // // set.delete(value)
+
+      // userVisits.delete(robert);
+      // console.log(userVisits);
+
+      // console.log(userVisits.has(mary)); // true
+
+      // iterate - for..of method
+      for (const value of userVisits) {
+        console.log(value);
+      }
+
+      // forEach - method
+      // syntax
+      userVisits.forEach((value, valueAgain, set) => {
+        console.log(value);
+      });
+    </script>
+  </body>
+</html>

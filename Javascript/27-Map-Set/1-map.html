@@ -11,6 +11,14 @@
       // Object => Used for storying keyed collection
       // Array => Used for storing ordered collection
 
+      // map methods
+      // map.set('key', value);
+      // map.get(key);
+      // map.has(key); ==> the presence of key in the map
+      // map.delete(key);
+      // map.clear()
+      // map.size
+
       // the Map is a data structure that stores elements as a key-value pair
       // behave as same as an Object
       // Object => key => string type
@@ -57,42 +65,85 @@
       // Method - 2
       // new Map()
       // multi-dimensional array
-      let fruits = new Map([
-        ['Mango', 20],
-        ['Banana', 30],
-        ['Apple', 50],
-        ['Orange', 40],
-      ]);
+      // let fruits = new Map([
+      //   ['Mango', 20],
+      //   ['Banana', 30],
+      //   ['Apple', 50],
+      //   ['Orange', 40],
+      // ]);
 
-      console.log(fruits);
+      // console.log(fruits);
 
       // Iterate the Keys and Values in the Map = > for.. of / forEach()
       // map.keys() => return the keys as iterable [Array Like]
       // map.values() => return the values as iterable [Array Like]
       // map.entries() => return key & value as iterable [Array Like]
 
-      let fruitsKeys = fruits.keys();
-      console.log(fruitsKeys);
-      for (const keys of fruitsKeys) {
-        console.log(keys);
-      }
+      // let fruitsKeys = fruits.keys();
+      // console.log(fruitsKeys);
+      // for (const keys of fruitsKeys) {
+      //   console.log(keys);
+      // }
 
-      // Accessing Values
-      let fruitsValues = fruits.values();
-      console.log(fruitsValues);
-      for (const fruitVal of fruitsValues) {
-        console.log(fruitVal);
-      }
+      // // Accessing Values
+      // let fruitsValues = fruits.values();
+      // console.log(fruitsValues);
+      // for (const fruitVal of fruitsValues) {
+      //   console.log(fruitVal);
+      // }
 
-      // forEach method
-      /* map.fortEach((value, key, map)==>{
+      // // forEach method
+      // /* map.fortEach((value, key, map)==>{
 
-      })*/
-      fruits.forEach((values, key, array) => {
-        console.log(values);
-        console.log(key);
-        console.log(array);
-      });
+      // })*/
+      // fruits.forEach((values, key, array) => {
+      //   console.log(values);
+      //   console.log(key);
+      //   console.log(array);
+      // });
+
+      // Access key: value
+      // let keyValues = fruits.entries();
+      // console.log(keyValues);
+
+      // for (const [key, value] of keyValues) {
+      //   console.log(`${key} => ${value}`);
+      // };
+
+      // new Map(Object.entries(fruits)) => we can convert to Map from Object
+      // Object to Map
+      // let fruits = {
+      //   mango: 20,
+      //   orange: 30,
+      //   apple: 40,
+      //   banana: 50,
+      // };
+
+      // console.log(fruits);
+
+      // // let fruitMap = Object.entries(fruits);
+      // let fruitMap = new Map(Object.entries(fruits));
+      // console.log(fruitMap);
+
+      // Map to Object
+      // Object.fromEntries(Map) => return Object
+
+      // let marksMap = new Map([
+      //   ['English', 20],
+      //   ['Science', 30],
+      //   ['Maths', 50],
+      //   ['Computer', 40],
+      // ]);
+
+      // let marksObject = Object.fromEntries(marksMap);
+
+      // console.log(marksObject);
+
+      let subjectMap = new Map();
+
+      subjectMap.set('English', 20).set('Math', 30).set('Physics', 40).set('Chemistry', 50);
+      // console.log(subjectMap);
+      console.log(Object.fromEntries(subjectMap).Physics); //40
     </script>
   </body>
 </html>

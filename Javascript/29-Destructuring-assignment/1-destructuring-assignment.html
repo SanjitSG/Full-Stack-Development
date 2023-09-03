@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript - Destructuring assignment</title>
+  </head>
+  <body>
+    <h1>JavaScript - Destructuring assignment</h1>
+
+    <script>
+      // JavaScript - Destructuring assignment
+      // 1. Objects => Extract each and every property by using some variable
+      // 2. Arrays => Extract each and every element by using some variable
+
+      // Array Destructuring
+      // let subjects = ['English', 'Maths', 'Physics', 'Chemistry'];
+      // console.log(subjects);
+
+      // // Syntax
+      // // let [var-1, var-2, ..., var-N] = [ "ele-1", "ele-2", ..., "ele-N" ];
+      // // let [subjectOne, subjectTwo, subjectThree, subjectFour] = subjects;
+      // // console.log(subjectOne);
+      // // console.log(subjectTwo);
+      // // console.log(subjectOne, subjectTwo, subjectThree, subjectFour);
+
+      // // Skipping array elements
+      // // let [subjectOne, , subjectFour] = subjects;
+      // // console.log(subjectOne, subjectFour);
+
+      // // // All the iterable values
+
+      // // let name = 'John';
+      // // // for (let char of name) {
+      // // //   console.log(char);
+      // // // }
+
+      // // let [charOne, charTwo, charThree, charFour] = name;
+      // // console.log(charOne, charTwo, charThree, charFour);
+
+      // // let [strOne, strTwo] = 'Hello World'.split(' ');
+      // // console.log(strOne, strTwo);
+
+      // let fruitsPrice = {
+      //   apple: 20,
+      //   mango: 30,
+      //   orange: 40,
+      //   banana: 50,
+      // };
+      // for (const [key, value] of Object.entries(fruitsPrice)) {
+      //   // [ "apple", 20 ]
+      //   console.log(key, value);
+      // }
+
+      // // map
+
+      // let subMap = new Map([
+      //   ['John', 50],
+      //   ['Jack', 60],
+      //   ['Mary', 80],
+      // ]);
+
+      // for (const [key, value] of subMap) {
+      //   console.log(subMap);
+      // }
+
+      // // Swapping of two values without using third variable (trick using destructuring concept)
+      // let firstName = 'SkillSafari';
+      // let lastName = 'EduKeys';
+
+      // console.log(firstName, lastName);
+      // [firstName, lastName] = [lastName, firstName];
+      // console.log(firstName, lastName);
+
+      // // ...rest
+      // let [valOne, valTwo, ...restVal] = [1, 2, 3, 4, 5]; // valOne = 1, valTwo = 2, restVal = [3, 4, 5]
+      // console.log(valOne); // 1
+      // console.log(valTwo); // 2
+      // console.log(restVal); // [ 3, 4, 5]
+      // let [valThree, valFour, valFive] = restVal;
+      // console.log(valThree, valFour, valFive);
+
+      // // Default values
+
+      //Default values
+      // let [numOne, numTwo, numThree] = [1, 2, 3];
+      // console.log(numOne, numTwo, numThree);
+
+      // // Default value
+      // let [firstName = 'John', lastName = 'Jack', age] = ['SkillSafari', 'EduKeys', 30];
+      // console.log(firstName, lastName, age);
+
+      // let [name = 'Guest', nickName = 'Raj'] = ['SkillSafari'];
+      // console.log(name, nickName);
+
+      // Object Destructuring
+
+      // let userDetails = {
+      //   firstName: 'SkillSafari',
+      //   lastName: 'EduKeys',
+      //   age: 40,
+      // };
+
+      // let { firstName, lastName, age } = userDetails;
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+
+      // Order [array]
+      // let [name, age, city] = ['Sanjit', 27, 'Goa'];
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+
+      // Order doesn't affect object
+
+      // let { city, name, age } = { name: 'John', age: 25, city: 'BLR' };
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+
+      // Alias name to the properties
+
+      // Syntax
+      // let {propName-1 : aliasName-1, propName-2 : aliasName-2, ..., propName-N: aliasName-N} = { propName-1: propValue-1, propName-2: propValue-2, ..., propName-N: propValue-N}
+      // let { name: n, age: a, city: c } = { name: 'John', age: 25, city: 'Bangalore' };
+      // console.log(c); // Bangalore
+      // console.log(n); // John
+      // console.log(a); // 25
+
+      // Default value
+      // Syntax
+      // let {propName-1 = defVal-1, propName-2 = defVal-2, ..., propName-N = defVal-N} = { propName-1: propValue-1, propName-2: propValue-2, ..., propName-N: propValue-N}
+      // let { name = "John", age = 20 } = { name: "Jack" };
+      // console.log(name); // Jack
+      // console.log(age); // 20
+
+      // Default value with Alias name
+      // let { name: userName = "John", age: userAge = 20 } = { name: "Jack" };
+      // console.log(userName); // Jack
+      // console.log(userAge); // 20
+
+      // Extraction
+      // let { city } = { name: 'John', age: 25, city: 'Bangalore' };
+      // console.log(city);
+
+      // ...rest
+      // let userDetails = {
+      //   firstName: 'SkillSafari',
+      //   lastName: 'EduKeys',
+      //   age: 40,
+      // };
+
+      // // let { firstName, ...otherDetails } = userDetails;
+      // // console.log(firstName);
+      // // console.log(otherDetails);
+
+      // // let { lastName, age } = otherDetails;
+      // // console.log(lastName);
+      // // console.log(age);
+
+      // // Destructuring variables
+      // let firstName;
+      // let lastName;
+      // let age;
+
+      // ({ firstName, lastName, age } = userDetails);
+
+      // console.log(firstName);
+      // console.log(lastName);
+      // console.log(age);
+
+      // Destructuring Nested Objects
+
+      // let userDetails = {
+      //   firstName: 'John',
+      //   age: 30,
+      //   address: {
+      //     city: 'BLR',
+      //     state: 'KA',
+      //   },
+      //   hobbies: ['Cricket', 'Singing', 'Swimming'],
+      // };
+
+      // let {
+      //   firstName,
+      //   age,
+      //   address: { city, state },
+      //   hobbies: [hobbyOne, hobbyTwo, hobbyThree],
+      // } = userDetails;
+
+      // console.log(age);
+      // console.log(city);
+      // console.log(hobbyOne);
+
+      // Smart function parameters
+
+      // function userDetails([firstName, lastName, age]) {
+      //   // [firstName, lastName, age] = ["SkillSafari", "EduKeys", 25]
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   console.log(age);
+      // }
+
+      // userDetails(['Sanjit', 'SG', 20]);
+
+      //object
+      let userDetails = {
+        name: 'Sanjit',
+        age: 27,
+        city: 'Goa',
+        isAdmin: false,
+      };
+      function userInfo({ name, age, city, isAdmin }) {
+        // using destructuring concept we have passed the object as function parameter
+        // { name, age, city, isAdmin } = userDetails
+        console.log(name);
+        console.log(age);
+        console.log(city);
+        console.log(isAdmin);
+      }
+      userInfo(userDetails);
+    </script>
+  </body>
+</html>

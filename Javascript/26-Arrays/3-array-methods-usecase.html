@@ -93,9 +93,25 @@
       // some()
       // any student dept = "CSE"
 
-      let studentDept = students.some((student) => student.dept == 'IT');
+      // let studentDept = students.some((student) => student.dept == 'IT');
 
-      console.log(studentDept);
+      // console.log(studentDept);
+
+      // find the average age of selected students
+      // Chain teh array methods
+      // let selectedStudents = students.filter((student) => student.isSelected);
+      let totalAge = students
+        .filter((student) => student.isSelected)
+        .reduce((acc, studentAge) => {
+          return acc + studentAge.age;
+        }, 0);
+      console.log(totalAge);
+
+      // let totalAge = selectedStudents.reduce((acc, studentAge) => {
+      //   return acc + studentAge.age;
+      // }, 0);
+
+      console.log(totalAge);
     </script>
   </body>
 </html>

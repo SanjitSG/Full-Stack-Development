@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Examples - Spread operator And Rest variable</title>
+  </head>
+  <body>
+    <h2>Examples - Spread operator And Rest variable</h2>
+
+    <script>
+      // Examples - Spread operator And Rest variable
+
+      // Spread Operator
+      // 1. Copying array elements
+
+      // let arrOne = ['John', 25, 'Tester', 'Chennai'];
+      // let arrTwo = [];
+
+      // // traditional way of copying an array
+      // // for (let i = 0; i < arrOne.length; i++) {
+      // //   arrTwo.push(arrOne[i]);
+      // // }
+
+      // // console.log(arrTwo);
+
+      // // using spread operator
+
+      // arrTwo = [...arrOne];
+
+      // arrOne.push('India'); // changes in one array didn't reflect in the second array and vice versa
+      // console.log(arrOne);
+
+      // arrTwo.unshift('Mr');
+      // console.log(arrTwo);
+
+      // copying multiple arrays into single array using spread operator
+      // let numArrOne = [1, 2, 3];
+      // let numArrTwo = [4, 5, 6];
+      // let numArrThree = [7, 8, 9];
+
+      // let numArrNew = [...numArrOne, ...numArrTwo, ...numArrThree];
+      // console.log(numArrNew);
+
+      // 2. Copy Object Properties
+
+      let userOne = {
+        name: 'John',
+        age: 25,
+      };
+
+      //      let userTwo = {};
+
+      // // traditional methods to copy object
+      // // userTwo = userOne;
+      // Object.assign(userTwo, userOne);
+
+      // console.log(userTwo);
+
+      // userOne.isAdmin = true;
+      // console.log(userOne);
+      // console.log(userTwo);
+
+      // using spread operator
+      // let userTwo = { ...userOne };
+      // userOne.isAdmin = false;
+      // console.log(userTwo);
+      // console.log(userOne);
+
+      // let userName = { name: "John" };
+      // let userAge = { age: 25 };
+      // let userCity = { city: "Chennai" };
+      // let userDetails = { ...userName, ...userAge, ...userCity };
+      // userDetails.isAdmin = true;
+      // console.log(userDetails);
+      // console.log(userName);
+      // console.log(userAge);
+      // console.log(userCity);
+
+      // Find unique elements in the array |  remove duplicate elements
+      // let numArr = [1, 2, 3, 3, 2, 1, 5, 6];
+      // let uniqueArr = [...new Set(numArr)];
+      // console.log(uniqueArr);
+
+      // passing array as parameter
+      // let numArr = [1, 2, 3];
+      // let addAll = (a, b, c) => {
+      //   return a + b + c;
+      // };
+
+      // // console.log(addAll(numArr)); // without spread operator , numArray will be only assigned to a, b&c will be undefined
+      // console.log(addAll(...numArr));
+
+      // splitting string into characters
+
+      // let str = 'Hello World!';
+      // console.log(str.split(''));
+      // console.log([...str]);
+
+      // Rest Variable
+      // let [a, ...b] = [1, 2, 3, 4, 5];
+      // console.log(a);
+      // console.log(b);
+      // let multiplyArray = (a, ...b) => {
+      //   return b
+      //     .map((ele) => a * ele)
+      //     .reduce((acc, eleOne) => { // add the elements of array [6, 8, 10, 12] = 36
+      //       return acc + eleOne;
+      //     }, 0);
+      // };
+      // console.log(multiplyArray(2, 3, 4, 5, 6));
+
+      // division
+      let divArray = (a, ...b) => {
+        return b
+          .map((ele) => ele / a)
+          .reduce((acc, eleOne) => {
+            // multiply all the elements
+            return acc * eleOne;
+          }, 1);
+      };
+
+      console.log(divArray(2, 4, 8, 10));
+    </script>
+  </body>
+</html>

@@ -198,8 +198,12 @@
       function userDetails(...userInfo) {
         // [firstName, lastName, age] = ["SkillSafari", "EduKeys", 25]
         console.log(userInfo);
-        console.log(userInfo[[0]]);
-        console.log(userInfo);
+
+        for (const keys of userInfo) {
+          console.log(keys[0]);
+          console.log(keys[1]);
+          console.log(keys[2]);
+        }
       }
 
       userDetails(['Sanjit', 'SG', 20]);

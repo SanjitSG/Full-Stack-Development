@@ -195,31 +195,31 @@
 
       // Smart function parameters
 
-      // function userDetails([firstName, lastName, age]) {
-      //   // [firstName, lastName, age] = ["SkillSafari", "EduKeys", 25]
-      //   console.log(firstName);
-      //   console.log(lastName);
-      //   console.log(age);
-      // }
+      function userDetails(...userInfo) {
+        // [firstName, lastName, age] = ["SkillSafari", "EduKeys", 25]
+        console.log(userInfo);
+        console.log(userInfo[[0]]);
+        console.log(userInfo);
+      }
 
-      // userDetails(['Sanjit', 'SG', 20]);
+      userDetails(['Sanjit', 'SG', 20]);
 
       //object
-      let userDetails = {
-        name: 'Sanjit',
-        age: 27,
-        city: 'Goa',
-        isAdmin: false,
-      };
-      function userInfo({ name, age, city, isAdmin }) {
-        // using destructuring concept we have passed the object as function parameter
-        // { name, age, city, isAdmin } = userDetails
-        console.log(name);
-        console.log(age);
-        console.log(city);
-        console.log(isAdmin);
-      }
-      userInfo(userDetails);
+      // let userDetails = {
+      //   name: 'Sanjit',
+      //   age: 27,
+      //   city: 'Goa',
+      //   isAdmin: false,
+      // };
+      // function userInfo({ name, age, city, isAdmin }) {
+      //   // using destructuring concept we have passed the object as function parameter
+      //   // { name, age, city, isAdmin } = userDetails
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(city);
+      //   console.log(isAdmin);
+      // }
+      // userInfo(userDetails);
     </script>
   </body>
 </html>

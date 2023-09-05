@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="getElementsByName()" />
+    <title>getElementsByName()</title>
+  </head>
+  <body>
+    <form action="#">
+      <input type="text" name="fname" id="fname" placeholder="Enter Name" />
+      <!-- 
+     {
+      type : "text", // by default is has empty string as value
+      name : "fname",
+      id : 'fname',
+      placeholder : 'Enter Name'
+     }
+     -->
+      <input type="email" name="email" id="email" placeholder="Email" />
+      <!-- 
+     {
+      type : "email", // by default is has empty string as value
+      name : "email",
+      id : 'email',
+      placeholder : 'Email'
+     }
+     -->
+      <input type="radio" name="subjects" id="english" />
+      <input type="radio" name="subjects" id="maths" />
+      <input type="radio" name="subjects" id="physics" />
+      <input type="radio" name="subjects" id="chem" />
+    </form>
+
+    <script>
+      // 2. getElementsByName()
+      let subjects = document.getElementsByName('subjects');
+      console.log(subjects);
+    </script>
+  </body>
+</html>

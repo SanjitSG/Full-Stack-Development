@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DOM Selectors" />
+    <title>DOM Selectors</title>
+  </head>
+  <body>
+    <!-- 
+  document.querySelector.('body').style.background = 'red'
+  
+
+
+  {
+   style : {
+    background : 'red'
+   }
+  }
+  
+  1. getElementById()
+  2. getElementsByName()
+  3. getElementsByTagName()
+  4. getElementsByClassName()
+
+  5. querySelector()
+  6. querySelectorAll()
+  -->
+
+    <h1 id="head">Heading</h1>
+    <p id="para">This is a paragraph</p>
+
+    <script>
+      // 1. getElementById('idName') => return type is HTML element
+      let head = document.getElementById('head');
+      let para = document.getElementById('para');
+      console.log(head);
+      console.log(para);
+    </script>
+  </body>
+</html>

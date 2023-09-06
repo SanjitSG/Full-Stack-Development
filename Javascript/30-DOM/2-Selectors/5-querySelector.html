@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="querySelector and  querySelectorAll" />
+    <title>querySelector and querySelectorAll</title>
+  </head>
+  <body>
+    <h1 id="head">querySelector and querySelectorAll</h1>
+
+    <div class="one">
+      <h2>Sub-Heading</h2>
+      <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure, exercitationem?</p>
+    </div>
+
+    <div class="two">
+      <h2>Sub-Heading</h2>
+      <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, quidem?</p>
+    </div>
+    <script>
+      // querySelector and querySelectorAll
+
+      // document.querySelector() => id
+      // document.querySelectorAll() => class, name, tag (combinators)
+
+      // let heading = document.querySelector('h1');
+      // let heading = document.querySelector("[id = 'head']");
+      // console.log(heading);
+
+      let selection = document.querySelectorAll(' .one, .two, .para');
+      console.log(selection);
+
+      selection[0].innerText = 'Hello im changed....';
+
+      let anotherSelection = document.querySelectorAll('.two > .para');
+      console.log(anotherSelection);
+    </script>
+  </body>
+</html>

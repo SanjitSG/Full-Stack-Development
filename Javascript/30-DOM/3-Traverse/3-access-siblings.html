@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Access Siblings</title>
+  </head>
+  <body>
+    <h1>Access Siblings</h1>
+
+    <ul class="parent">
+      <li class="nav-item">Home</li>
+      <li class="nav-item">About</li>
+      <li class="nav-item">Projects</li>
+      <li class="nav-item">Contact</li>
+    </ul>
+
+    <script>
+      // Access siblings
+
+      let siblingOne = document.querySelector(' .parent').firstElementChild;
+      // console.log(siblingOne);
+      console.log(siblingOne.nextElementSibling);
+
+      let siblingAll = document.querySelectorAll('.nav-item');
+      console.log(siblingAll);
+    </script>
+  </body>
+</html>

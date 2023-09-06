@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="getElementsByClassName" />
+    <title>getElementsByClassName</title>
+  </head>
+  <body>
+    <ul>
+      <li class="nav-item">Home</li>
+      <li class="nav-item">About</li>
+      <li class="nav-item">Projects</li>
+      <li class="nav-item">Contact</li>
+    </ul>
+
+    <script>
+      //getElementsByClassName
+
+      let navItems = document.getElementsByClassName('nav-item');
+      console.log(navItems);
+      Array.from(navItems).forEach((nav) => {
+        console.log(nav.textContent);
+      });
+      console.log(Array.from(navItems).map((nav) => nav.textContent));
+    </script>
+  </body>
+</html>

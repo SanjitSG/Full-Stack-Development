@@ -26,16 +26,43 @@
       placeholder : 'Email'
      }
      -->
-      <input type="radio" name="subjects" id="english" />
-      <input type="radio" name="subjects" id="maths" />
-      <input type="radio" name="subjects" id="physics" />
-      <input type="radio" name="subjects" id="chem" />
+      <input type="radio" name="subjects" id="english" value="English" />
+      <input type="radio" name="subjects" id="maths" value="Maths" />
+      <input type="radio" name="subjects" id="physics" value="Physics" />
+      <input type="radio" name="subjects" id="chem" value="Chem" />
     </form>
 
     <script>
-      // 2. getElementsByName()
+      // 2. getElementsByName('name attribute value')
+      // let subjects = document.getElementsByName('subjects');
+      // console.log(subjects);
+      // let subArray = Array.from(subjects).map((ele) => ele.id);
+      // console.log(subArray);
+
       let subjects = document.getElementsByName('subjects');
       console.log(subjects);
+      // subjects.forEach((subject, index, array) => console.log(subject.id))
+      console.log(Array.from(subjects).map((subject) => subject.value));
+
+      //[input#english, input#maths, input#physics, input#chem] => ['English', 'Maths', 'Physics', 'Chem']
+      // map() method will iterate each element and transform to equivalent array
+
+      // each and every element can be treated as an object, so the attribute of the element acts as properties of the object
+      // for ex
+      //   let subjects = [{
+      //       type: 'radio',
+      //       tagName: 'input',
+      //       name: 'subjects',
+      //       id: 'english',
+      //       value: 'English'
+      //   },
+      // {
+      //       type: 'radio',
+      //       tagName: 'input',
+      //       name: 'subjects',
+      //       id: 'maths',
+      //       value: 'Maths'
+      //   }]
     </script>
   </body>
 </html>

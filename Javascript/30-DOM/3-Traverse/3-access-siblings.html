@@ -14,16 +14,30 @@
       <li class="nav-item">Projects</li>
       <li class="nav-item">Contact</li>
     </ul>
-
+    <input type="button" value="DarkMode" id="btn" />
     <script>
       // Access siblings
-
+      let btn = document.getElementById('btn');
+      btn = document.addEventListener('click', function () {
+        document.body.style.backgroundColor = 'grey';
+      });
       let siblingOne = document.querySelector(' .parent').firstElementChild;
       // console.log(siblingOne);
       console.log(siblingOne.nextElementSibling);
 
       let siblingAll = document.querySelectorAll('.nav-item');
       console.log(siblingAll);
+
+      // Previous element sibling
+
+      let siblingLast = document.querySelector('.parent').lastElementChild;
+      console.log(siblingLast.previousElementSibling);
+
+      // iterating sibling values using while loop
+      while (siblingOne !== null) {
+        console.log(siblingOne);
+        siblingOne = siblingOne.nextElementSibling;
+      }
     </script>
   </body>
 </html>

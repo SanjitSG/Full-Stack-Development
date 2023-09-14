@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create HTML Element</title>
+  </head>
+  <body>
+    <h1>Create HTML element</h1>
+    <script>
+      // Create HTML Element
+
+      // document.createElement('tagName');
+
+      // let div = document.createElement('div');
+      // div.id = 'parent';
+      // div.className = 'parent-class';
+      // div.innerHTML = '<p>I am from div container</p>';
+      // console.log(div);
+
+      // // h1
+      // let h1 = document.createElement('h1');
+      // h1.textContent = 'Heading';
+      // console.log(h1);
+
+      // div#new
+      // h2 => div#new  [append h2 to div#new element]
+      let divNew = document.createElement('div');
+      divNew.id = 'new';
+
+      let h2 = document.createElement('h2');
+      h2.textContent = 'Heading-2';
+
+      divNew.appendChild(h2);
+      console.log(divNew);
+    </script>
+  </body>
+</html>

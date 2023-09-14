@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Selectors</title>
+
+    <style>
+      /* Combinators */
+      /* 1 - descendent selector */
+      /* selects all the descendent of the parent */
+      /* div p {
+        color: red;
+      } */
+
+      /* 2 - child selector */
+      /* The child selector selects all elements that are the children of a specified element.*/
+      /* div > p {
+        color: yellow;
+      } */
+
+      /* 3 - Adjacent sibling selector */
+      /* The adjacent sibling selector is used to select an element that is directly after another specific element. Sibling elements must have the same parent element, and "adjacent" means "immediately following".*/
+      /* div + p {
+        background: orange;
+      } */
+
+      /* 4 - General Sibling selector */
+      /* The general sibling selector selects all elements that are next siblings of a specified element. */
+      div ~ p {
+        background: limegreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CSS Selectors</h1>
+    <span> 1. The descendant selector matches all elements that are descendants of a specified element.</span>
+    <div>
+      <p>Paragraph 1 in div</p>
+      <p>Paragraph 2 in div</p>
+      <p>Paragraph 3 in div</p>
+    </div>
+    <p>Paragraph 4 not in div</p>
+    <p>Paragraph 5 not in div</p>
+  </body>
+</html>

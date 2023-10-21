@@ -13,7 +13,7 @@
       <li id="one">Home</li>
       <li id="two">About</li>
       <!-- Add Projects using after method -->
-      <li id="four">Contact</li>
+      <li id="five">Contact</li>
     </ul>
     <script>
       // after method
@@ -26,8 +26,12 @@
       projects.textContent = 'Projects';
       projects.id = 'three';
 
+      //portfolio
+      let portfolio = document.createElement('li');
+      portfolio.textContent = 'Portfolio';
+      portfolio.id = 'four';
       //adding projects after about
-      about.after(projects);
+      about.after(projects, portfolio);
 
       // we can add a single node or pass an array of nodes to be created inside after function.
     </script>

@@ -33,6 +33,27 @@
 
       divNew.appendChild(h2);
       console.log(divNew);
+
+      let ul = document.createElement('ul');
+
+      // function addChild(childText) {
+      //   for (let i = 0; i < childText.length; i++) {
+      //     let li = document.createElement('li');
+      //     li.textContent = childText[i];
+      //     ul.appendChild(li);
+      //   }
+      // }
+
+      // Using forEach loop
+      function addChild(childText) {
+        childText.forEach((element) => {
+          let li = document.createElement('li');
+          li.textContent = element;
+          ul.appendChild(li);
+        });
+      }
+      addChild(['Home', 'About', 'Projects', 'Contact']);
+      console.log(ul);
     </script>
   </body>
 </html>

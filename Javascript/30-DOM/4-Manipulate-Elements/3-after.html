@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="after method" />
+    <title>after method</title>
+  </head>
+  <body>
+    <h1>After Method</h1>
+
+    <ul>
+      <li id="one">Home</li>
+      <li id="two">About</li>
+      <!-- Add Projects using after method -->
+      <li id="four">Contact</li>
+    </ul>
+    <script>
+      // after method
+      // insert a node after an element.
+
+      let about = document.querySelector('ul').firstElementChild.nextElementSibling;
+      console.log(about);
+
+      let projects = document.createElement('li');
+      projects.textContent = 'Projects';
+      projects.id = 'three';
+
+      //adding projects after about
+      about.after(projects);
+
+      // we can add a single node or pass an array of nodes to be created inside after function.
+    </script>
+  </body>
+</html>

@@ -13,6 +13,13 @@
       <li>Projects</li>
       <li>Contact</li>
     </ul>
+
+    <input type="text" name="list" id="list" placeholder="Enter a list item" />
+    <button id="btn">Add</button>
+
+    <hr />
+    <ul id="listItems"></ul>
+
     <script>
       // Dom - Prepend
       // Add node(s) before the first child of a parent
@@ -30,6 +37,20 @@
 
       parent.prepend(...liElements);
       // console.log(liElements);
+
+      //form
+
+      let list = document.querySelector('#list');
+      // console.log(list);
+
+      btn = document.querySelector('#btn');
+      let liParent = document.querySelector('#listItems');
+      btn.onclick = function () {
+        let li = document.createElement('li');
+        li.textContent = list.value;
+        listItems.appendChild(li);
+        list.value = '';
+      };
     </script>
   </body>
 </html>

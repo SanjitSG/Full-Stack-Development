@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DOM - prepend method" />
+    <title>DOM - prepend method</title>
+  </head>
+  <body>
+    <h1>DOM - prepend method</h1>
+
+    <ul>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+    <script>
+      // Dom - Prepend
+      // Add node(s) before the first child of a parent
+      // syntax
+      // parentElement.prepend(node(s))
+
+      let parent = document.querySelector('ul');
+      let liItems = ['Home', 'About', 'Services'];
+
+      let liElements = liItems.map((liElement) => {
+        let element = document.createElement('li');
+        element.textContent = liElement;
+        return element;
+      });
+
+      parent.prepend(...liElements);
+      // console.log(liElements);
+    </script>
+  </body>
+</html>

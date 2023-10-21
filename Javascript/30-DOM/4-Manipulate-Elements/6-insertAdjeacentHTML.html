@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insert Adjacent HTML</title>
+  </head>
+  <body>
+    <h1>InsertAdjacentHTML</h1>
+
+    <ul id="list">
+      <li>CSS</li>
+    </ul>
+
+    <script>
+      //insertAdjacentHTML
+
+      // 1. beforebegin => add/insert a new element before the  specified element. (sibling)
+      // 2. afterbegin => add a new element as a first child. (child)
+      // 3. beforeend => add a new element as a last child. (child)
+      // 4. afterend => add/insert a new element after the specified element. (sibling)
+
+      let list = document.querySelector('#list');
+
+      list.insertAdjacentHTML('beforebegin', '<h2>This is before begin</h2>');
+
+      list.insertAdjacentHTML('afterbegin', '<li>HTML</li>'); // added as inner child elements
+
+      list.insertAdjacentHTML('beforeend', '<li>JAVASCRIPT</li>'); // added as inner child elements
+
+      list.insertAdjacentHTML('afterend', '<p>This is after end</p>');
+    </script>
+  </body>
+</html>

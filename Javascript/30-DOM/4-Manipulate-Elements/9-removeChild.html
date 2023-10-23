@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>removeChild</title>
+  </head>
+  <body>
+    <h1>removeChild() - method</h1>
+
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+    <script>
+      // removeChild()
+      // syntax
+      // parentNode.removeChild()
+
+      menu = document.querySelector('ul');
+      console.log(menu);
+      // menu.removeChild(menu.lastElementChild);
+
+      // removing all the children using removeChild() method
+
+      while (menu.children != null) {
+        menu.removeChild(menu.lastElementChild);
+      }
+    </script>
+  </body>
+</html>

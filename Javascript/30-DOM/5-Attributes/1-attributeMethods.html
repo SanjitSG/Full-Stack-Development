@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attribute methods</title>
+    <style>
+      #para {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 2rem;
+        line-height: 2.5rem;
+        word-spacing: 1rem;
+        background-color: blue;
+        color: white;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Attribute methods</h1>
+
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptatem dolores? Dicta veniam sed tenetur nisi eaque maiores officia cupiditate!</p>
+    <button id="btn">Add</button>
+    <!-- <button id="remove">Remove</button> -->
+
+    <h2 class="sub-head">Sub Heading</h2>
+    <button id="modify">Modify</button>
+
+    <!-- 
+    <p>
+      <button id="demo">Demo</button>
+    </p>
+    <p>
+      <button id="disable">Disable</button>
+    </p> -->
+    <script>
+      // Attribute methods
+      // 1. setAttribute(key, value) => set/add/update to an element.
+      // 2. getAttribute() => gets the attribute set to the element.
+      // 3. removeAttribute('id') => remove the attribute set to an element.
+      // 4. hasAttribute() => check the presence of the attribute in the element.
+
+      // 1. setAttribute() =>
+
+      let para = document.querySelector('p');
+
+      let btn = document.querySelector('#btn');
+
+      btn.onclick = function () {
+        para.setAttribute('class', 'modified-para'); // on clicking btn, add "id" attribute set to value "para" to paragraph.
+      };
+
+      // // ex2- setting attribute which has only 'key' and do not have any 'value' => disabled
+
+      // let demo = document.querySelector('#demo');
+      // let disable = document.querySelector('#disable');
+
+      // disable.onclick = function () {
+      //   // on clicking disable button, it will set attribute of demo button to disabled
+      //   demo.setAttribute('disabled', '');
+      // };
+
+      // removeAttribute('id')
+      // ex:
+
+      // let remove = document.querySelector('#remove');
+
+      // remove.onclick = function () {
+      //   para.removeAttribute('id');
+      // };
+
+      // modify attribute
+
+      let subheading = document.querySelector('.sub-head');
+      let modify = document.querySelector('#modify');
+
+      modify.onclick = function () {
+        subheading.setAttribute('class', 'newSubHead');
+      };
+
+      // hasAttribute
+
+      console.log(subheading.hasAttribute('class'));
+    </script>
+  </body>
+</html>

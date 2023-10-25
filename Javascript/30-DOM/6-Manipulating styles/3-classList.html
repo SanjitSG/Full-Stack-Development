@@ -17,6 +17,10 @@
       .center {
         text-align: center;
       }
+
+      .right {
+        text-align: right;
+      }
     </style>
   </head>
   <body>
@@ -27,6 +31,7 @@
     <button id="add-btn">Add Property</button>
     <button id="remove-btn">Remove Property</button>
     <button id="toggle-btn">Toggle Property</button>
+    <button id="replace-btn">Replace style</button>
 
     <script>
       // classList => Manipulate classes of an element using classList methods.
@@ -41,6 +46,7 @@
       let addBtn = document.querySelector('#add-btn');
       let removeBtn = document.querySelector('#remove-btn');
       let toggleBtn = document.querySelector('#toggle-btn');
+      let replaceBtn = document.querySelector('#replace-btn');
       console.log(classListProp.classList);
 
       //adding para class to classList
@@ -56,6 +62,12 @@
       // toggle (add and remove) i.e. toggle between value 'para' using toggle() property.
       toggleBtn.onclick = function () {
         classListProp.classList.toggle('para');
+      };
+
+      // replace style using replace('old', 'new') property.
+
+      replaceBtn.onclick = function () {
+        classListProp.classList.replace('center', 'right');
       };
     </script>
   </body>

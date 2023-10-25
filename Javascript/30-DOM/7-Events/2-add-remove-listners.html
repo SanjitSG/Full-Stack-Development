@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="add-remove event Listeners" />
+    <title>Add/Remove Event Listeners</title>
+    <style>
+      .para {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background: green;
+        color: white;
+        word-spacing: 15px;
+        line-height: 1.2rem;
+        font-size: 1.1rem;
+      }
+
+      .center {
+        text-align: center;
+      }
+
+      .right {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Add/Remove Event Listeners</h1>
+    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quos quidem ea. Distinctio numquam eaque molestiae similique quam assumenda dolore perferendis, excepturi magni temporibus, quasi nihil officiis? Fugit!</p>
+    <button id="add-btn">Add Listener</button>
+
+    <script>
+      // Add/remove Event listener
+      // There are 3 methods we can add an eventListener to an element.
+
+      let addBtn = document.querySelector('#add-btn');
+      let para = document.querySelector('p');
+
+      // Method - 1 => anonymous function
+
+      // addBtn.addEventListener('click', function () {
+      //   para.classList.add('para');
+      // });
+
+      // Method - 2 => arrow function
+      // addBtn.addEventListener('click', () => {
+      //   para.classList.add('para');
+      // });
+
+      // Method - 3 => using passing the function.
+
+      let paraProp = function () {
+        para.classList.add('para');
+      };
+
+      addBtn.addEventListener('click', paraProp);
+    </script>
+  </body>
+</html>

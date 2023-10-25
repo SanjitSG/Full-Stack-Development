@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events - Intro</title>
+  </head>
+  <body>
+    <h1>Events - Intro</h1>
+
+    <form action="#">
+      <input type="text" name="fullName" id="fullName" placeholder="Enter your name" />
+      <input type="email" name="email" id="email" placeholder="Enter your Email" />
+      <button id="submit-btn">Submit</button>
+    </form>
+    <script>
+      // Events - Intro
+      // There are two types of events
+      // 1. HTML events
+      // 2. Event Listeners
+
+      // we can capture any events using anonymous function
+      // by capturing events we can prevent data loss from form in case of refresh.
+
+      let submitBtn = document.querySelector('#submit-btn');
+
+      submitBtn.onclick = function (e) {
+        e.preventDefault(); // prevents default behavior.
+        console.log(e);
+      };
+    </script>
+  </body>
+</html>

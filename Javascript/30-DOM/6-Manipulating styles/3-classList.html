@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>classList Property</title>
+    <style>
+      .para {
+        background: green;
+        color: white;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 1.3rem;
+        word-spacing: 1.3rem;
+        line-height: 2rem;
+      }
+
+      .center {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>classList Property</h1>
+
+    <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias adipisci accusamus corrupti laborum praesentium quas perferendis eos nobis harum voluptates!</p>
+
+    <button id="add-btn">Add Property</button>
+    <button id="remove-btn">Remove Property</button>
+    <button id="toggle-btn">Toggle Property</button>
+
+    <script>
+      // classList => Manipulate classes of an element using classList methods.
+      // add()
+      // remove()
+      // toggle()
+      // replace()
+
+      // getting access to classList
+
+      let classListProp = document.querySelector('p');
+      let addBtn = document.querySelector('#add-btn');
+      let removeBtn = document.querySelector('#remove-btn');
+      let toggleBtn = document.querySelector('#toggle-btn');
+      console.log(classListProp.classList);
+
+      //adding para class to classList
+      addBtn.onclick = function () {
+        classListProp.classList.add('para');
+      };
+
+      // removing para class from classList
+      removeBtn.onclick = function () {
+        classListProp.classList.remove('para');
+      };
+
+      // toggle (add and remove) i.e. toggle between value 'para' using toggle() property.
+      toggleBtn.onclick = function () {
+        classListProp.classList.toggle('para');
+      };
+    </script>
+  </body>
+</html>

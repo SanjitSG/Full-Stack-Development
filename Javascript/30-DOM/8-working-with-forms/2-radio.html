@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - Radio Button</title>
+  </head>
+  <body>
+    <h1>DOM - Radio Button</h1>
+
+    <form action="#" method="post">
+      <label><strong>Select Subject: </strong></label>
+      <label for="english"><input type="radio" name="subjects" id="english" value="English" />English</label>
+      <label for="maths"><input type="radio" name="subjects" id="maths" value="Maths" />Maths</label>
+      <label for="physics"><input type="radio" name="subjects" id="physics" value="Physics" />Physics</label>
+    </form>
+    <button id="btn">Select Subject</button>
+
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // DOM - radio button
+      let result = document.querySelector('#result');
+      let btn = document.querySelector('#btn');
+      let subjects = document.querySelectorAll('[name="subjects"]');
+      console.log(subjects);
+
+      btn.addEventListener('click', (e) => {
+        // on click of button, display Selected subject inside paragraph text.
+        e.preventDefault(); // e captures the event, prevent default prevents the default behavior i.e. clearing the data after submission of form.
+        let selectedSubject;
+
+        for (const subject of subjects) {
+          // for..of loop iterate the array-like structure containing properties of radio button.
+          // variable 'subject' hold the keys of subjects array. using subject.propName, we can access the value of the key.
+          if (subject.checked) {
+            selectedSubject = subject.value;
+            console.log(selectedSubject);
+            break;
+          }
+        }
+        result.innerText = selectedSubject ? `Selected Subject is: ${selectedSubject}.` : `No Subject is selected.`;
+        // ternary operator checks of there exists any true value in 'selectedSubject' if yes => first statement will be executed, else 2nd statement will be executed.
+      });
+    </script>
+  </body>
+</html>

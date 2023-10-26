@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input Element</title>
+  </head>
+  <body>
+    <h1>Input Element</h1>
+
+    <input type="text" class="fullName" id="fullName" placeholder="Enter your full name" />
+    <hr />
+    <h2 id="content"></h2>
+
+    <script>
+      // Input Element
+      // Form
+      // Input - text, email, textarea, radio, checkbox, select.
+
+      // Get value from input and add it to textContent of h2 element in runtime
+
+      let fullName = document.querySelector('#fullName');
+      let content = document.querySelector('#content');
+
+      fullName.addEventListener('input', () => {
+        content.textContent = fullName.value;
+      });
+    </script>
+  </body>
+</html>

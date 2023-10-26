@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll into View</title>
+    <style></style>
+  </head>
+  <body>
+    <h1 id="head">Scroll Into View</h1>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia consequuntur asperiores voluptas rem officiis iure nisi vero odio et at qui, provident atque adipisci saepe autem fuga! Qui ducimus odio rem sit voluptatibus, debitis laborum asperiores labore autem explicabo quis mollitia neque expedita alias nam. Culpa velit quam minus tenetur pariatur! Quasi nesciunt architecto ducimus magnam assumenda possimus deleniti quia expedita excepturi porro numquam, non quisquam velit in at hic maiores molestias repellendus, doloremque quos. Sed in earum consequatur reiciendis ullam consequuntur
+      dolore minima dolor quo perspiciatis maiores, facilis quidem perferendis nihil repellat? Ipsum, voluptate optio. Alias, minus. Minima temporibus quaerat aliquid doloremque voluptas eius dolor est, explicabo fuga officia dolore architecto veniam ipsa, provident itaque! Temporibus recusandae nisi eveniet fuga in quod quae vel pariatur, dolor ex expedita necessitatibus quaerat assumenda error, minus tenetur aperiam quasi fugiat excepturi. Aut placeat a quae quam rerum doloribus ducimus possimus repellat, iste eius ratione voluptate iure adipisci quo accusamus nisi fugiat earum cumque neque
+      quaerat perspiciatis! Animi quae nihil corporis qui neque a reiciendis tempore molestias debitis consectetur sit dicta nulla itaque, beatae doloremque vitae, adipisci blanditiis ad repudiandae. Asperiores unde placeat fugiat sunt pariatur! Modi officiis perspiciatis commodi, unde ut corrupti, expedita, amet veniam perferendis nulla quam labore libero qui voluptatum mollitia ullam animi corporis asperiores quos quia distinctio doloribus pariatur. Temporibus dignissimos fugit ea consequuntur eos iusto, odio ducimus, sint soluta laudantium illo libero necessitatibus deserunt. Asperiores
+      quaerat dolores ut at, illum ipsa veritatis culpa, necessitatibus eos fugiat soluta, atque nostrum impedit earum eius totam maiores incidunt nobis aliquam blanditiis qui aperiam! At veniam voluptatum itaque quos numquam amet qui ea eligendi dicta. Laboriosam reiciendis ullam rem quas veniam et iusto, sunt distinctio ipsam nisi. Quae dolorem minima nemo earum, similique cum possimus, illo nisi aut ut quos corporis eius, voluptates soluta impedit a. Voluptatibus tempore esse officia assumenda tempora, beatae consequuntur, veniam ipsa nam doloribus quisquam similique, cupiditate fugit?
+      Aperiam necessitatibus vel tempore ipsam neque blanditiis expedita. Magnam adipisci, itaque tenetur expedita temporibus voluptatum iusto, fugiat distinctio illum incidunt enim velit quod fuga corrupti impedit at quisquam veniam facilis. Voluptatibus, architecto fugiat? Ex recusandae itaque optio incidunt explicabo eveniet similique delectus repudiandae laborum excepturi? Molestiae id iusto eveniet numquam at a accusantium aliquam tempora veritatis adipisci vel unde, reiciendis eos est sit debitis voluptas iste odit sapiente quas esse quia! Velit nostrum optio ipsam, ad mollitia maxime
+      molestiae iste odio perferendis dolores delectus provident sequi ab rem officia deserunt explicabo. Illum accusamus iure vitae ipsum odio deserunt minima corporis voluptatum minus iusto, ratione libero odit cum consequuntur excepturi ipsam optio, distinctio numquam ab! Nisi sed, impedit accusantium sit nobis aspernatur consequatur quasi culpa fugiat ad necessitatibus saepe veniam delectus deleniti quas incidunt aliquam tempora. Dolorem, velit porro iure autem ea neque repellendus adipisci, voluptate magnam tenetur, nobis voluptas ex maxime enim quos deleniti optio? Autem, impedit.
+      Mollitia nulla doloremque nesciunt cumque iusto commodi accusantium tempore ab optio voluptatem error provident rerum saepe molestias vel tempora, incidunt est deleniti dolor.
+    </p>
+
+    <button id="btn">Scroll to Top</button>
+
+    <script>
+      // Scroll into view
+      // syntax
+      // element.scrollIntoView(options)
+      // options => alignToTop (by default)
+
+      let btn = document.querySelector('#btn');
+      let head = document.querySelector('#head');
+
+      btn.addEventListener('click', () => {
+        // on clicking button => head.scrollIntoView event will trigger.
+        head.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>

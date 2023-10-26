@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM -Scroll Event</title>
+  </head>
+  <style>
+    body {
+      height: 100vh;
+    }
+  </style>
+  <body>
+    <h1 id="heading">DOM - Scroll Event</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, optio!</p>
+
+    <script>
+      // Scroll Event is property of Window object. Window object is a Global Object.
+
+      let head = document.querySelector('#heading');
+
+      window.addEventListener('scroll', () => {
+        console.log('Someone is Scrolling');
+      });
+    </script>
+  </body>
+</html>

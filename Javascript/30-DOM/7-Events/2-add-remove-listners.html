@@ -25,9 +25,10 @@
     </style>
   </head>
   <body>
-    <h1>Add/Remove Event Listeners</h1>
+    <h1>Add / Remove Event Listeners</h1>
     <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque perferendis quos quidem ea. Distinctio numquam eaque molestiae similique quam assumenda dolore perferendis, excepturi magni temporibus, quasi nihil officiis? Fugit!</p>
-    <button id="add-btn">Add Listener</button>
+    <button id="add-btn">Add Event</button>
+    <button id="remove-btn">Remove Event</button>
 
     <script>
       // Add/remove Event listener
@@ -48,12 +49,20 @@
       // });
 
       // Method - 3 => using passing the function.
+      // event.addEventListener('type', listenerFunctionName)
 
-      let paraProp = function () {
+      let addParaProp = function () {
         para.classList.add('para');
       };
 
-      addBtn.addEventListener('click', paraProp);
+      addBtn.addEventListener('click', addParaProp);
+
+      // Remove Event
+      let removeBtn = document.querySelector('#remove-btn');
+      removeBtn.addEventListener('click', function () {
+        addBtn.removeEventListener('click', addParaProp);
+        console.log('remove-btn');
+      });
     </script>
   </body>
 </html>

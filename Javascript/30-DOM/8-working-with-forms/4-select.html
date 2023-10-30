@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - select</title>
+  </head>
+  <body>
+    <h1>DOM - select</h1>
+    <form action="#">
+      <p>
+        <label><strong>Select Subject(s):</strong></label>
+      </p>
+
+      <select name="subjects" id="subjects" multiple>
+        <option value="English">English</option>
+        <option value="Maths">Maths</option>
+        <option value="Physics">Physics</option>
+        <option value="Computer">Computer</option>
+        <option value="Chemistry">Chemistry</option>
+      </select>
+      <p><button id="btn">Selected Subjects</button></p>
+    </form>
+
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // DOM - select
+      // using 'selected' property we can check if the option is selected
+
+      let btn = document.querySelector('#btn');
+      let result = document.querySelector('#result');
+
+      // selecting options
+      let subjects = document.querySelectorAll('option'); // NodeList
+      console.log(subjects);
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let selectedOption = [];
+
+        subjects.forEach((subject) => {
+          if (subject.selected) {
+            selectedOption.push(subject.value);
+          }
+        });
+        console.log(selectedOption);
+        result.textContent = `Use have selected: ${selectedOption.join(', ')}`;
+      });
+    </script>
+  </body>
+</html>

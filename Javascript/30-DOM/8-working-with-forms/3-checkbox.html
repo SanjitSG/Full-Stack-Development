@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM - CheckBox</title>
+  </head>
+  <body>
+    <h1>DOM - checkbox</h1>
+
+    <form action="#" method="post">
+      <label><strong>Select Subject(s):</strong> </label>
+      <label for="english"><input type="checkbox" name="subject" id="english" value="English" />English</label>
+      <label for="physics"><input type="checkbox" name="subject" id="physics" value="Physics" />Physics</label>
+      <label for="chemistry"><input type="checkbox" name="subject" id="chemistry" value="Chemistry" />Chemistry</label>
+      <label for="maths"><input type="checkbox" name="subject" id="maths" value="Maths" />Maths</label>
+      <label for="computer"><input type="checkbox" name="subject" id="computer" value="Computer" />Computer</label>
+
+      <p><button id="btn">Select Subject(s)</button></p>
+    </form>
+
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // DOM - Checkbox
+
+      let btn = document.querySelector('#btn');
+      let result = document.querySelector('#result');
+
+      // selecting all checkBoxes using attribute type selector
+      let subjects = document.querySelectorAll("[type = 'checkbox']"); // NodeList
+
+      // adding an event to btn
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let subjectArray = [];
+
+        subjects.forEach((subject) => {
+          if (subject.checked) {
+            subjectArray.push(subject.value);
+          }
+        });
+        result.textContent = `The selected Subjects are: ${subjectArray.join(', ')}`;
+      });
+    </script>
+  </body>
+</html>

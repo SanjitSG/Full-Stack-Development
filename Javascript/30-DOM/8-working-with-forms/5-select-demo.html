@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select Demo</title>
+  </head>
+  <body>
+    <h1>Select Demo</h1>
+
+    <p><input type="text" id="option" placeholder="Enter option" /></p>
+    <button id="btn-add">Add</button>
+
+    <hr />
+
+    <p>
+      <select name="subjects" id="subjects" multiple></select>
+    </p>
+
+    <button id="btn-remove">Remove</button>
+
+    <script>
+      // Select Demo
+
+      let addBtn = document.querySelector('#btn-add');
+      let removeBtn = document.querySelector('#btn-remove');
+      let option = document.querySelector('#option');
+      let subjects = document.querySelector('#subjects');
+
+      // adding event listener to add btn to add an option to select menu
+
+      addBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let newOption = new Option(option.value, option.value);
+        subjects.append(newOption);
+        option.value = '';
+        option.focus();
+      });
+
+      // removeBtn.addEventListener('click', (e) => {
+      //   e.preventDefault();
+      //   let selectedOption = subjects.selectedOption;
+      // });
+      // adding event listener to removeBtn to remove selected options from select menu
+      removeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let options = document.querySelectorAll('option');
+
+        options.forEach((option) => {
+          if (option.selected) {
+            option.remove();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

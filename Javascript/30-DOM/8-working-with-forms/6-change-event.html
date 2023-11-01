@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change Event</title>
+  </head>
+  <body>
+    <h1>Change Event</h1>
+    <p>
+      <label for="username">Username: <input type="text" name="username" id="username" placeholder="Enter Subject" /></label>
+    </p>
+
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // change event
+      // on change in element event auto triggers listener function
+      // syntax
+      /*
+      element.addEventListener("change", function (e) {
+       // logic
+      })
+     */
+
+      let username = document.querySelector('#username');
+      let result = document.querySelector('#result');
+
+      username.addEventListener('change', function (e) {
+        result.textContent = username.value;
+      });
+    </script>
+  </body>
+</html>

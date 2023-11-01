@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>radio change</title>
+    <style>
+      input[type='radio'] {
+        margin-top: -2px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Radio change</h1>
+
+    <div>
+      <label for="english"><input type="radio" name="subject" id="english" value="English" /> English</label>
+    </div>
+    <div>
+      <label for="english"><input type="radio" name="subject" id="maths" value="Maths" /> Maths</label>
+    </div>
+    <div>
+      <label for="english"><input type="radio" name="subject" id="physics" value="Physics" /> Physics</label>
+    </div>
+    <div>
+      <label for="english"><input type="radio" name="subject" id="computer" value="Computer" /> Computer</label>
+    </div>
+
+    <hr />
+    <p id="result"></p>
+    <script>
+      // radio change
+      // using capture property we can get access  to target element.
+      let result = document.querySelector('#result');
+
+      document.body.addEventListener('change', function (e) {
+        console.log(e);
+        console.log(e.target);
+        //using object destructuring (impt for react events)
+
+        let { type, name, id, value } = e.target;
+
+        result.textContent = value;
+      });
+    </script>
+  </body>
+</html>

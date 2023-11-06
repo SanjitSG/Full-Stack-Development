@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Auth using localStorage</title>
+  </head>
+  <body>
+    <h1>Auth using localStorage</h1>
+    <h2 id="heading">Registration form</h2>
+    <form action="#" id="from" method="post">
+      <p>
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required />
+      </p>
+      <p>
+        <label for="password">Password: </label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required />
+      </p>
+      <p>
+        <label for="confirm-password">Confirm Password: </label>
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password" />
+      </p>
+      <p>
+        <label for="age">Enter Age: </label>
+        <input type="number" id="age" name="age" placeholder="Enter your age" required />
+      </p>
+      <p>
+        <button id="register">Register</button>
+        <button id="cancel">Cancel</button>
+      </p>
+    </form>
+
+    <script>
+      // auth using localStorage
+
+      let register = document.querySelector('#register');
+      let cancel = document.querySelector('#cancel');
+      let inputs = document.querySelectorAll('input');
+
+      register.addEventListener('click', (e) => {
+        e.preventDefault();
+        let userInfo = {};
+
+        inputs.forEach((input) => {
+          let { name, value } = input;
+          userInfo[name] = value; // name ="username" value="John"
+        });
+
+        // checking if username already exists
+        let localStorageEntries = Object.keys(localStorage);
+        console.log(localStorageEntries);
+        let username = localStorageEntries.find((key) => key === userInfo.username);
+
+        if (username) {
+          alert('Username not available');
+        } else {
+          // checking for password and confirm-password
+          if (inputs[1].value === inputs[2].value) {
+            localStorage.setItem(userInfo.username, JSON.stringify(userInfo)); // setting key and value (object to string) to local storage
+            window.location.href = 'http://192.168.31.152:5500/Javascript/31-Web%20API/1-Local%20Storage/3-signin.html';
+          } else {
+            alert('Passwords do not match!');
+            inputs[1].value = '';
+            inputs[2].value = '';
+          }
+        }
+      });
+
+      cancel.addEventListener('click', (e) => {
+        inputs.forEach((input) => {
+          input.value = '';
+        });
+      });
+    </script>
+  </body>
+</html>

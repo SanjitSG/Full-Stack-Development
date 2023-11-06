@@ -53,11 +53,11 @@
       // syntax
       // localStorage.getItem("key")
 
-      console.log(obj.getItem('name'));
-      console.log(obj.getItem('age'));
+      // console.log(obj.getItem('name'));
+      // console.log(obj.getItem('age'));
 
       // length
-      console.log(obj.length); // 3
+      // console.log(obj.length); // 3
 
       // Remove the item
       // Syntax
@@ -67,16 +67,16 @@
 
       //Iterate the localStorage items using Object.keys()
 
-      console.log(Object.keys(obj));
+      // console.log(Object.keys(obj));
 
       // Object.keys(obj).forEach((key) => {
       //   console.log(obj.getItem(key));
       // });
 
       // using for..of loop
-      for (const key of Object.keys(obj)) {
-        console.log(obj.getItem(key));
-      }
+      // for (const key of Object.keys(obj)) {
+      //   console.log(obj.getItem(key));
+      // }
 
       // value as Object
       let john = {
@@ -89,8 +89,10 @@
 
       console.log(JSON.parse(localStorage.getItem('user')));
 
+      let test = JSON.parse(localStorage.getItem('user'));
+      console.log(test);
       // clear()
-      localStorage.clear();
+      // localStorage.clear();
     </script>
   </body>
 </html>

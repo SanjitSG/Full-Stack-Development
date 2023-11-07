@@ -8,18 +8,18 @@
   <body>
     <h1>Auth using localStorage</h1>
     <h2 id="heading">Registration form</h2>
-    <form action="#" id="from" method="post">
+    <form action="#" method="post">
       <p>
         <label for="username">Username: </label>
         <input type="text" id="username" name="username" placeholder="Enter your username" required />
       </p>
       <p>
         <label for="password">Password: </label>
-        <input type="password" id="password" name="password" placeholder="Enter password" required />
+        <input type="password" id="password" name="password" placeholder="Enter Password" required />
       </p>
       <p>
         <label for="confirm-password">Confirm Password: </label>
-        <input type="password" name="confirm-password" id="confirm-password" placeholder="confirm password" />
+        <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" />
       </p>
       <p>
         <label for="age">Enter Age: </label>
@@ -58,6 +58,7 @@
           // checking for password and confirm-password
           if (inputs[1].value === inputs[2].value) {
             localStorage.setItem(userInfo.username, JSON.stringify(userInfo)); // setting key and value (object to string) to local storage
+            alert('user added successfully');
             window.location.href = 'http://192.168.31.152:5500/Javascript/31-Web%20API/1-Local%20Storage/3-signin.html';
           } else {
             alert('Passwords do not match!');

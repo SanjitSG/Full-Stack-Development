@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Session Storage - intro</title>
+  </head>
+  <body>
+    <h1>Session Storage - intro</h1>
+
+    <script>
+      // sessionStorage
+      // similar to localStorage, the difference is that data in localStorage doesn't expire, data in sessionStorage is cleared when the page session ends.
+
+      // Accessing sessionStorage
+      // 1. window.sessionStorage
+      // 2. sessionStorage => return storage object
+
+      let sessionStorageData = sessionStorage;
+
+      // methods
+
+      // 1. Adding a key : value pair. setItem('key', 'value')
+      sessionStorageData.setItem('username', 'john');
+      // key => string | value => string
+      console.log(sessionStorageData);
+
+      // 2. getItem('key')
+
+      // 3. removeItem('key')
+
+      // 4. clear()
+    </script>
+  </body>
+</html>

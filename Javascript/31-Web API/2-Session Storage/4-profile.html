@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>User Profile</h1>
+    <h2>Welcome, <span></span></h2>
+
+    <p>
+      <button id="btn">Logout</button>
+    </p>
+
+    <script>
+      // Logout
+      let logout = document.querySelector('#btn');
+      let spanTag = document.querySelector('span');
+      //getting username
+      let username = Object.keys(sessionStorage)[1];
+      spanTag.textContent = username;
+
+      logout.addEventListener('click', (e) => {
+        e.preventDefault();
+        sessionStorage.removeItem(username);
+        window.location.href = 'http://192.168.31.152:5500/Javascript/31-Web%20API/2-Session%20Storage/2-register.html';
+      });
+    </script>
+  </body>
+</html>

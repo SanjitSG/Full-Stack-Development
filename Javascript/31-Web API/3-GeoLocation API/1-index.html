@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Geo Location API</title>
+  </head>
+  <body>
+    <h1>Geo Location API</h1>
+    <button id="btn">Get Location</button>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Geo Location API
+      // using geoLocation object we can get access to lat and lng of the device.
+
+      // Access GeoLocation object
+      console.log(navigator.geolocation);
+
+      //getting lat and lng by accessing geoLocation object
+
+      let btn = document.querySelector('#btn');
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+
+        // onSuccess is user defined variable
+        function onSuccess(position) {
+          const { latitude, longitude } = position.coords;
+          let result = document.querySelector('#result');
+          result.textContent = `The latitude position is: ${latitude} and the longitude position is: ${longitude}`;
+        }
+
+        // onError
+        function onError() {
+          result.textContent = `Required user concent to display the location. Allow access.`;
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -99,11 +99,17 @@
             return `
            <div>
             <h1>Product ID: ${product.id}</h1>
+            <p><img src="${product.image}" alt="${product.category}" height = 200px width = 200px></p>
             <h2>Product Title: ${product.title}</h2>
+            <p><strong>Description: </strong>${product.description}</p>
+            <hr>
            </div>
           `;
           });
+
+          result.innerHTML = displayProducts.join('');
         } catch (error) {
+          result.innerHTML = 'Something went wrong...';
           console.log(error);
         }
       }

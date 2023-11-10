@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Fetch API</title>
+  </head>
+  <body>
+    <h1>{JSON} Placeholder</h1>
+    <h2>Posts</h2>
+    <p class="result"></p>
+
+    <script>
+      let result = document.querySelector('.result');
+      // fetching 100 posts
+      async function fetchPost(url) {
+        try {
+          let res = await fetch(url);
+          let posts = await res.json();
+
+          let displayPost = posts.map((post) => {
+            return `
+           <div>
+            <h3>User ID: ${post.id}</h3>
+            <h2><strong>Title:</strong>${post.title}</h2>
+            <p>${post.body}</p>
+
+            <hr>
+            </div>
+           `;
+          });
+          result.innerHTML = displayPost.join('');
+        } catch (error) {
+          console.log(error);
+        }
+      }
+
+      fetchPost('https://jsonplaceholder.typicode.com/posts');
+    </script>
+  </body>
+</html>

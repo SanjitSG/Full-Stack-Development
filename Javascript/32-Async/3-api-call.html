@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API - Call</title>
+  </head>
+  <body>
+    <h1>API - Call</h1>
+
+    <script>
+      // API - Call
+      let fetchData = async (url) => {
+        let result = await fetch(url);
+        let data = await result.json();
+        console.log(data);
+      };
+      fetchData('url');
+    </script>
+  </body>
+</html>

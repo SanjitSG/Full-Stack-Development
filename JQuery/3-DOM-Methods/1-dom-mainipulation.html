@@ -11,7 +11,15 @@
 
     <div></div>
 
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat fugit vitae explicabo, illum neque, nulla distinctio quia eaque, suscipit sunt impedit! Architecto consectetur quae eum! Quae sequi facilis necessitatibus fugiat?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, facere?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores, facere?</p>
+    <!-- 
+    <ul>
+      <li>list item 1</li>
+      <li>list item 2</li>
+      <li>list item 3</li>
+    </ul>
+    <p>a paragraph</p> -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
@@ -24,21 +32,31 @@
       // inside => 'div'
 
       $(document).ready(function () {
-        // $('div').add('p').addClass('para').append('This is paragraph');
+        $('div').add('p').addClass('para').append('This is paragraph');
 
         //append() => add the content at the end of selected element innerText
-        //$('div').append('This is a text');
+        $('div').append('This is a text');
         // referenceElement.after('element');
 
         // add an element after a reference Element
-        // $('div').after("<p style='color:red'>This is a para.</p>");
-        // $('div').before("<p style='color:red'>This is a para.</p>");
+        $('div').after("<p style='color:red'>This is a para.</p>");
+        $('div').before("<p style='color:red'>This is a para.</p>");
 
         // prepend() => inserts content at the beginning of the reference element
-        // $('div').prepend('<p style="color:blue">This is a para.</p>');
+        $('div').prepend('<p style="color:blue">This is a para.</p>');
 
         // remove()
         $('p').remove();
+
+        $('li').add('p').css('background-color', 'red');
+
+        $('li').add(document.getElementsByTagName('p')[0]).css('background-color', 'red');
+
+        // replaceAll();
+        $('<h2>Im replaced para.</h2>').replaceAll('p');
+
+        // wrap()
+        $('p').wrap('<div></div>');
       });
     </script>
   </body>

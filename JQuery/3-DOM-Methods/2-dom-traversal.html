@@ -36,11 +36,17 @@
         console.log('The index is => ' + index + ' | Text: ' + $(this).text());
       });
 
-      //children
+      //children()
       $('ul')
         .children()
         .each(function (i, e) {
           console.log($(this).text());
+        });
+
+      $('#outerDiv')
+        .children()
+        .each(function (i, e) {
+          console.log($(this).html());
         });
     </script>
   </body>

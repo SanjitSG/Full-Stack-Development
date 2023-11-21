@@ -42,6 +42,7 @@ search.addEventListener('click', () => {
           setTimeout(() => {
             container.classList.remove('active');
           }, 2500);
+
           switch (json.weather[0].main) {
             case 'Clear':
               image.src = './images/clear.png';

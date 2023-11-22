@@ -31,47 +31,47 @@
       // DOM - Traversal methods
       // each(), children(), find(), first(), next(), parent(), prev(), sibling()
 
-      // each()
-      // $('p').each(function (index, ele) {
-      //   console.log('The index is => ' + index + ' | Text: ' + $(this).text());
-      // });
+      each();
+      $('p').each(function (index, ele) {
+        console.log('The index is => ' + index + ' | Text: ' + $(this).text());
+      });
 
       // //children()
-      // $('ul')
-      //   .children()
-      //   .each(function (i, e) {
-      //     console.log($(this).text());
-      //   });
+      $('ul')
+        .children()
+        .each(function (i, e) {
+          console.log($(this).text());
+        });
 
-      // $('#outerDiv')
-      //   .children()
-      //   .each(function (i, e) {
-      //     console.log($(this).html());
-      //   });
+      $('#outerDiv')
+        .children()
+        .each(function (i, e) {
+          console.log($(this).html());
+        });
 
       // find()
-      // $('#outerDiv')
-      //   .find('p')
-      //   .each(function (i, e) {
-      //     console.log($(this).text());
-      //   });
+      $('#outerDiv')
+        .find('p')
+        .each(function (i, e) {
+          console.log($(this).text());
+        });
 
       // // next()
-      // console.log($('#outerDiv').next().html());
+      console.log($('#outerDiv').next().html());
 
       // parent()
-      // console.log($('#innerDiv').parent().html()); // #outerDiv
+      console.log($('#innerDiv').parent().html()); // #outerDiv
 
       //sibling
-      // console.log($('#outerDiv').siblings()); // h1, div, div, script, script
+      console.log($('#outerDiv').siblings()); // h1, div, div, script, script
 
       // css() we can add css using jQuery
-      // $('#outerDiv').siblings().css({ color: 'red', background: 'cyan', marginTop: '40px', border: '1px solid black' });
+      $('#outerDiv').siblings().css({ color: 'red', background: 'cyan', marginTop: '40px', border: '1px solid black' });
 
       // css properties must be added in json format, multi word properties uses camelCase notation.
 
       // addClass()
-      // $('h1').addClass('header'); // <h1 class="header">DOM - traversal</h1>
+      $('h1').addClass('header'); // <h1 class="header">DOM - traversal</h1>
     </script>
   </body>
 </html>

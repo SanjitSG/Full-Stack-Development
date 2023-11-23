@@ -10,6 +10,7 @@
         height: 100px;
         width: 100px;
         background: crimson;
+        /* display: none; */
       }
     </style>
   </head>
@@ -17,7 +18,12 @@
     <h1>Animation</h1>
 
     <div id="animate" class="box"></div>
-    <p id="msg"></p>
+    <p id="msg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, vitae?</p>
+
+    <input type="button" value="Click" id="btn" />
+    <input type="button" value="Submit" />
+    <input type="button" value="Clear" />
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <script>
@@ -35,6 +41,41 @@
             $('#msg').append('The animations attached to the current element is ' + $('#animate').queue().length);
           }
         );
+      });
+
+      // fadeIn(duration, function(optional))
+
+      $('#animate').fadeIn(5000, function () {
+        $('#msg').append('Animation is complete');
+      });
+
+      // fadeOut
+      $('#animate').fadeOut(5000);
+
+      // hide()
+      $('#animate').hide(5000);
+
+      //show()
+      $('#animate').show(5000);
+
+      //Toggle event
+      //toggle() => toggles between show and hide
+      $('#btn').click(function () {
+        $('#animate').toggle(500);
+      });
+
+      // This keyword to access inner properties of an element
+
+      $("[type='button']").click(function () {
+        console.log(this.value);
+      });
+
+      // onClick => click
+      // onMouseOver => mouseover
+
+      $('p').mouseover(function () {
+        // $(this).css('background-color', 'red');
+        $(this).css({ backgroundColor: 'cyan', fontSize: '45px' });
       });
     </script>
   </body>

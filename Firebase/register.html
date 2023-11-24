@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Firebase Auth</title>
+  </head>
+  <body>
+    <h1>Firebase Authentication</h1>
+
+    <h2 id="heading">Registration form</h2>
+    <form action="#" method="post" id="form">
+      <table>
+        <tr>
+          <td>
+            <label for="username">Username: </label>
+          </td>
+          <td>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Email: </label></td>
+          <td><input type="email" name="email" id="email" placeholder="Enter your Email" required /></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="password">Password: </label>
+          </td>
+          <td>
+            <input type="password" id="password" name="password" placeholder="Enter Password" required />
+          </td>
+        </tr>
+      </table>
+      <br />
+      <p>
+        <button id="register">Register</button>
+        <button id="cancel">Cancel</button>
+      </p>
+    </form>
+
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js';
+
+      import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js';
+
+      import { getDatabase, set, ref } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js';
+
+      const firebaseConfig = {
+        apiKey: 'AIzaSyCVggAGfoW_eDQN04L9YqCEkoHX-g9vhXg',
+        authDomain: 'fir-auth-467d8.firebaseapp.com',
+        projectId: 'fir-auth-467d8',
+        storageBucket: 'fir-auth-467d8.appspot.com',
+        messagingSenderId: '123990071246',
+        appId: '1:123990071246:web:d8fd1f8f6281a19751fd9f',
+      };
+
+      const app = initializeApp(firebaseConfig);
+
+      const auth = getAuth();
+
+      const db = getDatabase(app);
+
+      let form = document.querySelector('#form');
+      let inputs = document.querySelectorAll('input');
+      let cancel = document.querySelector('cancel');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        let username = inputs[0].value;
+        let email = inputs[1].value;
+        let password = inputs[2].value;
+        createUserWithEmailAndPassword(auth, email, password)
+          .then((res) => {
+            console.log(res);
+            let user = res.user;
+
+            // setting data to database
+            set(ref(db, 'users/' + user.uid), {
+              username: username,
+              email: email,
+            });
+            alert('user created');
+          })
+          .catch((err) => {
+            let { code, message } = err;
+            console.log(code);
+            console.log(message);
+          });
+      });
+    </script>
+  </body>
+</html>

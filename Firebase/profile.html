@@ -12,7 +12,25 @@
       <button id="logout">Logout</button>
     </p>
 
-    <script>
+    <script type="module">
+      import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js';
+
+      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js';
+
+      const firebaseConfig = {
+        apiKey: 'AIzaSyCVggAGfoW_eDQN04L9YqCEkoHX-g9vhXg',
+        authDomain: 'fir-auth-467d8.firebaseapp.com',
+        databaseURL: 'https://fir-auth-467d8-default-rtdb.firebaseio.com',
+        projectId: 'fir-auth-467d8',
+        storageBucket: 'fir-auth-467d8.appspot.com',
+        messagingSenderId: '123990071246',
+        appId: '1:123990071246:web:d8fd1f8f6281a19751fd9f',
+      };
+
+      const app = initializeApp(firebaseConfig);
+
+      const auth = getAuth();
+
       let username = document.querySelector('#username');
       let logout = document.querySelector('#logout');
 
@@ -24,7 +42,15 @@
 
       logout.addEventListener('click', (e) => {
         e.preventDefault();
-        window.location.href = './signin.html';
+        signOut(auth)
+          .then(() => {
+            sessionStorage.removeItem(value);
+            window.location.href = './signin.html';
+          })
+          .catch((err) => {
+            let { code, message } = err;
+            console.log(`Something went wrong. ${code} => ${message}`);
+          });
       });
     </script>
   </body>

@@ -70,10 +70,12 @@
             onValue(userDetailsRef, (snapshot) => {
               const data = snapshot.val();
               console.log(data);
+              //URL query to pass the username to profile.html page
+              alert('login successful');
               window.location.href = `./profile.html?username=${data.username}`;
+
+              sessionStorage.setItem(data.username, res.user.uid);
             });
-            alert('login successful');
-            //URL query to pass the username to profile.html page
           })
           .catch((err) => {
             let { code, message } = err;

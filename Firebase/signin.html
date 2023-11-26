@@ -23,6 +23,7 @@
         <input type="submit" value="Sign-In" />
         <input type="reset" value="Clear" />
       </p>
+      <p>Not yet Registered? <a href="./register.html">Click here to register.</a></p>
     </form>
 
     <script type="module">
@@ -30,6 +31,8 @@
       import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js';
 
       import { getAuth, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js';
+
+      import { getDatabase, ref, onValue } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js';
 
       // Your web app's Firebase configuration
       const firebaseConfig = {
@@ -47,9 +50,11 @@
 
       const auth = getAuth();
 
+      const db = getDatabase(app);
+
       let form = document.querySelector('#form');
       let inputs = document.querySelectorAll('input');
-      console.log(inputs);
+      // console.log(inputs);
 
       form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -60,7 +65,15 @@
         signInWithEmailAndPassword(auth, email, password)
           .then((res) => {
             console.log(res);
+            let uid = res.user.uid;
+            const userDetailsRef = ref(db, 'users/' + uid);
+            onValue(userDetailsRef, (snapshot) => {
+              const data = snapshot.val();
+              console.log(data);
+              window.location.href = `./profile.html?username=${data.username}`;
+            });
             alert('login successful');
+            //URL query to pass the username to profile.html page
           })
           .catch((err) => {
             let { code, message } = err;

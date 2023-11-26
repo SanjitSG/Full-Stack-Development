@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile page</title>
+  </head>
+  <body>
+    <h1>Profile page</h1>
+    <p><strong>Welcome, </strong><span id="username"></span></p>
+    <p>
+      <button id="logout">Logout</button>
+    </p>
+
+    <script>
+      let username = document.querySelector('#username');
+      let logout = document.querySelector('#logout');
+
+      let urlParams = new URLSearchParams(location.search);
+      // console.log(urlParams);
+      let [value] = urlParams.values();
+      console.log(value);
+      username.textContent = value;
+
+      logout.addEventListener('click', (e) => {
+        e.preventDefault();
+        window.location.href = './signin.html';
+      });
+    </script>
+  </body>
+</html>

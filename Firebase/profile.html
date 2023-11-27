@@ -36,9 +36,10 @@
 
       let urlParams = new URLSearchParams(location.search);
       // console.log(urlParams);
-      let [value] = urlParams.values();
-      console.log(value);
-      username.textContent = value;
+      let [name, id] = urlParams.values();
+      console.log(name);
+      console.log(id);
+      username.textContent = name;
 
       logout.addEventListener('click', (e) => {
         e.preventDefault();

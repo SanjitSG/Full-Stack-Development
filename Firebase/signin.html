@@ -72,7 +72,7 @@
               console.log(data);
               //URL query to pass the username to profile.html page
               alert('login successful');
-              window.location.href = `./profile.html?username=${data.username}`;
+              window.location.href = `./profile.html?username=${data.username}&id=${res.user.uid}`;
 
               sessionStorage.setItem(data.username, res.user.uid);
             });

@@ -7,15 +7,23 @@
   </head>
   <body>
     <h1>Profile page</h1>
-    <p><strong>Welcome, </strong><span id="username"></span></p>
+    <div style="display: flex; justify-content: space-between">
+      <p><strong>Welcome, </strong><span id="username"></span></p>
+      <p>
+        <button id="logout">Logout</button>
+      </p>
+    </div>
+    <hr />
     <p>
-      <button id="logout">Logout</button>
+      Username: <input type="text" id="displayname" name="displayname" />
+      <input type="button" id="edit" name="edit" value="Edit" />
+      <input type="button" id="delete" name="delete" value="Delete" />
     </p>
 
     <script type="module">
       import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js';
-
-      import { getAuth, signOut } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js';
+      import { getAuth, signOut, deleteUser } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-auth.js';
+      import { getDatabase, ref, onValue, update } from 'https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js';
 
       const firebaseConfig = {
         apiKey: 'AIzaSyCVggAGfoW_eDQN04L9YqCEkoHX-g9vhXg',
@@ -28,24 +36,63 @@
       };
 
       const app = initializeApp(firebaseConfig);
-
       const auth = getAuth();
+      const db = getDatabase();
 
       let username = document.querySelector('#username');
       let logout = document.querySelector('#logout');
+      let displayName = document.querySelector('#displayname');
+      let edit = document.querySelector('#edit');
+      let deleteuser = document.querySelector('#delete');
 
       let urlParams = new URLSearchParams(location.search);
-      // console.log(urlParams);
-      let [name, id] = urlParams.values();
-      console.log(name);
-      console.log(id);
-      username.textContent = name;
+      let [id] = urlParams.values();
 
+      console.log(id);
+
+      const userDetailsRef = ref(db, 'users/' + id);
+      onValue(userDetailsRef, (snapshot) => {
+        let data = snapshot?.val();
+        username.textContent = data?.username;
+        displayName.value = data?.username;
+      });
+
+      /*--------------------- edit user --------------------*/
+      edit.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let newData = {
+          uid: id,
+          username: displayName.value,
+        };
+
+        if (confirm('Do you want to save the changes?')) {
+          const updates = {};
+          updates['/users/' + id] = newData;
+          update(ref(db), updates);
+        }
+      });
+
+      /*------------------------- delete user -------------*/
+      deleteuser.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        let newData = null;
+
+        if (confirm('Do you want to delete the user?')) {
+          const updates = {};
+          updates['/users/' + id] = newData;
+          update(ref(db), updates);
+          window.location.href = './signin.html';
+        }
+      });
+
+      /*---------------- logout -----------------------------*/
       logout.addEventListener('click', (e) => {
         e.preventDefault();
         signOut(auth)
           .then(() => {
-            sessionStorage.removeItem(value);
+            sessionStorage.removeItem(name);
             window.location.href = './signin.html';
           })
           .catch((err) => {

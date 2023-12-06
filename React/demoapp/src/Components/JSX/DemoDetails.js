@@ -1,13 +1,16 @@
-function DemoDetails() {
+function DemoDetails({ restItem }) {
+  // console.log(restItem);
+  let { id, category, price, image, rating } = restItem;
+
   return (
     <>
       <p>
-        Category: <i>{}</i>
+        Category: <i>{category}</i>
       </p>
-      <img src={item.image} alt={`image-${item.id}`} height="150px" width="150px" />
-      <p>Price: {item.price}</p>
-      <p>Rating: {}</p>
-      <p>Count: {}</p>
+      <img src={image} alt={`image-${id + 1}`} height="150px" width="150px" />
+      <p>Price: {price}</p>
+      <p>Rating: {rating.rate}</p>
+      <p>Count: {rating.count}</p>
     </>
   );
 }

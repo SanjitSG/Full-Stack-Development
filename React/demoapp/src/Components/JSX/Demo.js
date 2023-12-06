@@ -2,6 +2,7 @@ import { data, imgOne, imgTwo, displayMessage } from "./data";
 import DemoDetails from "./DemoDetails";
 let name = "Jack";
 let subject = "ReactJS";
+let moreDetails = false;
 
 displayMessage("John");
 function Demo() {
@@ -23,7 +24,9 @@ function Demo() {
             <h3>
               Description: <i>{item.description}</i>
             </h3>
+
             <DemoDetails restItem={item} />
+
             <hr />
           </div>
         );

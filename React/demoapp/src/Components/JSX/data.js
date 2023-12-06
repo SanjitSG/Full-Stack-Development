@@ -246,7 +246,7 @@ export let data = [
 ];
 
 export let displayMessage = function (name) {
-  console.log(`Hello, ${name}`);
+  // console.log(`Hello, ${name}`);
 };
 export let imgOne = imageOne;
 export let imgTwo = imageTwo;

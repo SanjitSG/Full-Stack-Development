@@ -20,13 +20,10 @@ function Demo() {
             <h2>
               Title: <i>{item.title}</i>
             </h2>
-
             <h3>
               Description: <i>{item.description}</i>
             </h3>
-
-            <DemoDetails restItem={item} />
-
+            <DemoDetails restItem={item} /> {/*Porps => attribute=value*/}
             <hr />
           </div>
         );

@@ -1,7 +1,7 @@
 function DemoDetails({ restItem }) {
+  // restItem prop from Demo.js
   // console.log(restItem);
-  let { id, category, price, image, rating } = restItem;
-
+  let { id, category, price, image, rating } = restItem; // destructuring
   return (
     <>
       <p>

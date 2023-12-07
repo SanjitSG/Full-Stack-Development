@@ -1,14 +1,15 @@
 import ProductDetails from "./ProductDetails";
+import Card from "./Card";
 
 let ProductCard = ({ product }) => {
   let { title, description, ...otherProps } = product;
   return (
-    <div>
-      <h1>Title: {title}</h1>
+    <Card title={title}>
+      {/* <h1>Title: {title}</h1> */}
       <p>Description: {description}</p>
       <ProductDetails otherProps={otherProps} />
       <hr />
-    </div>
+    </Card>
   );
 };
 

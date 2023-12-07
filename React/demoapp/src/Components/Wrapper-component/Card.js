@@ -1,8 +1,10 @@
-let Card = () => {
+let Card = ({ title, children }) => {
+  // console.log(title);
+  // console.log(children);
   return (
     <div>
-      <h3>Card Component</h3>
-      <h2>Title:</h2>
+      <h3>Title: {title}</h3>
+      {children}
     </div>
   );
 };

@@ -7,6 +7,7 @@ import "./Components/Intro/styles.css";
 // import Demo from "./Components/JSX/Demo";
 // import PropDetails from "./Components/JSX/PropDemo";
 
+// Wrapper-component
 import products from "./Components/Wrapper-component/data";
 import ProductCard from "./Components/Wrapper-component/ProductCard";
 function App() {
@@ -19,7 +20,7 @@ function App() {
       {/* <Demo /> */}
       {/* <PropDetails /> */}
       {products.map((product) => (
-        <ProductCard />
+        <ProductCard key={product.id} product={product} />
       ))}
     </div>
   );

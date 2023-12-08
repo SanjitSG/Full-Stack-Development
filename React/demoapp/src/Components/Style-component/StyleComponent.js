@@ -7,9 +7,14 @@ let userDetails = [
   { name: "Robert", age: 22, City: "Delhi" },
 ];
 
+let container = {
+  display: "flex",
+  gap: "10px",
+  flexWrap: "wrap",
+};
 let StyleComponent = () => {
   return (
-    <div className="container">
+    <div style={container}>
       {userDetails.map((user, index) => (
         <UserDetails key={index + 1} user={user} />
       ))}

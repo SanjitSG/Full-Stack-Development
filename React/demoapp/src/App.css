@@ -37,6 +37,6 @@
   }
 }
 
-.container > div {
-  border: 1px solid black;
+.user-info {
+  border: 2px solid red;
 }

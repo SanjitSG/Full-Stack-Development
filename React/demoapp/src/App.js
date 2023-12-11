@@ -12,7 +12,10 @@ import "./App.css";
 // import ProductCard from "./Components/Wrapper-component/ProductCard";
 
 //Style Component
-import StyleComponent from "./Components/Style-component/StyleComponent";
+// import StyleComponent from "./Components/Style-component/StyleComponent";
+
+// useState
+import Counter from "./Components/Counter/Counter";
 function App() {
   return (
     <div className="App">
@@ -25,7 +28,8 @@ function App() {
       {/* {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))} */}
-      <StyleComponent />
+      {/* <StyleComponent /> */}
+      <Counter />
     </div>
   );
 }

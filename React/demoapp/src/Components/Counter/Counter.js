@@ -1,25 +1,28 @@
 import { useState } from "react";
 
 let Counter = () => {
-  // let initValue = 0;
   let [initValue, SetInitValue] = useState(0);
 
+  // increment function
   let increment = () => {
-    // console.log("increment");
     SetInitValue((initValue) => (initValue = initValue + 1));
-    console.log(initValue);
   };
 
+  // decrement function
   let decrement = () => {
-    // console.log("decrement");
     SetInitValue((initValue) => (initValue = initValue - 1));
-    console.log(initValue);
+  };
+
+  //  reset
+  let reset = () => {
+    SetInitValue((initValue) => (initValue = 0));
   };
   return (
     <div>
       <h1>Counter Component</h1>
-      <h3>{initValue}</h3>
       <hr />
+
+      <h3>Counter: {initValue}</h3>
       <button
         onClick={() => {
           increment();
@@ -33,6 +36,14 @@ let Counter = () => {
         }}
       >
         Decrement
+      </button>
+
+      <button
+        onClick={() => {
+          reset();
+        }}
+      >
+        Reset
       </button>
     </div>
   );

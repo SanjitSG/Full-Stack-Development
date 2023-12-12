@@ -15,7 +15,10 @@ import "./App.css";
 // import StyleComponent from "./Components/Style-component/StyleComponent";
 
 // useState
-import Counter from "./Components/Counter/Counter";
+// import Counter from "./Components/Counter/Counter";
+
+// Products Counter
+import Products from "./Components/Counter/Products";
 function App() {
   return (
     <div className="App">
@@ -29,7 +32,8 @@ function App() {
         <ProductCard key={product.id} product={product} />
       ))} */}
       {/* <StyleComponent /> */}
-      <Counter />
+      {/* <Counter /> */}
+      <Products />
     </div>
   );
 }

@@ -19,6 +19,7 @@ import "./App.css";
 
 // Products Counter
 import Products from "./Components/Counter/Products";
+import UseReducer from "./Components/UseReducer/UseReducer";
 function App() {
   return (
     <div className="App">
@@ -33,7 +34,9 @@ function App() {
       ))} */}
       {/* <StyleComponent /> */}
       {/* <Counter /> */}
-      <Products />
+      {/* <Products /> */}
+
+      <UseReducer />
     </div>
   );
 }

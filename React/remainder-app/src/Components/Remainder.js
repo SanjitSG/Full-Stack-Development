@@ -1,7 +1,9 @@
 let Remainder = () => {
   return (
     <>
+      {/* Modal Trigger button */}
       <div className="container">
+        <h2 className="display-2 text-center">REMAINDER APP</h2>
         <div className="row">
           <div className="col-md-12">
             <div className="card card-white">
@@ -18,6 +20,19 @@ let Remainder = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      <div className="remainder-list">
+        <div className="remainder-item">
+          <hr />
+          <span>
+            <div className="checker">
+              <span className="">
+                <input type="checkbox" />
+              </span>
+            </div>
+          </span>
         </div>
       </div>
 

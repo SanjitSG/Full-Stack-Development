@@ -5,15 +5,20 @@ import { db } from "../Config/firebase-config";
 // state variable
 import { useState } from "react";
 
-import Edit from "./EditRemainder";
+import Edit from "./EditReminder";
 
-let Remainder = () => {
-  const [createRemainder, setCreateRemainder] = useState("");
+let Reminder = () => {
+  const collectionRef = collection(db, "reminder");
+  const [createReminder, setCreateReminder] = useState("");
+
+  const submitReminder = () => {
+    console.log("submit reminder");
+  };
   return (
     <>
       {/* Modal Trigger button */}
       <div className="container">
-        <h2 className="display-2 text-center">REMAINDER APP</h2>
+        <h2 className="display-2 text-center">REMINDER APP</h2>
         <div className="row">
           <div className="col-md-12">
             <div className="card card-white">
@@ -25,11 +30,11 @@ let Remainder = () => {
                   type="button"
                   className="btn btn-primary"
                 >
-                  Add Remainder
+                  Add Reminder
                 </button>
 
-                <div className="remainder-list">
-                  <div className="remainder-item">
+                <div className="reminder-list">
+                  <div className="reminder-item">
                     <hr />
                     <span>
                       <div className="checker">
@@ -61,19 +66,19 @@ let Remainder = () => {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title" id="staticBackdropLabel">
-                ADD REMAINDER
+                ADD REMINDER
               </h5>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <input type="text" className="form-control" placeholder="Add Remainder" onChange={(e) => setCreateRemainder(e.target.value)} />
+              <input type="text" className="form-control" placeholder="Add Reminder" onChange={(e) => setCreateReminder(e.target.value)} />
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">
                 Close
               </button>
-              <button type="button" className="btn btn-primary">
-                Create Remainder
+              <button type="button" className="btn btn-primary" onClick={submitReminder}>
+                Create Reminder
               </button>
             </div>
           </div>
@@ -83,4 +88,4 @@ let Remainder = () => {
   );
 };
 
-export default Remainder;
+export default Reminder;

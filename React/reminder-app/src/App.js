@@ -1,9 +1,9 @@
 import "./App.css";
-import Remainder from "./Components/Remainder";
+import Reminder from "./Components/Reminder";
 function App() {
   return (
     <div>
-      <Remainder />
+      <Reminder />
     </div>
   );
 }

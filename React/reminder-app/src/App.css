@@ -3,11 +3,11 @@ body {
   background: #f8f8f8;
 }
 
-.remainder-list {
+.reminder-list {
   margin: 10px 0;
 }
 
-.remainder-list .remainder-item {
+.reminder-list .reminder-item {
   padding: 15px;
   margin: 5px 0;
   border-radius: 0;

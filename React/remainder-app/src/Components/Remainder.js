@@ -1,4 +1,14 @@
+// firebase import
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../Config/firebase-config";
+
+// state variable
+import { useState } from "react";
+
+import Edit from "./EditRemainder";
+
 let Remainder = () => {
+  const [createRemainder, setCreateRemainder] = useState("");
   return (
     <>
       {/* Modal Trigger button */}
@@ -17,22 +27,30 @@ let Remainder = () => {
                 >
                   Add Remainder
                 </button>
+
+                <div className="remainder-list">
+                  <div className="remainder-item">
+                    <hr />
+                    <span>
+                      <div className="checker">
+                        <span className="">
+                          <input type="checkbox" />
+                        </span>
+                      </div>{" "}
+                      Do React Assignments <br />
+                      <i>24/12/2023</i>
+                    </span>
+                    <span className="float-end mx-3">
+                      <Edit />
+                    </span>
+                    <button type="button" className="btn btn-danger">
+                      Delete
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-
-      <div className="remainder-list">
-        <div className="remainder-item">
-          <hr />
-          <span>
-            <div className="checker">
-              <span className="">
-                <input type="checkbox" />
-              </span>
-            </div>
-          </span>
         </div>
       </div>
 
@@ -48,7 +66,7 @@ let Remainder = () => {
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div className="modal-body">
-              <input type="text" className="form-control" placeholder="Add Remainder" />
+              <input type="text" className="form-control" placeholder="Add Remainder" onChange={(e) => setCreateRemainder(e.target.value)} />
             </div>
             <div className="modal-footer">
               <button type="button" className="btn btn-secondary" data-bs-dismiss="modal">

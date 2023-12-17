@@ -11,8 +11,18 @@ let Reminder = () => {
   const collectionRef = collection(db, "reminder");
   const [createReminder, setCreateReminder] = useState("");
 
-  const submitReminder = () => {
-    console.log("submit reminder");
+  const submitReminder = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collectionRef, {
+        reminder: createReminder,
+        isChecked: false,
+        timestamp: serverTimestamp(),
+      });
+      window.location.reload(); // adding the details, window will automatically reload
+    } catch (error) {
+      console.log(error);
+    }
   };
   return (
     <>

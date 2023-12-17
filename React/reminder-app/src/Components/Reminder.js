@@ -1,5 +1,5 @@
 // firebase import
-import { collection, addDoc, serverTimestamp, getDoc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, getDocs } from "firebase/firestore";
 import { db } from "../Config/firebase-config";
 
 // state variable
@@ -17,9 +17,11 @@ let Reminder = () => {
   useEffect(() => {
     const getReminders = async () => {
       await getDocs(collectionRef).then((reminder) => {
-        console.log(reminder);
+        console.log(reminder.docs);
       });
     };
+
+    getReminders();
   }, []);
 
   const submitReminder = async (e) => {

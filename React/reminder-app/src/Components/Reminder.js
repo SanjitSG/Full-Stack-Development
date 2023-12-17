@@ -1,15 +1,26 @@
 // firebase import
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, getDoc } from "firebase/firestore";
 import { db } from "../Config/firebase-config";
 
 // state variable
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import Edit from "./EditReminder";
 
 let Reminder = () => {
   const collectionRef = collection(db, "reminder");
+
+  //state variables
   const [createReminder, setCreateReminder] = useState("");
+  const [reminders, setReminders] = useState([]);
+
+  useEffect(() => {
+    const getReminders = async () => {
+      await getDocs(collectionRef).then((reminder) => {
+        console.log(reminder);
+      });
+    };
+  }, []);
 
   const submitReminder = async (e) => {
     e.preventDefault();

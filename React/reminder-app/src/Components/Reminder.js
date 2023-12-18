@@ -17,7 +17,11 @@ let Reminder = () => {
   useEffect(() => {
     const getReminders = async () => {
       await getDocs(collectionRef).then((reminder) => {
-        console.log(reminder.docs);
+        let reminderData = reminder.docs.map((doc) => ({
+          ...doc.data(), // so this object will have properties of data and id { prop: val , prop: val, ... , id: doc.id} [...doc.data() holds the ]
+          id: doc.id,
+        }));
+        setReminders(reminderData);
       });
     };
 

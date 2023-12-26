@@ -7,8 +7,37 @@
 }
 * {
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Karla", sans-serif;
+  background-color: hsl(204, 43%, 93%);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+  height: 100vh;
+  border: 1px solid red;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-areas: "a a" "b c";
+}
+
+.main {
+  grid-area: a;
+}
+
+.sub {
+  grid-area: b;
+}
+
+.why {
+  grid-area: c;
 }

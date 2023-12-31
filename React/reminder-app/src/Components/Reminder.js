@@ -12,6 +12,7 @@ let Reminder = () => {
   //state variables
   const [createReminder, setCreateReminder] = useState("");
   const [reminders, setReminders] = useState([]);
+  const [checked, setChecked] = useState([]);
 
   useEffect(() => {
     const getReminders = async () => {
@@ -21,6 +22,7 @@ let Reminder = () => {
           id: doc.id,
         }));
         setReminders(reminderData);
+        setChecked(reminderData);
       });
     };
 
@@ -53,6 +55,16 @@ let Reminder = () => {
       console.log(error);
     }
   };
+
+  let changeHandler = (e, reminder) => {
+    setChecked((state) => {
+      const indexToUpdate = state.findIndex((checkBox) => checkBox.id.toString() === e.target.name);
+      // console.log(indexToUpdate);
+
+      let newState = state.slice();
+      console.log(newState);
+    });
+  };
   return (
     <>
       {/* Modal Trigger button */}
@@ -79,7 +91,14 @@ let Reminder = () => {
                       <span className={`${isChecked === true ? "done" : ""}`}>
                         <div className="checker">
                           <span className="">
-                            <input type="checkbox" />
+                            <input
+                              type="checkbox"
+                              checked={isChecked}
+                              name={id}
+                              onChange={(e) => {
+                                changeHandler(e, reminder);
+                              }}
+                            />
                           </span>
                         </div>{" "}
                         {reminder} <br />

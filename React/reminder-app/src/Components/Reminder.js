@@ -58,11 +58,16 @@ let Reminder = () => {
 
   let changeHandler = (e, reminder) => {
     setChecked((state) => {
-      const indexToUpdate = state.findIndex((checkBox) => checkBox.id.toString() === e.target.name);
+      const indexToUpdate = state.findIndex((checkBox) => checkBox.reminder === reminder);
       // console.log(indexToUpdate);
 
-      let newState = state.slice();
-      console.log(newState);
+      let newState = [...state];
+      // console.log(newState);
+      newState.splice(indexToUpdate, 1, {
+        ...state[indexToUpdate],
+        isChecked: !state[indexToUpdate].isChecked,
+      });
+      setReminders(newState);
     });
   };
   return (

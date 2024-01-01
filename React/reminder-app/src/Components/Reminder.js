@@ -1,5 +1,5 @@
 // firebase import
-import { collection, addDoc, serverTimestamp, getDocs, deleteDoc, doc } from "firebase/firestore";
+import { collection, addDoc, serverTimestamp, getDocs, deleteDoc, doc, runTransaction } from "firebase/firestore";
 import { db } from "../Config/firebase-config";
 
 // state variable
@@ -56,7 +56,7 @@ let Reminder = () => {
     }
   };
 
-  let changeHandler = (e, reminder) => {
+  let changeHandler = async (e, reminder) => {
     setChecked((state) => {
       const indexToUpdate = state.findIndex((checkBox) => checkBox.reminder === reminder);
       // console.log(indexToUpdate);
@@ -68,7 +68,23 @@ let Reminder = () => {
         isChecked: !state[indexToUpdate].isChecked,
       });
       setReminders(newState);
+      return newState;
     });
+
+    try {
+      const docRef = doc(db, "reminder", e.target.name);
+      await runTransaction(db, async (transaction) => {
+        const reminderDoc = await transaction.get(docRef);
+        if (!reminderDoc.exists()) {
+          throw "Document not exists";
+        }
+        const newValue = !reminderDoc.data().isChecked;
+        transaction.update(docRef, { isChecked: newValue });
+      });
+      console.log("Transaction / updation performed successfully");
+    } catch (error) {
+      console.log(`Transaction failed: ${error}`);
+    }
   };
   return (
     <>

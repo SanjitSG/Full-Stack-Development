@@ -8,8 +8,8 @@ let Form = () => {
     phonenumber: "",
     address: "",
     subjects: "",
-    addons: "",
-    gender: "",
+    addons: false,
+    gender: false,
   });
 
   const handleForm = (e) => {
@@ -20,7 +20,6 @@ let Form = () => {
         [e.target.name]: value,
       };
     });
-    // console.log(form);
   };
 
   const handleSubmit = (e) => {
@@ -70,13 +69,17 @@ let Form = () => {
         </p>
         <p>
           <label>Avail Addon:</label>
-          <input type="checkbox" name="addons" value={form.addons} onChange={handleForm}></input>
+          <input type="checkbox" name="addons" value={form.addons} onChange={handleForm} checked={form.addons} checked></input>
+          <label>Avail Bus:</label>
+          <input type="checkbox" name="bus" value={form.addons} onChange={handleForm} checked={form.addons}></input>
+          <label>Avail Hostel:</label>
+          <input type="checkbox" name="hostel" value={form.addons} onChange={handleForm} checked={form.addons}></input>
         </p>
         <p>
           <label>Male</label>
-          <input type="radio" name="gender" value={form.gender} onChange={handleForm} />
+          <input type="radio" name="gender" value="male" onChange={handleForm} />
           <label>Female</label>
-          <input type="radio" name="gender" value={form.gender} onChange={handleForm} />
+          <input type="radio" name="gender" value="female" onChange={handleForm} />
         </p>
         <hr />
         <input type="submit" value="Submit" /> <input type="reset" value="Clear" />

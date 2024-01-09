@@ -8,18 +8,44 @@ let Form = () => {
     phonenumber: "",
     address: "",
     subjects: "",
-    addons: false,
+    addons: [],
     gender: false,
   });
 
   const handleForm = (e) => {
-    let value = e.target.type === "checkbox" ? e.target.checked : e.target.value;
-    setForm((form) => {
-      return {
-        ...form,
-        [e.target.name]: value,
-      };
-    });
+    let { value } = e.target; // target = {name: "", value=""} we are destructuring target object and getting value.
+    if (e.target.type === "checkbox") {
+      setForm((form) => {
+        if (e.target.checked) {
+          // If checked, add the value
+          if (!form.addons.includes(value)) {
+            // Only add if not already present
+            return {
+              ...form,
+              addons: [...form.addons, value],
+            };
+          }
+        } else {
+          // If unchecked, remove the value
+          if (form.addons.includes(value)) {
+            // Only remove if present
+            return {
+              ...form,
+              addons: form.addons.filter((v) => v !== value),
+            };
+          }
+        }
+
+        return form; // Return the current form if no changes needed
+      });
+    } else {
+      setForm((form) => {
+        return {
+          ...form,
+          [e.target.name]: value,
+        };
+      });
+    }
   };
 
   const handleSubmit = (e) => {
@@ -69,11 +95,9 @@ let Form = () => {
         </p>
         <p>
           <label>Avail Addon:</label>
-          <input type="checkbox" name="addons" value={form.addons} onChange={handleForm} checked={form.addons} checked></input>
-          <label>Avail Bus:</label>
-          <input type="checkbox" name="bus" value={form.addons} onChange={handleForm} checked={form.addons}></input>
-          <label>Avail Hostel:</label>
-          <input type="checkbox" name="hostel" value={form.addons} onChange={handleForm} checked={form.addons}></input>
+          <input type="checkbox" onChange={handleForm} value="Bus"></input> Bus
+          <input type="checkbox" onChange={handleForm} value="Food"></input> Food
+          <input type="checkbox" onChange={handleForm} value="Hostel"></input> Hostel
         </p>
         <p>
           <label>Male</label>

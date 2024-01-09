@@ -5,6 +5,7 @@ import Home from "./Components/Home";
 import Projects from "./Components/Projects";
 import Error from "./Components/Error";
 import Navbar from "./Components/Navbar";
+import Product from "./Components/Product";
 
 //react router dom
 
@@ -22,6 +23,7 @@ function App() {
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Contacts" element={<Contact />} />
           <Route path="/products" element={<Products />} />
+          <Route path="/products/:productId" element={<Product />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

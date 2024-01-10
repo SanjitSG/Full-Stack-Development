@@ -11,6 +11,7 @@ import Product from "./Components/Product";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Products from "./Components/Products";
+import SharedComponent from "./Components/SharedComponent";
 
 function App() {
   return (
@@ -22,8 +23,10 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/Projects" element={<Projects />} />
           <Route path="/Contacts" element={<Contact />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:productId" element={<Product />} />
+          <Route path="/products" element={<SharedComponent />}>
+            <Route index element={<Products />} />
+            <Route path=":productId" element={<Product />} />
+          </Route>
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

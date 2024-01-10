@@ -1,24 +1,26 @@
-import { useParams } from "react-router-dom";
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useParams, Link, useOutletContext } from "react-router-dom";
 
 const Product = () => {
-  console.log(useParams());
   let { productId } = useParams();
-  const [products, setProducts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://fakestoreapi.com/products")
-      .then((res) => setProducts(res.data))
-      .catch((err) => console.log(err));
-  }, []);
+  const products = useOutletContext();
 
   const product = products.find((product) => product.id === Number(productId));
   console.log(product);
+
   return (
     <div>
       <h1>Single Product Component</h1>
+      <p>ID: {product?.id}</p>
+      <p>Title: {product?.title}</p>
+      <p>Description: {product?.description}</p>
+      <p>Category: {product?.category}</p>
+      <p>Price: {product?.price}</p>
+      <p>
+        <img src={product?.image} height="100px" width="100px" />
+      </p>
+      <p>Rate: {product?.rating?.rate}</p>
+      <p>Count: {product?.rating?.count} </p>
+      <Link to="/products">Products</Link>
     </div>
   );
 };

@@ -1,3 +1,10 @@
+import { CartState } from "../Context/Context";
+const {
+  state: { cart },
+  dispatch,
+  productDispatch,
+} = CartState();
+
 const Header = () => {
   return (
     <div>

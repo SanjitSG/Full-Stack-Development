@@ -11,7 +11,7 @@ const SingleProduct = ({ prod }) => {
             <span>Rs. {prod.price}</span>
             <div>Fast Delivery</div>
             <div>Standard Delivery</div>
-            <Rating rating={prod.rating} />
+            <Rating rating={prod.ratings} />
           </Card.Subtitle>
           <Button variant="primary">Add to Cart</Button> {"   "}
           <Button variant="danger">Remove form Cart</Button>

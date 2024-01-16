@@ -1,8 +1,13 @@
-const Rating = ({rating}) => {
+import { AiFillStar, AiOutlineStar } from "react-icons/ai";
+const Rating = ({ rating }) => {
   return (
-    <div>
-      <h2>Rating Component</h2>
-    </div>
+    <>
+      {[...Array(5)].map((_, index) => (
+        <span key={index}>
+          <AiFillStar fontSize="15px" />
+        </span>
+      ))}
+    </>
   );
 };
 

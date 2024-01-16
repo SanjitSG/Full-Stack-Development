@@ -1,36 +1,19 @@
 import { ListGroup, Row, Col, Image, Form, Button } from "react-bootstrap";
 import { AiFillDelete } from "react-icons/ai";
-
+import { CartState } from "../Context/Context";
+import { useState, useEffect } from "react";
 const Cart = () => {
-  const cart = [
-    {
-      id: "9882d49f-bfab-45a2-9e64-22f297df47cc",
-      image: "https://loremflickr.com/640/480?lock=773740273074176",
-      inStock: 0,
-      name: "Licensed Concrete Gloves",
-      price: "365",
-      quickDelivery: false,
-      ratings: 4,
-    },
-    {
-      id: "ef84cb59-02dd-403c-94a6-982d672791ce",
-      image: "https://picsum.photos/seed/jpc2ydy/640/480",
-      inStock: 5,
-      name: "Elegant Frozen Table",
-      price: "330",
-      quickDelivery: true,
-      ratings: 3,
-    },
-    {
-      id: "d211e4f4-e6d2-4b8c-9458-186525d402fd",
-      image: "https://picsum.photos/seed/XzDF6S5gga/640/480",
-      inStock: 6,
-      name: "Bespoke Frozen Soap",
-      price: "668",
-      quickDelivery: false,
-      ratings: 1,
-    },
-  ];
+  const {
+    state: { cart },
+    dispatch,
+  } = CartState();
+
+  //total
+  const [total, setTotal] = useState();
+  //refresh the total whenever there is updation is cart
+  useEffect(() => {
+    setTotal(cart.reduce((acc, currentEle) => acc + Number(currentEle.price) * currentEle.qty, 0));
+  }, [cart]);
   return (
     <div className="home">
       <div className="productContainer">
@@ -51,12 +34,18 @@ const Cart = () => {
                   <span>{prod.ratings}</span>
                 </Col>
                 <Col>
-                  <Form.Select value={prod.qty}>
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
+                  <Form.Select
+                    value={prod.qty}
+                    onChange={(e) => {
+                      dispatch({
+                        type: "CHANGE_CART_QTY",
+                        payload: { id: prod.id, qty: e.target.value },
+                      });
+                    }}
+                  >
+                    {[...Array(prod.inStock).keys()].map((val) => (
+                      <option key={val + 1}>{val + 1}</option>
+                    ))}
                   </Form.Select>
                 </Col>
                 <Col>
@@ -70,8 +59,8 @@ const Cart = () => {
         </ListGroup>
       </div>
       <div className="filters summary">
-        <span>Subtotal 2 items</span>
-        <span>Total Rs. 1000</span>
+        <span>Subtotal {cart.length} items</span>
+        <span>Total {total}</span>
         <Button type="button">Proceed to Checkout</Button>
       </div>
     </div>

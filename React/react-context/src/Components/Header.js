@@ -34,8 +34,8 @@ const Header = () => {
             placeholder="Search a Product"
             className="m-auto"
             onChange={(e) => {
-              dispatch({
-                action: "FILTER_BY_SEARCH",
+              productDispatch({
+                type: "FILTER_BY_SEARCH",
                 payload: e.target.value,
               });
             }}

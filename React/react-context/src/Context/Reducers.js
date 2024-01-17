@@ -21,6 +21,7 @@ export const cartReducer = (state, action) => {
 export const productReducer = (state, action) => {
   switch (action.type) {
     case "SORT_BY_PRICE":
+      return { ...state, sort: action.payload };
       break;
     case "FILTER_BY_STOCK":
       break;
@@ -29,6 +30,9 @@ export const productReducer = (state, action) => {
     case "FILTER_BY_RATING":
       break;
     case "FILTER_BY_SEARCH":
+      // console.log(action);
+      // console.log(action.payload);
+
       return { ...state, searchQuery: action.payload };
       break;
     case "CLEAR_FILTERS":

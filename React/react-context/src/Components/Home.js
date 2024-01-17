@@ -1,18 +1,29 @@
 import Filter from "./Filter";
 import { CartState } from "../Context/Context";
 import SingleProduct from "./SingleProduct";
-import { useContext } from "react";
+
 const Home = () => {
   const {
     state: { products },
-    productState: { byStock, byQuickDelivery, byRating, searchQuery },
+    productState: { byStock, byQuickDelivery, byRating, searchQuery, sort },
   } = CartState();
+  function transformProducts() {
+    let sortedProducts = products;
 
+    if (sort) {
+      sortedProducts = sortedProducts.sort((a, b) => (sort === "lowToHigh" ? a.price - b.price : b.price - a.price));
+    }
+
+    if (searchQuery) {
+      sortedProducts = sortedProducts.filter((prod) => prod.name.toLowerCase().includes(searchQuery));
+    }
+    return sortedProducts;
+  }
   return (
     <div className="home">
       <Filter />
       <div className="productContainer">
-        {products.map((prod) => (
+        {transformProducts().map((prod) => (
           <SingleProduct prod={prod} key={prod.id} />
         ))}
       </div>

@@ -29,6 +29,7 @@ export const productReducer = (state, action) => {
     case "FILTER_BY_RATING":
       break;
     case "FILTER_BY_SEARCH":
+      return { ...state, searchQuery: action.payload };
       break;
     case "CLEAR_FILTERS":
       break;

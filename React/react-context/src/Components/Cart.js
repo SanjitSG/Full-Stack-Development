@@ -49,7 +49,15 @@ const Cart = () => {
                   </Form.Select>
                 </Col>
                 <Col>
-                  <Button>
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      dispatch({
+                        type: "REMOVE_FROM_CART",
+                        payload: prod,
+                      });
+                    }}
+                  >
                     <AiFillDelete fontSize="20px" />
                   </Button>
                 </Col>

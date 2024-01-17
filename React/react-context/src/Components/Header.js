@@ -44,7 +44,16 @@ const Header = () => {
                     <span>{prod.name}</span>
                     <span>{prod.price}</span>
                   </div>
-                  <AiFillDelete style={{ cursor: "pointer" }} fontSize="20px" />
+                  <AiFillDelete
+                    style={{ cursor: "pointer" }}
+                    fontSize="20px"
+                    onClick={() => {
+                      dispatch({
+                        type: "REMOVE_FROM_CART",
+                        payload: prod,
+                      });
+                    }}
+                  />
                 </span>
               ))}
               <Link to="/cart">

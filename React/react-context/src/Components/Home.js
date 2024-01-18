@@ -25,6 +25,10 @@ const Home = () => {
     if (quickDelivery) {
       sortedProducts = sortedProducts.filter((prod) => prod.quickDelivery);
     }
+
+    if (byRating) {
+      sortedProducts = sortedProducts.filter((prod) => prod.ratings >= byRating);
+    }
     return sortedProducts;
   }
   return (

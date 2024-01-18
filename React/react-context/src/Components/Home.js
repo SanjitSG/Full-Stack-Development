@@ -5,7 +5,7 @@ import SingleProduct from "./SingleProduct";
 const Home = () => {
   const {
     state: { products },
-    productState: { byStock, byQuickDelivery, byRating, searchQuery, sort },
+    productState: { byStock, quickDelivery, byRating, searchQuery, sort },
   } = CartState();
   function transformProducts() {
     let sortedProducts = products;
@@ -16,6 +16,14 @@ const Home = () => {
 
     if (searchQuery) {
       sortedProducts = sortedProducts.filter((prod) => prod.name.toLowerCase().includes(searchQuery));
+    }
+
+    if (!byStock) {
+      sortedProducts = sortedProducts.filter((prod) => prod.inStock);
+    }
+
+    if (quickDelivery) {
+      sortedProducts = sortedProducts.filter((prod) => prod.quickDelivery);
     }
     return sortedProducts;
   }

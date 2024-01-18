@@ -2,7 +2,7 @@ import { Form, Button } from "react-bootstrap";
 import { CartState } from "../Context/Context";
 const Filter = () => {
   const {
-    productState: { byStock, byQuickDelivery, sort, byRating },
+    productState: { byStock, quickDelivery, sort, byRating },
     productDispatch,
   } = CartState();
 
@@ -42,15 +42,46 @@ const Filter = () => {
         />
       </span>
       <span>
-        <Form.Check inline label="Include Out of Stock" name="group1" type="checkbox" id={`inline-3`} />
+        <Form.Check
+          inline
+          label="Include Out of Stock"
+          name="group1"
+          type="checkbox"
+          id={`inline-3`}
+          onChange={() => {
+            productDispatch({
+              type: "FILTER_BY_STOCK",
+            });
+          }}
+          checked={byStock}
+        />
       </span>
       <span>
-        <Form.Check inline label="Quick Delivery only" name="group1" type="checkbox" id={`inline-4`} />
+        <Form.Check
+          inline
+          label="Quick Delivery only"
+          name="group1"
+          type="checkbox"
+          id={`inline-4`}
+          onChange={() => {
+            productDispatch({
+              type: "FILTER_BY_DELIVERY",
+            });
+          }}
+          checked={quickDelivery}
+        />
       </span>
       <span style={{ paddingRight: 10 }}>
         <label>Ratings: </label>
       </span>
-      <Button variant="primary">Clear Filter</Button>
+      <Button
+        variant="primary"
+        onClick={() => {
+          productDispatch({ type: "CLEAR_FILTERS" });
+        }}
+      >
+        Clear Filter
+      </Button>
     </div>
   );
 };

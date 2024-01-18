@@ -15,8 +15,7 @@ const SingleProduct = ({ prod }) => {
           <Card.Title className="title">{prod.name}</Card.Title>
           <Card.Subtitle style={{ paddingBottom: 10 }}>
             <span>Rs. {prod.price}</span>
-            <div>Fast Delivery</div>
-            <div>Standard Delivery</div>
+            {prod.quickDelivery ? <div>Fast Delivery</div> : <div>Standard Delivery</div>}
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
           <Button

@@ -19,7 +19,17 @@ const SingleProduct = ({ prod }) => {
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
           {cart.some((p) => p.id === prod.id) ? (
-            <Button variant="danger">Remove form Cart</Button>
+            <Button
+              variant="danger"
+              onClick={() => {
+                dispatch({
+                  type: "REMOVE_FROM_CART",
+                  payload: prod,
+                });
+              }}
+            >
+              Remove form Cart
+            </Button>
           ) : (
             <Button
               variant="primary"

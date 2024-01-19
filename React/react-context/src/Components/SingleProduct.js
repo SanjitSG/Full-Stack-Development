@@ -18,19 +18,21 @@ const SingleProduct = ({ prod }) => {
             {prod.quickDelivery ? <div>Fast Delivery</div> : <div>Standard Delivery</div>}
             <Rating rating={prod.ratings} />
           </Card.Subtitle>
-          <Button
-            variant="primary"
-            onClick={() => {
-              dispatch({
-                type: "ADD_TO_CART",
-                payload: prod,
-              });
-            }}
-          >
-            Add to Cart
-          </Button>{" "}
-          {"   "}
-          <Button variant="danger">Remove form Cart</Button>
+          {cart.some((p) => p.id === prod.id) ? (
+            <Button variant="danger">Remove form Cart</Button>
+          ) : (
+            <Button
+              variant="primary"
+              onClick={() => {
+                dispatch({
+                  type: "ADD_TO_CART",
+                  payload: prod,
+                });
+              }}
+            >
+              Add to Cart
+            </Button>
+          )}
         </Card.Body>
       </Card>
     </div>

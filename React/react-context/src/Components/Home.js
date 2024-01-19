@@ -27,7 +27,7 @@ const Home = () => {
     }
 
     if (byRating) {
-      sortedProducts = sortedProducts.filter((prod) => prod.ratings >= byRating);
+      sortedProducts = sortedProducts.filter((prod) => prod.ratings >= byRating); // == if we want to display exact matching stars
     }
     return sortedProducts;
   }

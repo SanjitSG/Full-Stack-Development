@@ -2,12 +2,14 @@ import { Alert, Button, Input } from "@mui/material";
 import { useState } from "react";
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import app from "../firebase.config";
+import { useNavigate } from "react-router-dom";
 
 const auth = getAuth(app);
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -18,10 +20,10 @@ const Login = () => {
       const { user } = await signInWithEmailAndPassword(auth, email, password);
       console.log(user);
 
-      { <Alert>Login successful !!</Alert> }
+      navigate('/profile');
     } catch (error) {
       setError(error.message);
-      <Alert>{error}</Alert>;
+
     }
   };
   return (
